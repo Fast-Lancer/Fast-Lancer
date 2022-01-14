@@ -1,25 +1,25 @@
-import { client } from './client';
+import { supaClient } from './client';
 
 export function getUser() {
-  return client.auth.user();
+  return supaClient.auth.user();
 }
 
 export function getSession() {
-  return client.auth.session();
+  return supaClient.auth.session();
 }
 
 export async function signUpUser(email, password) {
-  const { user, error } = await client.auth.signUp({ email, password });
+  const { user, error } = await supaClient.auth.signUp({ email, password });
   if (error) throw error;
   return user;
 }
 
 export async function signInUser(email, password) {
-  const { user, error } = await client.auth.signIn({ email, password });
+  const { user, error } = await supaClient.auth.signIn({ email, password });
   if (error) throw error;
   return user;
 }
 
 export async function signOutUser() {
-  return client.auth.signOut();
+  return supaClient.auth.signOut();
 }
