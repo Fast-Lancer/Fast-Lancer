@@ -12,7 +12,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '14.x'
-    - run: yarn ci
-    - run: yarn test
+    - run: yarn run ci
+    - run: yarn run test
       env:
         CI: true
