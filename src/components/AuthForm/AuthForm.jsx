@@ -15,8 +15,8 @@ export default function AuthForm({
       <input type="text" name="username" />
       <label htmlFor="password">Password</label>
       <input type="password" name="password" />
-      <Button {...{ handleClick={handleSubmit}, buttonText={AuthText} }} />
-      <Link to={isSigningUp ? '/signup' : '/login'}>
+      <Button handleClick={handleSubmit} buttonText={AuthText} />
+      <Link to={isSigningUp ? "/signup" : "/login"}>
         <div className="auth-link" onClick={toggleIsSigningUp}>
           {isSigningUp ? "LogIn Instead" : "SignUp Instead"}
         </div>
