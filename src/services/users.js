@@ -1,4 +1,4 @@
-import { supaClient } from './client';
+import { supaClient } from "./supaClient";
 
 export function getUser() {
   return supaClient.auth.user();

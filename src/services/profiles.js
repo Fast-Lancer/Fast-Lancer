@@ -1,4 +1,4 @@
-import { supaClient, parseData } from './client';
+import { supaClient, parseData } from './supaClient';
 
 export async function getProfile() {
   const request = await supaClient.from('profiles').select().single();
