@@ -3,9 +3,9 @@ import { useHistory } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import { useUser } from '../../context/UserContext.jsx'
 
-export default function PrivateRoute({children, ...rest}) {
+export default function PrivateRoute({ children, ...rest }) {
   const history = useHistory()
-  const {user} = useUser()
+  const { user } = useUser()
 
   if(user.id) {
     return <Route {...rest}>{children}</Route>

@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { signUpUser } from '../../services/users.js'
 import { useUser } from '../../context/UserContext.jsx'
-import { useLocation } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import AuthForm from '../../components/AuthForm/AuthForm.jsx';
+import { useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import AuthForm from '../../components/AuthForm/AuthForm.jsx'
 
 export default function Auth() {
   const history = useHistory()
   const location = useLocation()
   const [errorMessage, setErrorMessage] = useState('')
   const [isSigningUp, setIsSigningUp] = useState(location.pathname === '/signup')
-  const {setUser} = useUser();
+  const { setUser } = useUser()
   const wasRedirected = location.search === '?redirect=true'
+
+  useEffect(() => {
+    setIsSigningUp(location.pathname === '/signup')
+  }, [location])
 
   async function handleSubmit(username, password) {
     setErrorMessage('')
@@ -54,7 +58,7 @@ export default function Auth() {
     <div className='test'>
       {!!wasRedirected ? <div>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}
       {!!errorMessage ? <div>{errorMessage}</div> : <></>}
-      <AuthForm {...{isSigningUp, handleSubmit, toggleIsSigningUp}} />
+      <AuthForm {...{ isSigningUp, handleSubmit, toggleIsSigningUp }} />
     </div>
   )
 }
