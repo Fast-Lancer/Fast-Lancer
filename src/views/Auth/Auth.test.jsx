@@ -13,6 +13,7 @@ it('should sign up a user', async () => {
 
   const usernameInput = await screen.findByText('User Name')
   const passwordInput = await screen.findByText('Password')
+  
 
 
 })
