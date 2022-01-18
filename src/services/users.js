@@ -8,14 +8,14 @@ export function getSession() {
   return supaClient.auth.session()
 }
 
-export async function signUpUser(username, password) {
-  const { user, error } = await supaClient.auth.signUp({ username, password })
+export async function signUpUser(email, password) {
+  const { user, error } = await supaClient.auth.signUp({ email, password })
   if (error) throw error
   return user
 }
 
-export async function signInUser(username, password) {
-  const { user, error } = await supaClient.auth.signIn({ username, password })
+export async function signInUser(email, password) {
+  const { user, error } = await supaClient.auth.signIn({ email, password })
   if (error) throw error
   return user
 }

@@ -17,11 +17,11 @@ export default function Auth() {
     setIsSigningUp(location.pathname === '/signup')
   }, [location])
 
-  async function handleSubmit(username, password) {
+  async function handleSubmit(email, password) {
     setErrorMessage('')
     if(isSigningUp) {
       try {
-        const user = await signUpUser(username, password)
+        const user = await signUpUser(email, password)
         setUser(user)
         if(wasRedirected) {
           history.goBack()
@@ -34,7 +34,7 @@ export default function Auth() {
       }
     } else {
       try {
-        const user = await signUpUser(username, password)
+        const user = await signUpUser(email, password)
         setUser(user)
         if(wasRedirected) {
           history.goBack()
