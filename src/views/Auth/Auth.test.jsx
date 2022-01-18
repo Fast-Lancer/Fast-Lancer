@@ -32,12 +32,12 @@ it('should render the sign up page and sign up a user', async () => {
 
   expect(signUpText).toBeInTheDocument()
 
-  const usernameInput = await screen.findByLabelText('User Name')
-  const passwordInput = await screen.findByLabelText('Password')
+  const emailInput = await screen.findByLabelText('Email:')
+  const passwordInput = await screen.findByLabelText('Password:')
   const signupButton = await screen.findByRole('button')
   
-  fireEvent.change(usernameInput, { target: { value: 'asdf' } })
-  fireEvent.change(usernameInput, { target: { value: '1234' } })
+  fireEvent.change(emailInput, { target: { value: 'asdf' } })
+  fireEvent.change(emailInput, { target: { value: '1234' } })
   fireEvent.click(signupButton)
 
   await waitFor(() => location.pathname === '/projects')
@@ -56,12 +56,12 @@ it('should render the log in page and log in a user', async () => {
 
   expect(signUpText).toBeInTheDocument()
   
-  const usernameInput = await screen.findByLabelText('User Name')
-  const passwordInput = await screen.findByLabelText('Password')
+  const emailInput = await screen.findByLabelText('Email:')
+  const passwordInput = await screen.findByLabelText('Password:')
   const signupButton = await screen.findByRole('button')
   
-  fireEvent.change(usernameInput, { target: { value: 'asdf' } })
-  fireEvent.change(usernameInput, { target: { value: '1234' } })
+  fireEvent.change(emailInput, { target: { value: 'asdf' } })
+  fireEvent.change(emailInput, { target: { value: '1234' } })
   fireEvent.click(signupButton)
 
   await waitFor(() => location.pathname === '/projects')
