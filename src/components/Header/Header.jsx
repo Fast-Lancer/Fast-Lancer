@@ -11,7 +11,9 @@ export default function Header() {
     <div>
       <img src={FastLancerLogo} alt="fast lancer logo" />
       <div>
-        {currentPage === "/login" || currentPage === "/signup" ? (
+        {currentPage === "/login" ||
+        currentPage === "/signup" ||
+        currentPage === "/" ? (
           <>
             <Link to="/login">Log In</Link>
             <Link to="/signup">Sign Up</Link>
@@ -22,7 +24,7 @@ export default function Header() {
             <Link to="/projects">Projects</Link>
           </>
         )}
-        {user?.id ?? (
+        {user.id && (
           <Link onClick={() => setUser({})} to="/login">
             Log Out
           </Link>
