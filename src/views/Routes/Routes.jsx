@@ -1,4 +1,3 @@
-import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Auth from '../Auth/Auth.jsx'
 import Home from '../Home/Home.jsx'
