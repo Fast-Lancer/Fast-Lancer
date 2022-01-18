@@ -1,0 +1,17 @@
+.headerContainer {
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+  border-bottom: black 1px solid;
+}
+
+.headerContainer > img {
+  height: 20vh;
+}
+
+.navContainer > * {
+  margin-right: 3vw;
+  font-size: 3rem;
+}

@@ -2,15 +2,17 @@ import { Link, useLocation } from "react-router-dom";
 import FastLancerLogo from "../../assets/FastLancerLogo.svg";
 import { useUser } from "../../context/UserContext.jsx";
 
+import styles from "./Header.module.css";
+
 export default function Header() {
   const { user, setUser } = useUser();
   const location = useLocation();
   const currentPage = location.pathname;
 
   return (
-    <div>
+    <header className={styles.headerContainer}>
       <img src={FastLancerLogo} alt="fast lancer logo" />
-      <div>
+      <div className={styles.navContainer}>
         {currentPage === "/login" ||
         currentPage === "/signup" ||
         currentPage === "/" ? (
@@ -30,6 +32,6 @@ export default function Header() {
           </Link>
         )}
       </div>
-    </div>
+    </header>
   );
 }
