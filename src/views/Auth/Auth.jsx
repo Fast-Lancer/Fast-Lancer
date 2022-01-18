@@ -22,7 +22,8 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: figure out where to redirect user
+          // TODO: change this if we don't end up using /projects
+          history.push('/projects')
         }
       } catch(e) {
         setErrorMessage(e.message)
@@ -34,7 +35,8 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: figure out where to redirect user
+          // TODO: change this if we don't end up using /projects
+          history.push('/projects')
         }
       } catch(e) {
         setErrorMessage(e.message)
