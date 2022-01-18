@@ -3,7 +3,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "parser": "react-scripts/node_modules/babel-eslint",
+  "parser": "babel-eslint",
   "globals": {
     "process": true
   },
