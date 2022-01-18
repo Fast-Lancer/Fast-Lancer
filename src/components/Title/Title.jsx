@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
+import styles from "./Title.module.css";
 
 export default function Title({ pageTitle }) {
   return (
-    <div>
-      {pageTitle}
-      <section className="tab-nav-1">{pageTitle}</section>
-      <section className="tab-nav-2">
-        {pageTitle === "Projects" ? (
-          <Link to="/clients">Clients</Link>
-        ) : (
-          "Projects"
-        )}
-      </section>
-      <section className="tab-nav-3">
-        {pageTitle === "Projects" ? (
-          <Link to="/newproject">New Project</Link>
-        ) : (
-          <Link to="/newclient">New Client</Link>
-        )}
-      </section>
+    <div className={styles.titleBody}>
+      <section className={styles.title}>{pageTitle}</section>
+      <ul className={styles.tabnav}>
+        <li className={styles.active}>
+          <a href="#">{pageTitle}</a>
+        </li>
+        <li className={styles.tab2}>
+          {pageTitle === "Projects" ? (
+            <Link to="/clients">Clients</Link>
+          ) : (
+            "Projects"
+          )}
+        </li>
+        <li className={styles.tab3}>
+          {pageTitle === "Projects" ? (
+            <Link to="/newproject">New Project</Link>
+          ) : (
+            <Link to="/newclient">New Client</Link>
+          )}
+        </li>
+      </ul>
     </div>
   );
 }
