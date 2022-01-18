@@ -3,6 +3,7 @@ import { signUpUser } from '../../services/users.js'
 import { useUser } from '../../context/UserContext.jsx'
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
+import AuthForm from '../../components/AuthForm/AuthForm.jsx';
 
 export default function Auth() {
   const history = useHistory()
@@ -48,10 +49,10 @@ export default function Auth() {
 
   // TODO: pick ideal wording for text
   return (
-    <div>
+    <div className='test'>
       {!!wasRedirected ? <div>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}
       {!!errorMessage ? <div>{errorMessage}</div> : <></>}
-      {/* Login/signup form here */}
+      <AuthForm {...{isSigningUp, handleSubmit, toggleIsSigningUp}} />
     </div>
   )
 }

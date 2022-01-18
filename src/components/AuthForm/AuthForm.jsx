@@ -1,5 +1,5 @@
 import Button from "../Button/Button.jsx";
-import { Link } from "react-router-dom";
+import styles from './AuthForm.module.css';
 
 export default function AuthForm({
   isSigningUp,
@@ -16,11 +16,9 @@ export default function AuthForm({
       <label htmlFor="password">Password</label>
       <input type="password" name="password" />
       <Button handleClick={handleSubmit} buttonText={AuthText} />
-      <Link to={isSigningUp ? "/signup" : "/login"}>
-        <div className="auth-link" onClick={toggleIsSigningUp}>
-          {isSigningUp ? "LogIn Instead" : "SignUp Instead"}
-        </div>
-      </Link>
+      <div className={styles.linkButton} onClick={toggleIsSigningUp}>
+        {isSigningUp ? "LogIn Instead" : "SignUp Instead"}
+      </div>
     </form>
   );
 }
