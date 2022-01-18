@@ -1,7 +1,10 @@
+import Header from "../../components/Header/Header";
+import Title from "../../components/Title/Title";
 export default function Home() {
   return (
     <div>
-      Home
+      <Header />
+      <Title pageTitle="Projects" />
     </div>
-  )
+  );
 }
