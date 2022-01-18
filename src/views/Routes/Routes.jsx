@@ -1,19 +1,19 @@
-import { Route, Switch } from 'react-router-dom'
-import Auth from '../Auth/Auth.jsx'
-import Home from '../Home/Home.jsx'
+import { Route, Switch } from "react-router-dom";
+import Auth from "../Auth/Auth.jsx";
+import Home from "../Home/Home.jsx";
 
 export default function Routes() {
   return (
     <Switch>
-      <Route path='/login'>
+      <Route path="/login">
         <Auth />
       </Route>
-      <Route path='/signup'>
+      <Route path="/signup">
         <Auth />
       </Route>
-      <Route path='/'>
+      <Route path="/">
         <Home />
       </Route>
     </Switch>
-  )
+  );
 }
