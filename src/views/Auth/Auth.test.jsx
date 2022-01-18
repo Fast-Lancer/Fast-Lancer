@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Routes from '../Routes/Routes.jsx'
 
-jest.mock('../../users.js')
+jest.mock('../../services/users.js')
 
 it('should sign up a user', async () => {
   render(
@@ -13,7 +13,6 @@ it('should sign up a user', async () => {
 
   const usernameInput = await screen.findByText('User Name')
   const passwordInput = await screen.findByText('Password')
-  const submitButton = await screen.findByText('Sign Up')
 
-  
+
 })

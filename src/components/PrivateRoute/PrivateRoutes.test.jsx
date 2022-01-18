@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter, Route, Switch } from 'react-router-dom'
-import { UserProvider } from '../context/UserContext'
+import { UserProvider } from '../../context/UserContext'
 import PrivateRoute from './PrivateRoute.jsx'
 
 
