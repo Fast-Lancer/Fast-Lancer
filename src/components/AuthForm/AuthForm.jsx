@@ -1,12 +1,12 @@
-import Button from "../Button/Button.jsx";
-import styles from "./AuthForm.module.css";
+import Button from '../Button/Button.jsx'
+import styles from './AuthForm.module.css'
 
 export default function AuthForm({
   isSigningUp,
   handleSubmit,
   toggleIsSigningUp,
 }) {
-  const AuthText = isSigningUp ? "Sign Up" : "Log In";
+  const AuthText = isSigningUp ? 'Sign Up' : 'Log In'
 
   return (
     <form>
@@ -17,8 +17,8 @@ export default function AuthForm({
       <input type="password" name="password" />
       <Button handleClick={handleSubmit} buttonText={AuthText} />
       <div className={styles.linkButton} onClick={toggleIsSigningUp}>
-        {isSigningUp ? "LogIn Instead" : "SignUp Instead"}
+        {isSigningUp ? 'LogIn Instead' : 'SignUp Instead'}
       </div>
     </form>
-  );
+  )
 }
