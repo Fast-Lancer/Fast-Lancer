@@ -4,6 +4,6 @@ const mockUserService = {
   signUpUser: jest.fn().mockImplementation(() => ({ id: 1 })),
   signInUser: jest.fn().mockImplementation(() => ({ id: 1 })),
   signOutUser: jest.fn(),
-};
+}
 
-export default mockUserService;
+export default mockUserService
