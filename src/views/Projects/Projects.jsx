@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import ProjectItem from "../../components/ProjectItem/ProjectItem.jsx";
-import { getProjects } from "../../services/projects.js";
+import { useEffect, useState } from 'react'
+import ProjectItem from '../../components/ProjectItem/ProjectItem.jsx'
+import { getProjects } from '../../services/projects.js'
 
 export default function Projects() {
-  const [loading, setLoading] = useState(true);
-  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true)
+  const [projects, setProjects] = useState([])
 
   useEffect(() => {
     const requestProjects = async () => {
-      const req = await getProjects();
+      const req = await getProjects()
 
-      return req;
-    };
+      return req
+    }
 
-    const freshProjects = requestProjects();
-    setProjects(freshProjects);
-    setLoading(false);
-  }, []);
+    const freshProjects = requestProjects()
+    setProjects(freshProjects)
+    setLoading(false)
+  }, [])
 
   return (
     <div>
@@ -26,5 +26,5 @@ export default function Projects() {
         projects.map((project) => <ProjectItem {...{ project }} />)
       )}
     </div>
-  );
+  )
 }
