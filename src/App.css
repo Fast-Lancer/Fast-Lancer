@@ -16,6 +16,7 @@ html {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'Work Sans', sans-serif;
 }
 
 main {
@@ -67,4 +68,9 @@ li {
 	display: inline-block;
 	padding: 10px;
 	font-size: 1.2em;
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
