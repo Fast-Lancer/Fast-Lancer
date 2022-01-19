@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { signUpUser } from '../../services/users.js'
+import { signInUser, signUpUser } from '../../services/users.js'
 import { useUser } from '../../context/UserContext.jsx'
 import { useLocation } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
@@ -34,7 +34,7 @@ export default function Auth() {
       }
     } else {
       try {
-        const user = await signUpUser(email, password)
+        const user = await signInUser(email, password)
         setUser(user)
         if(wasRedirected) {
           history.goBack()

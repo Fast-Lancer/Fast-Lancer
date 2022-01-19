@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import FastLancerLogo from '../../assets/FastLancerLogo.svg'
 import { useUser } from '../../context/UserContext.jsx'
+import styles from './Header.module.css'
 
 export default function Header() {
   const { user, setUser } = useUser()
@@ -8,9 +9,11 @@ export default function Header() {
   const currentPage = location.pathname
 
   return (
-    <div>
-      <img src={FastLancerLogo} alt="fast lancer logo" />
-      <div>
+    <header className={styles.header}>
+      <div className={styles.logoDiv}>
+        <img src={FastLancerLogo} alt="fast lancer logo" />
+      </div>
+      <nav>
         {currentPage === '/login' ||
         currentPage === '/signup' ||
         currentPage === '/' ? (
@@ -29,7 +32,12 @@ export default function Header() {
             Log Out
           </Link>
         )}
+      </nav>
+      <div class={styles.hamburger}>
+        <span class={styles.bar}></span>
+        <span class={styles.bar}></span>
+        <span class={styles.bar}></span>
       </div>
-    </div>
+    </header>
   )
 }
