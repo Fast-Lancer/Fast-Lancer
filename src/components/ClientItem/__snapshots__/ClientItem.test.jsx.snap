@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the ClientItem with the client info 1`] = `
+<div>
+  <div
+    class="clientItem"
+  >
+    <div
+      class="col"
+    >
+      <h3
+        class="h3"
+      >
+        Bob Bobbertson
+      </h3>
+      <h4
+        class="h4"
+      >
+        Bobs Bobby Pins
+      </h4>
+    </div>
+    <div
+      class="col"
+    >
+      <div
+        class="row"
+      >
+        <img
+          alt="a phone icon"
+          src="phoneSmall.png"
+        />
+        (360)-222-2222
+      </div>
+      <div
+        class="row"
+      >
+        <img
+          alt="a email icon"
+          src="emailSmall.png"
+        />
+        asdf@asdf.com
+      </div>
+    </div>
+  </div>
+</div>
+`;
