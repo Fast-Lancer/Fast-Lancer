@@ -30,6 +30,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* 

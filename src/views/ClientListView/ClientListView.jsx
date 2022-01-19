@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 export default function ClientListView() {
   //state
 
@@ -8,6 +8,7 @@ export default function ClientListView() {
   return (
     <div>
       ClientListView
+      <Link to="/clients/new">New client View</Link>
     </div>
   )
 }
