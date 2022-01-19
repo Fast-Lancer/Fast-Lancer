@@ -1,7 +1,7 @@
-import { Route, Switch } from "react-router-dom";
-import Auth from "../Auth/Auth.jsx";
-import Home from "../Home/Home.jsx";
-import PrivateRoute from "../../components/PrivateRoute/PrivateRoute.jsx";
+import { Route, Switch } from 'react-router-dom'
+import Auth from '../Auth/Auth.jsx'
+import Home from '../Home/Home.jsx'
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute.jsx'
 
 export default function Routes() {
   return (
@@ -19,5 +19,5 @@ export default function Routes() {
         <Home />
       </Route>
     </Switch>
-  );
+  )
 }
