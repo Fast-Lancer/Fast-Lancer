@@ -1,12 +1,22 @@
 .projectItem {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   border-bottom: 1px black solid;
-  border-top: 1px black solid;
-  font-size: 3rem;
+  padding: 2vmax;
+}
+
+.titleSection {
+  position: relative;
+  left: 1vw;
+}
+
+.projectItem > section > * {
+  padding: 0.1vh;
+  margin: 0;
 }
 
 .clientName {
+  text-indent: 1vw;
   color: darkgray;
 }
