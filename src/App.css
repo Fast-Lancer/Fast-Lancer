@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Work+Sans:ital,wght@0,300;1,300&display=swap");
+
+/* 
+font-family: 'IBM Plex Mono', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Work Sans', sans-serif; 
+*/
+
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Work Sans', sans-serif;
+  font-size:1em;
+  background-color: lightgrey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1{ 
+  font-size: 4em;
+  display: block;
+  padding-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: block;
+}
+
+label {
+  font-size: 0.7em;
+}
+
+input {
+  display: block;
+  margin: 5px;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+li {
+	display: inline-block;
+	padding: 10px;
+	font-size: 1.2em;
 }

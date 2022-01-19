@@ -1,13 +1,13 @@
-import styles from "./Title.module.css";
-import { Link } from "react-router-dom";
+import styles from './Title.module.css'
+import { Link } from 'react-router-dom'
 
-export default function TitleNav({ pageTitle }) {
+export default function TitleNav({ pageTitle, pageHeader }) {
   switch (pageTitle) {
-    case "projects":
+    case 'projects':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={" "}>{pageTitle}</a>
+            <a href={' '}>{pageHeader}</a>
           </li>
           <li>
             <Link to="/clients">Clients</Link>
@@ -16,13 +16,13 @@ export default function TitleNav({ pageTitle }) {
             <Link to="/newproject">New Project</Link>
           </li>
         </ul>
-      );
+      )
 
-    case "clients":
+    case 'clients':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={" "}>{pageTitle}</a>
+            <a href={' '}>{pageTitle}</a>
           </li>
           <li>
             <Link to="/projects">Projects</Link>
@@ -31,13 +31,13 @@ export default function TitleNav({ pageTitle }) {
             <Link to="/newclient">New Client</Link>
           </li>
         </ul>
-      );
+      )
 
-    case "project detail":
+    case 'project detail':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={"/projects"}>Projects</a>
+            <a href={'/projects'}>Projects</a>
           </li>
           <li>
             <Link to="/clients">Clients</Link>
@@ -46,13 +46,13 @@ export default function TitleNav({ pageTitle }) {
             <Link to="/editproject">Edit Project</Link>
           </li>
         </ul>
-      );
+      )
 
-    case "client detail":
+    case 'client detail':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={"/clients"}>Clients</a>
+            <a href={'/clients'}>Clients</a>
           </li>
           <li>
             <Link to="/projects">Projects</Link>
@@ -61,33 +61,33 @@ export default function TitleNav({ pageTitle }) {
             <Link to="/editclient">Edit Client</Link>
           </li>
         </ul>
-      );
+      )
 
-    case "new-edit project":
+    case 'new-edit project':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={"/projects"}>Projects</a>
+            <a href={'/projects'}>Projects</a>
           </li>
           <li>
             <Link to="/clients">Clients</Link>
           </li>
         </ul>
-      );
+      )
 
-    case "new-edit client":
+    case 'new-edit client':
       return (
         <ul className={styles.tabnav}>
           <li className={styles.active}>
-            <a href={"/clients"}>Clients</a>
+            <a href={'/clients'}>Clients</a>
           </li>
           <li>
             <Link to="/projects">Projects</Link>
           </li>
         </ul>
-      );
+      )
 
     default:
-      return "err";
+      return 'err'
   }
 }
