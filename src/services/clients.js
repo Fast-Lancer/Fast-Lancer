@@ -1,7 +1,7 @@
 import { supaClient, parseData } from './supaClient'
 
 export async function getClients() {
-  const request = await supaClient.from('clients').select()
+  const request = await supaClient.from('clients').select('*')
   return parseData(request)
 }
 

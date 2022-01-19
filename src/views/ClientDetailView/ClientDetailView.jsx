@@ -1,19 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ClientDetail from '../../components/ClientDetail/ClientDetail.jsx'
+import Title from '../../components/Title/Title.jsx'
+import { getClient, getClients } from '../../services/clients.js'
+import { getProjectsByClient } from '../../services/projects.js'
 
 export default function ClientDetailView() {
-  const { id } = useParams() // We can use something other than id if needed
+  const { id } = useParams()
+  const [client, setClient] = useState({})
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // get details
+    Promise.all([getClient(id), getProjectsByClient(id)])
+      .then(([client, projects]) => {
+        setClient({ ...client, projects })
+      })
+      .catch(e => console.error(e))
+      .finally(() => setLoading(false))
   }, [])
   
-  // render ClientDetail with data from state
   return (
     <div>
-      ClientDetailView
-      <ClientDetail />
+      {
+        loading
+          ? <h1>Loading...</h1>
+          : <div>
+            <Title pageTitle='client detail' pageHeader={client.client_name} />
+            <ClientDetail client={client}/>
+          </div>
+      }
     </div>
   )
 }
