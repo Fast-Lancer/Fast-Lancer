@@ -33,10 +33,10 @@ export default function Header() {
           </Link>
         )}
       </nav>
-      <div class={styles.hamburger}>
-        <span class={styles.bar}></span>
-        <span class={styles.bar}></span>
-        <span class={styles.bar}></span>
+      <div className={styles.hamburger}>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
+        <span className={styles.bar}></span>
       </div>
     </header>
   )
