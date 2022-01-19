@@ -5,6 +5,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx'
 import ClientListView from '../../views/ClientListView/ClientListView.jsx'
 import ClientDetailView from '../../views/ClientDetailView/ClientDetailView.jsx'
 import About from '../../views/About/About.jsx'
+import NewEditClient from '../../views/NewEditClient/NewEditClient.jsx'
 import ProjectDetailView from '../../views/Projects/ProjectDetailView.jsx'
 import ProjectListView from '../../views/Projects/ProjectListView.jsx'
 
@@ -17,22 +18,31 @@ export default function Routes() {
       <PrivateRoute exact path='/projects'>
         <ProjectListView />
       </PrivateRoute>
-      <PrivateRoute path='/clients/:id'>
+
+      {/* MAKE PRIVATE: */}
+      <Route exact path='/clients/edit/:id' >
+        <NewEditClient />
+      </Route>
+      {/* MAKE PRIVATE: */}
+      <Route exact path='/clients/new' >
+        <NewEditClient isNew/>
+      </Route>
+      <PrivateRoute exact path='/clients/:id'>
         <ClientDetailView />
       </PrivateRoute>
-      <PrivateRoute path='/clients'>
+      <PrivateRoute exact path='/clients'>
         <ClientListView />
       </PrivateRoute>
-      <Route path='/login'>
+      <Route exact path='/login'>
         <Auth />
       </Route>
-      <Route path='/signup'>
+      <Route exact path='/signup'>
         <Auth />
       </Route>
-      <Route path='/about'>
+      <Route exact path='/about'>
         <About />
       </Route>
-      <Route path='/'>
+      <Route exact path='/'>
         <Home />
       </Route>
     </Switch>
