@@ -5,16 +5,16 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx'
 import ClientListView from '../../views/ClientListView/ClientListView.jsx'
 import ClientDetailView from '../../views/ClientDetailView/ClientDetailView.jsx'
 import About from '../../views/About/About.jsx'
-import ProjectDetaiView from '../../views/Projects/ProjectDetailView.jsx'
+import ProjectDetailView from '../../views/Projects/ProjectDetailView.jsx'
 import ProjectListView from '../../views/Projects/ProjectListView.jsx'
 
 export default function Routes() {
   return (
     <Switch>
-      <PrivateRoute path='/projects/:id'>
-        <ProjectDetaiView />
+      <PrivateRoute exact path='/projects/:id'>
+        <ProjectDetailView />
       </PrivateRoute>
-      <PrivateRoute path='/projects'>
+      <PrivateRoute exact path='/projects'>
         <ProjectListView />
       </PrivateRoute>
       <PrivateRoute path='/clients/:id'>
