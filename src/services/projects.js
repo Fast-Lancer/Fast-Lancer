@@ -21,3 +21,14 @@ export async function getProjectById(id) {
 
   return data
 }
+
+export async function getProjectsByClient(client_id) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .select('*')
+    .eq('client_id', client_id)
+
+  if (error) throw Error
+
+  return data
+}
