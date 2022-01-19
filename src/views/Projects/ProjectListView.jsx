@@ -16,7 +16,6 @@ export default function ProjectListView() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-
         projects.map((project) => <Link key={project.id} to={`/projects/${project.id}`}><ProjectItem key={project.id}  project={project}  />
         </Link>)
       )}

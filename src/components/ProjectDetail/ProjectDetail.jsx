@@ -1,9 +1,10 @@
+import { getProjectsByClient } from '../../services/projects.js'
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail({ project }) {
-  const { hourly_rate, URL, date_start, date_end, description, notes, clients } = project
+  const { hourly_rate, URL, date_start, date_end, description, notes, clients, client_id } = project
 
-  return <main className={styles.mainSection}>
+  return <main>
     {clients && <div className={styles.clientName}><h1>{clients?.name}</h1></div>}
     <section className={styles.infoSection}>
       <h2>Hourly Rate: {hourly_rate}</h2>
