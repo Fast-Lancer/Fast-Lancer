@@ -1,6 +1,8 @@
 import styles from './ClientDetail.module.css'
 import phoneIcon from '../../assets/icons/phoneSmall.png'
 import emailIcon from '../../assets/icons/emailSmall.png'
+import paletteIcon from '../../assets/icons/paletteSmall.png'
+import { Link } from 'react-router-dom'
 
 export default function ClientDetail({ client }) {
   const {
@@ -29,13 +31,20 @@ export default function ClientDetail({ client }) {
         </div>
         <div className={styles.col}>
           <div className={styles.row}>
-            <img src={phoneIcon} alt='a phone icon' />
-            {phone}
+            <img src={paletteIcon} alt='a palette icon' />
+            Client Projects
           </div>
-          <div className={styles.row}>
-            <img src={emailIcon} alt='an email icon' />
-            {email}
-          </div>
+          <ul className={styles.linkList}>
+            {
+              client.projects.map((project) => (
+                <li key={project.id}>
+                  <Link to={`/projects/${project.id}`}>
+                    {project.title}
+                  </Link>
+                </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
       <div>
