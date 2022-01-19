@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { useHistory } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { MemoryRouter } from 'react-router-dom'
-import Routes from '../Routes/Routes.jsx'
+import Routes from '../../components/Routes/Routes.jsx'
 
 jest.mock('../../services/users.js')
 
