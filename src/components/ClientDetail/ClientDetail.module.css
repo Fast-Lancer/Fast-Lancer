@@ -1,11 +1,31 @@
 .clientDetail {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: spread;
+  background-color: #d3d3d3;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+}
+
+.clientDetail > * {
+  padding: 10px;
+}
+
+.twoColRow {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #d3d3d3;
   padding: .2em;
   border-bottom: 1px solid black;
+  font-size: 18px;
+  width: 100%;
+}
+
+.twoColRow > * {
+  padding: 10px;
 }
 
 .col {
@@ -24,10 +44,17 @@
   gap: 5px;
 }
 
+.row > * {
+  margin: 5px;
+}
+
 .h3 {
-  margin: .1em 0px;
   font-family: 'Playfair Display', serif;
   font-size: 28px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
 
 .h4 {
@@ -37,3 +64,7 @@
   margin-left: .4em;
 }
 
+.notesDiv {
+  margin: 10px;
+  text-align: center;
+}

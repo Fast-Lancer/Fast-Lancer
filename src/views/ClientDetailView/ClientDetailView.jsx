@@ -22,7 +22,7 @@ export default function ClientDetailView() {
         loading
           ? <h1>Loading...</h1>
           : <div>
-            <Title pageTitle='client detail' pageHeader={client.name} />
+            <Title pageTitle='client detail' pageHeader={client.client_name} />
             <ClientDetail client={client}/>
           </div>
       }

@@ -12,27 +12,40 @@ export default function ClientDetail({ client }) {
   } = client
 
   return (
-    <div className={styles.clientItem}>
-      <div className={styles.col}>
-        <h3 className={styles.h3}>
-          {name}
-        </h3>
-        <h4 className={styles.h4}>
-          {businessName}
-        </h4>
-      </div>
-      <div className={styles.col}>
-        <div className={styles.row}>
-          <img src={phoneIcon} alt='a phone icon' />
-          {phone}
+    <div className={styles.clientDetail}>
+      <h3 className={styles.h3}>
+        {businessName}
+      </h3>
+      <div className={styles.twoColRow}>
+        <div className={styles.col}>
+          <div className={styles.row}>
+            <img src={phoneIcon} alt='a phone icon' />
+            {phone}
+          </div>
+          <div className={styles.row}>
+            <img src={emailIcon} alt='an email icon' />
+            {email}
+          </div>
         </div>
-        <div className={styles.row}>
-          <img src={emailIcon} alt='a email icon' />
-          {email}
+        <div className={styles.col}>
+          <div className={styles.row}>
+            <img src={phoneIcon} alt='a phone icon' />
+            {phone}
+          </div>
+          <div className={styles.row}>
+            <img src={emailIcon} alt='an email icon' />
+            {email}
+          </div>
         </div>
       </div>
       <div>
-        {notes}
+        <div className={styles.row}>
+          <img src={emailIcon} alt='a notes icon' />
+          Notes
+        </div>
+        <div className={styles.notesDiv}>
+          {notes ?? 'No notes entered.'}
+        </div>
       </div>
     </div>
   )
