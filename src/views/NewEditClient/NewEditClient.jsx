@@ -13,8 +13,10 @@ export default function NewEditClient({ isNew = false }) {
   // /clients/edit/:id
   // -getClient(id)
   // edit form w values
-  // onS
-    
+  // onSubmit update client
+
+  // New Flow
+  // from
 
   // useEffect(() => {
   //   const client = getClient(id)
