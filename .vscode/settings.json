@@ -5,6 +5,7 @@
 		"newclient",
 		"newproject",
 		"signup",
+		"supa",
 		"tabnav"
 	],
 	"eslint.format.enable": true
