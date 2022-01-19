@@ -1,5 +1,5 @@
-import styles from "./Title.module.css";
-import TitleNav from "./TitleNav";
+import styles from './Title.module.css'
+import TitleNav from './TitleNav'
 
 export default function Title({ pageTitle }) {
   return (
@@ -7,5 +7,5 @@ export default function Title({ pageTitle }) {
       <section className={styles.title}>{pageTitle}</section>
       <TitleNav pageTitle={pageTitle} />
     </div>
-  );
+  )
 }

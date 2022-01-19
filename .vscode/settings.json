@@ -1,10 +1,11 @@
 {
-  "cSpell.words": [
-    "editclient",
-    "editproject",
-    "newclient",
-    "newproject",
-    "signup",
-    "tabnav"
-  ]
+	"cSpell.words": [
+		"editclient",
+		"editproject",
+		"newclient",
+		"newproject",
+		"signup",
+		"tabnav"
+	],
+	"eslint.format.enable": true
 }
