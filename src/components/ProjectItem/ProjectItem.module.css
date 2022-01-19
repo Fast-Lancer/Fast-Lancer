@@ -1,0 +1,12 @@
+.projectItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+  font-size: 3rem;
+}
+
+.clientName {
+  color: darkgray;
+}
