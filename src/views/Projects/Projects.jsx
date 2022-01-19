@@ -7,15 +7,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    const requestProjects = async () => {
-      const req = await getProjects()
-
-      return req
-    }
-
-    const freshProjects = requestProjects()
-    setProjects(freshProjects)
-    setLoading(false)
+    getProjects().then(setProjects).finally(() => setLoading(false))
   }, [])
 
   return (
@@ -23,7 +15,8 @@ export default function Projects() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        projects.map((project) => <ProjectItem {...{ project }} />)
+
+        projects.map((project) => <ProjectItem key={project.id}  project={project}  />)
       )}
     </div>
   )

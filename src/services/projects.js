@@ -1,17 +1,17 @@
 import { supaClient } from './supaClient.js'
 
 export async function getProjects() {
-  const { projects, error } = await supaClient
+  const { data, error } = await supaClient
     .from('projects')
     .select('*, clients (name)')
 
   if (error) throw Error
 
-  return projects
+  return data
 }
 
 export async function getProjectById(id) {
-  const { project, error } = await supaClient
+  const { data, error } = await supaClient
     .from('projects')
     .select('*, clients (name)')
     .match({ id })
@@ -19,5 +19,5 @@ export async function getProjectById(id) {
 
   if (error) throw Error
 
-  return project
+  return data
 }
