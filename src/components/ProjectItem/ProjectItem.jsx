@@ -5,7 +5,7 @@ export default function ProjectItem({ project }) {
     <div className={styles.projectItem}>
       <section className={styles.titleSection}>
         <h1>{project.title}</h1>
-        <h3 className={styles.clientName}>{project.clients.name}</h3>
+        <h2 className={styles.clientName}>{project.clients.name}</h2>
       </section>
       <section>
         <div>Hourly Rate: {project.hourly_rate}</div>

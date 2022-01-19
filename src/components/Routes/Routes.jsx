@@ -2,16 +2,20 @@ import { Route, Switch } from 'react-router-dom'
 import Auth from '../../views/Auth/Auth.jsx'
 import Home from '../../views/Home/Home.jsx'
 import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx'
-import Projects from '../../views/Projects/Projects.jsx'
 import ClientListView from '../../views/ClientListView/ClientListView.jsx'
 import ClientDetailView from '../../views/ClientDetailView/ClientDetailView.jsx'
 import About from '../../views/About/About.jsx'
+import ProjectDetaiView from '../../views/Projects/ProjectDetailView.jsx'
+import ProjectListView from '../../views/Projects/ProjectListView.jsx'
 
 export default function Routes() {
   return (
     <Switch>
+      <PrivateRoute path='/projects/:id'>
+        <ProjectDetaiView />
+      </PrivateRoute>
       <PrivateRoute path='/projects'>
-        <Projects />
+        <ProjectListView />
       </PrivateRoute>
       <PrivateRoute path='/clients/:id'>
         <ClientDetailView />
