@@ -1,15 +1,16 @@
 import { BrowserRouter } from 'react-router-dom'
-import './App.css'
-import Header from './components/Header/Header.jsx'
 import { UserProvider } from './context/UserContext.jsx'
 import Routes from './views/Routes/Routes.jsx'
+import Layout from './components/Layout/Layout.jsx'
+import './App.css'
 
 function App() {
   return (
     <UserProvider>
       <BrowserRouter>
-        <Header />
-        <Routes />
+        <Layout>
+          <Routes />
+        </Layout>
       </BrowserRouter>
     </UserProvider>
   )
