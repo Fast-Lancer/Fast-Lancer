@@ -1,19 +1,26 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import FastLancerLogo from '../../assets/FastLancerLogo.svg'
 import { useUser } from '../../context/UserContext.jsx'
 import styles from './Header.module.css'
 
 export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false)
   const { user, setUser } = useUser()
   const location = useLocation()
   const currentPage = location.pathname
+  const barClassName = isNavOpen ? `${styles.bar} ${styles.active}` : styles.bar
+
+  function handleHamburgerClick() {
+    setIsNavOpen(prev => !prev)
+  }
 
   return (
     <header className={styles.header}>
       <div className={styles.logoDiv}>
         <img src={FastLancerLogo} alt="fast lancer logo" />
       </div>
-      <nav>
+      <nav className={isNavOpen ? styles.active : ''}>
         {currentPage === '/login' ||
         currentPage === '/signup' ||
         currentPage === '/' ? (
@@ -33,11 +40,11 @@ export default function Header() {
           </Link>
         )}
       </nav>
-      <div className={styles.hamburger}>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-      </div>
+      <button className={styles.hamburger} onClick={handleHamburgerClick}>
+        <span className={barClassName}></span>
+        <span className={barClassName}></span>
+        <span className={barClassName}></span>
+      </button>
     </header>
   )
 }
