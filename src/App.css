@@ -75,7 +75,7 @@ form {
 
 input {
 	display: block;
-	width: 100%;
+	width: 16em;
 	padding: 5px;
 	font-size: 1.25em;
 	font-family: 'Work Sans', sans-serif;

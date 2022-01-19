@@ -18,9 +18,9 @@ export async function updateClient({ client_name, email, phone, business_name, n
   return parseData(request)
 }
 
-export async function createClient({ client_name, email, phone, business_name, notes }) {
+export async function createClient({ client_name, email, phone, business_name, notes, user_id }) {
   const request = await supaClient
     .from('clients')
-    .insert({ client_name, email, phone, business_name, notes })
+    .insert([{ client_name, email, phone, business_name, notes, user_id }])
   return parseData(request)
 }
