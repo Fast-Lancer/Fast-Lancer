@@ -1,24 +1,31 @@
-import Button from "../Button/Button.jsx";
-import styles from "./AuthForm.module.css";
+import { useState } from 'react'
+import Button from '../Button/Button.jsx'
+import styles from './AuthForm.module.css'
 
 export default function AuthForm({
   isSigningUp,
   handleSubmit,
   toggleIsSigningUp,
 }) {
-  const AuthText = isSigningUp ? "Sign Up" : "Log In";
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const AuthText = isSigningUp ? 'Sign Up' : 'Log In'
 
   return (
-    <form>
+    <div>
       <h1>{AuthText}</h1>
-      <label htmlFor="username">User Name</label>
-      <input type="text" name="username" />
-      <label htmlFor="password">Password</label>
-      <input type="password" name="password" />
-      <Button handleClick={handleSubmit} buttonText={AuthText} />
+      <label>
+        Email:
+        <input value={email} onChange={({ target }) => setEmail(target.value)}/>
+      </label>
+      <label>
+        Password:
+        <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />
+      </label>
+      <Button handleClick={() => handleSubmit(email, password)} buttonText={AuthText} />
       <div className={styles.linkButton} onClick={toggleIsSigningUp}>
-        {isSigningUp ? "LogIn Instead" : "SignUp Instead"}
+        {isSigningUp ? 'Log In Instead' : 'Sign Up Instead'}
       </div>
-    </form>
-  );
+    </div>
+  )
 }
