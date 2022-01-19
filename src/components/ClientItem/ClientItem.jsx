@@ -4,7 +4,7 @@ import emailIcon from '../../assets/icons/emailSmall.png'
 
 export default function ClientItem({ client }) {
   const {
-    name,
+    client_name: name,
     email,
     phone,
     business_name: businessName

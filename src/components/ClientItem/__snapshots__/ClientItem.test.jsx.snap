@@ -10,9 +10,7 @@ exports[`should render the ClientItem with the client info 1`] = `
     >
       <h3
         class="h3"
-      >
-        Bob Bobbertson
-      </h3>
+      />
       <h4
         class="h4"
       >

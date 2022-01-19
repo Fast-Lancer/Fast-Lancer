@@ -1,14 +1,27 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import ClientItem from '../../components/ClientItem/ClientItem.jsx'
+import Title from '../../components/Title/Title.jsx'
+import { getClients } from '../../services/clients.js'
+
 export default function ClientListView() {
-  //state
+  const [loading, setLoading] = useState(true)
+  const [clients, setClients] = useState([])
 
-  //useEffect to get data
+  useEffect(() => {
+    getClients().then(setClients).finally(() => setLoading(false))
+  }, [])
 
-  //render ClientItems with data from state
+  if(loading) return <h1>Loading...</h1>
+
   return (
     <div>
-      ClientListView
-      <Link to="/clients/new">New client View</Link>
+      <Title pageTitle='clients' pageHeader='Clients' />
+      {clients.map((client) => (
+        <Link key={client.id} to={`/clients/${client.id}`}>
+          <ClientItem key={client.id}  client={client}  />
+        </Link>
+      ))}
     </div>
   )
 }
