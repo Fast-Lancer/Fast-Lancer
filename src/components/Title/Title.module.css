@@ -13,20 +13,6 @@ font-family: 'Work Sans', sans-serif;
   align-items: center;
 }
 
-/* a:link,
-:visited,
-:active {
-  text-decoration: none;
-  color: white;
-} */
-/* does a weird thing w non-linked text color ? */
-
-/* a:hover {
-  text-decoration: none;
-  color: lightgrey;
-  cursor: pointer;
-} */
-
 ul {
   list-style: none;
 }
@@ -37,6 +23,7 @@ ul {
   padding-bottom: 40px;
   font-family: "Playfair Display", serif;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .tabnav {
@@ -54,7 +41,7 @@ https://css-tricks.com/tabs-with-round-out-borders/
   /* Makes a horizontal row */
   float: left;
 
-  /* So the psueudo elements can be
+  /* So the pseudo elements can be
      abs. positioned inside */
   position: relative;
 }
@@ -158,17 +145,3 @@ https://css-tricks.com/tabs-with-round-out-borders/
 .tabnav li a:after {
   right: -20px;
 }
-
-/* .tab1 {
-  background-color: lightgrey;
-  border-radius: 12px;
-  padding: 15px;
-}
-
-.tab2 {
-  background-color: darkgrey;
-  color: white;
-  border-radius: 12px;
-  padding: 15px;
-}
-*/
