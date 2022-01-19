@@ -12,10 +12,10 @@ import ProjectListView from '../../views/Projects/ProjectListView.jsx'
 export default function Routes() {
   return (
     <Switch>
-      <PrivateRoute path='/projects/:id'>
+      <PrivateRoute exact path='/projects/:id'>
         <ProjectDetailView />
       </PrivateRoute>
-      <PrivateRoute path='/projects'>
+      <PrivateRoute exact path='/projects'>
         <ProjectListView />
       </PrivateRoute>
 
