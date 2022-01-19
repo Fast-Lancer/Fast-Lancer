@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Work+Sans:ital,wght@0,300;1,300&display=swap");
+
+/* 
+font-family: 'IBM Plex Mono', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Work Sans', sans-serif; 
+*/
+
+.titleBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.title {
+  font-size: 4em;
+  display: block;
+  padding-bottom: 40px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.tabnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+From CSS Tricks: (below)
+https://css-tricks.com/tabs-with-round-out-borders/ 
+*/
+
+.tabnav li {
+  /* Makes a horizontal row */
+  float: left;
+
+  /* So the pseudo elements can be
+     abs. positioned inside */
+  position: relative;
+}
+.tabnav a {
+  /* Make them block level
+     and only as wide as they need */
+  float: left;
+  padding: 10px 40px;
+  text-decoration: none;
+
+  /* Default colors */
+  color: black;
+  background: grey;
+
+  /* Only round the top corners */
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.tabnav .active {
+  /* Highest, active tab is on top */
+  z-index: 3;
+}
+.tabnav .active a {
+  /* Colors when tab is active */
+  background: lightGrey;
+  color: black;
+}
+.tabnav li:before,
+.tabnav li:after,
+.tabnav li a:before,
+.tabnav li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+}
+/* Only the first, last, and active
+   tabs need pseudo elements at all */
+.tabnav li:last-child:after,
+.tabnav li:last-child a:after,
+.tabnav li:first-child:before,
+.tabnav li:first-child a:before,
+.tabnav .active:after,
+.tabnav .active:before,
+.tabnav .active a:after,
+.tabnav .active a:before {
+  content: "";
+}
+.tabnav .active:before,
+.tabnav .active:after {
+  background: lightgrey;
+
+  /* Squares below circles */
+  z-index: 1;
+}
+/* Squares */
+.tabnav li:before,
+.tabnav li:after {
+  background: lightgrey;
+  width: 10px;
+  height: 10px;
+}
+.tabnav li:before {
+  left: -10px;
+}
+.tabnav li:after {
+  right: -10px;
+}
+/* Circles */
+.tabnav li a:after,
+.tabnav li a:before {
+  width: 20px;
+  height: 20px;
+  /* Circles are circular */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: white;
+
+  /* Circles over squares */
+  z-index: 2;
+}
+.tabnav .active a:after,
+.tabnav .active a:before {
+  background: grey;
+}
+/* First and last tabs have different
+   outside color needs */
+.tabnav li:first-child.active a:before,
+.tabnav li:last-child.active a:after {
+  background: white;
+}
+.tabnav li a:before {
+  left: -20px;
+}
+.tabnav li a:after {
+  right: -20px;
+}
