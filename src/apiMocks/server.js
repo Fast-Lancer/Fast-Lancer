@@ -3,6 +3,8 @@ import { setupServer } from 'msw/node'
 
 const url = process.env.REACT_APP_SUPABASE_URL + '/rest/v1'
 
+let postedClient = {}
+
 export const server = setupServer(
   rest.get(url + '/clients', (req, res, ctx) => {
     const select = req.url.searchParams.get('select')
@@ -30,19 +32,37 @@ export const server = setupServer(
       )
     } else if(id) {
       // response for getClient(id)
-      return res(
-        ctx.json([
-          {
-            id: 1,
-            client_name: 'bob1',
-            business_name: 'business1',
-            email:'email@email.com',
-            phone:'123456',
-            notes: 'bobby 1 is cooler than bobby 2'
-          }
-        ])
-      )
+      if(id === 'eq.42') {
+        // Janky workaround to make testing edit/create possible.
+        // The post route mock will set the id to 42
+        // So this responds with the posted data when client.id is 42
+        return res(
+          ctx.json(
+            postedClient
+          )
+        )
+      } else {
+        return res(
+          ctx.json(
+            {
+              id: 1,
+              client_name: 'bob1',
+              business_name: 'business1'
+            }
+          )
+        )
+      }
     }
+  }),
+  rest.post(url + '/clients', (req, res, ctx) => {
+    let [client] = req.body
+    client = { ...client, id: 42 }
+    postedClient = client
+    return res(
+      ctx.json([
+        client
+      ])
+    )
   }),
   rest.get(url + '/projects', (req, res, ctx) => {
     const select = req.url.searchParams.get('select')

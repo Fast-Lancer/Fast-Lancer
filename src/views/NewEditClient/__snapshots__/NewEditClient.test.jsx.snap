@@ -1,216 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the EDIT Client view 1`] = `
+exports[`should render the fetched data 1`] = `
 <div>
   <div>
-    <div
-      class="titleBody"
-    >
-      <section
-        class="title"
+    <div>
+      <div
+        class="titleBody"
       >
-        Update Client
-      </section>
-      <ul
-        class="tabnav"
-      >
-        <li
-          class="active"
+        <section
+          class="title"
         >
-          <a
-            href="/clients"
-          >
-            Clients
-          </a>
-        </li>
-        <li>
-          <a
-            href="/projects"
-          >
-            Projects
-          </a>
-        </li>
-      </ul>
-    </div>
-    <main>
-      <div>
-        <h2>
-          Edit Client
-        </h2>
-        <fieldset>
-          <form>
-            <label
-              for="client_name"
-            >
-              Client Name
-            </label>
-            <input
-              id="client_name"
-              required=""
-              type="text"
-              value=""
-            />
-            <label
-              for="email"
-            >
-              E-Mail
-            </label>
-            <input
-              id="email"
-              required=""
-              type="email"
-              value=""
-            />
-            <label
-              for="phone"
-            >
-              Phone Number
-            </label>
-            <input
-              id="phone"
-              required=""
-              type="text"
-              value=""
-            />
-            <label
-              for="business_name"
-            >
-              Business Name
-            </label>
-            <input
-              id="business_name"
-              placeholder="Optional"
-              type="text"
-              value=""
-            />
-            <label
-              for="notes"
-            >
-              Notes
-            </label>
-            <textarea
-              id="notes"
-              placeholder="Optional"
-            />
-            <button
-              type="submit"
-            >
-              Save
-            </button>
-          </form>
-          <section>
-            <button>
-              DELETE CLIENT
-            </button>
-          </section>
-        </fieldset>
-      </div>
-    </main>
-  </div>
-</div>
-`;
-
-exports[`should render the New Client view 1`] = `
-<div>
-  <div>
-    <div
-      class="titleBody"
-    >
-      <section
-        class="title"
-      >
-        Create New Client
-      </section>
-      <ul
-        class="tabnav"
-      >
-        <li
-          class="active"
+          bobs name
+        </section>
+        <ul
+          class="tabnav"
         >
-          <a
-            href="/clients"
+          <li
+            class="active"
           >
-            Clients
-          </a>
-        </li>
-        <li>
-          <a
-            href="/projects"
-          >
-            Projects
-          </a>
-        </li>
-      </ul>
-    </div>
-    <main>
-      <div>
-        <h2>
-          Client Details
-        </h2>
-        <fieldset>
-          <form>
-            <label
-              for="client_name"
+            <a
+              href="/clients"
             >
-              Client Name
-            </label>
-            <input
-              id="client_name"
-              required=""
-              type="text"
-              value=""
-            />
-            <label
-              for="email"
+              Clients
+            </a>
+          </li>
+          <li>
+            <a
+              href="/projects"
             >
-              E-Mail
-            </label>
-            <input
-              id="email"
-              required=""
-              type="email"
-              value=""
-            />
-            <label
-              for="phone"
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="/clients/edit/42"
             >
-              Phone Number
-            </label>
-            <input
-              id="phone"
-              required=""
-              type="number"
-              value=""
-            />
-            <label
-              for="business_name"
-            >
-              Business Name
-            </label>
-            <input
-              id="business_name"
-              placeholder="Optional"
-              type="text"
-              value=""
-            />
-            <label
-              for="notes"
-            >
-              Notes
-            </label>
-            <textarea
-              id="notes"
-              placeholder="Optional"
-            />
-            <button
-              type="submit"
-            >
-              Save
-            </button>
-          </form>
-        </fieldset>
+              Edit Client
+            </a>
+          </li>
+        </ul>
       </div>
-    </main>
+      <div
+        class="clientDetail"
+      >
+        <h3
+          class="h3"
+        >
+          bobs business
+        </h3>
+        <div
+          class="twoColRow"
+        >
+          <div
+            class="col"
+          >
+            <div
+              class="row"
+            >
+              <img
+                alt="a phone icon"
+                src="phoneSmall.png"
+              />
+              123
+            </div>
+            <div
+              class="row"
+            >
+              <img
+                alt="an email icon"
+                src="emailSmall.png"
+              />
+              bob@bob.com
+            </div>
+          </div>
+          <div
+            class="col"
+          >
+            <div
+              class="row"
+            >
+              <img
+                alt="a palette icon"
+                src="paletteSmall.png"
+              />
+              Client Projects
+            </div>
+            <ul
+              class="linkList"
+            >
+              <li>
+                <a
+                  href="/projects/1"
+                >
+                  project1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/projects/2"
+                >
+                  project2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/projects/3"
+                >
+                  project3
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div
+            class="row"
+          >
+            <img
+              alt="a notes icon"
+              src="emailSmall.png"
+            />
+            Notes
+          </div>
+          <div
+            class="notesDiv"
+          >
+            note
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;

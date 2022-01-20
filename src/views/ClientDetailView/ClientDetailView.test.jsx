@@ -27,10 +27,9 @@ it('should render the fetched data', async () => {
 
   await screen.findByText('Notes')
 
-  // This bob came from the mocked service
-  waitFor(() => screen.findByText(/business1/), {
-    timeout: 5000
-  })
+  // This text comes from the mocked service
+  await screen.findByText('bob1')
+  await screen.findByText('business1')
 
   expect(container).toMatchSnapshot()
 })
