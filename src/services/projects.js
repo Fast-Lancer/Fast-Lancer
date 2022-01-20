@@ -38,7 +38,6 @@ export async function createProject(project) {
   const { data, error } = await supaClient
     .from('projects')
     .insert(project)
- 
       
   if (error) throw Error
     
@@ -53,6 +52,17 @@ export async function updateProject(project) {
   
   if (error) throw Error
     
+  return data
+}
+
+export async function deleteProjectById(id) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .delete()
+    .match({ id })
+
+  if (error) throw Error
+
   return data
 }
 
