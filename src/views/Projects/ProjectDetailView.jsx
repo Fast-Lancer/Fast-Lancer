@@ -12,8 +12,6 @@ export default function ProjectDetailView() {
 
   useEffect(() => {
     getProjectById(id).then(setProject).finally(() => setLoading(false))
-
-    
   }, [])
 
   return <div>
@@ -21,7 +19,7 @@ export default function ProjectDetailView() {
       loading
         ? <h1>Loading...</h1>
         : <div>
-          <Title pageTitle='clients' pageHeader={project.title} />
+          <Title pageTitle='project detail' pageHeader={project.title} />
           <ProjectDetail project={project} />
         </div>
     }

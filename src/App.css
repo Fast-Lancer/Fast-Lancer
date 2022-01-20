@@ -22,8 +22,6 @@ html {
 main {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1em;
 	background-color: lightgrey;
