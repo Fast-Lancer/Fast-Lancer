@@ -25,15 +25,12 @@ export default function Routes() {
       <PrivateRoute exact path='/projects'>
         <ProjectListView />
       </PrivateRoute>
-
-      {/* MAKE PRIVATE: */}
-      <Route exact path='/clients/edit/:id' >
+      <PrivateRoute exact path='/clients/edit/:id' >
         <NewEditClient />
-      </Route>
-      {/* MAKE PRIVATE: */}
-      <Route exact path='/clients/newclient' >
+      </PrivateRoute>
+      <PrivateRoute exact path='/clients/newclient' >
         <NewEditClient isNew/>
-      </Route>
+      </PrivateRoute>
       <PrivateRoute exact path='/clients/:id'>
         <ClientDetailView />
       </PrivateRoute>

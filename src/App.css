@@ -53,6 +53,7 @@ fieldset {
   margin-top: 1em;
   padding-bottom: 2em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -97,6 +98,10 @@ button {
   font-weight: 700;
   background-color: white;
   border: 1px solid black;
+}
+
+.deleteButton {
+  background-color: red;
 }
 
 button:hover {

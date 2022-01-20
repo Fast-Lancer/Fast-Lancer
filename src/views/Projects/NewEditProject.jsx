@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
-import ProjectForm from '../../components/ProjectForm.jsx'
-import { createProject, getProjectNoClient, updateProject } from '../../services/projects.js'
+import Button from '../../components/Button/Button.jsx'
+import ProjectForm from '../../components/ProjectForm/ProjectForm.jsx'
+import { getClients } from '../../services/clients.js'
+import { createProject, deleteProjectById, getProjectNoClient, updateProject } from '../../services/projects.js'
 import changeValue from '../../utils/changeValue.js'
 
 export default function NewEditProject() {
@@ -15,14 +17,9 @@ export default function NewEditProject() {
   })
 
   const [loading, setLoading] = useState(true)
+  const [clientsAvailable, setClientsAvailable] = useState([{ client_name: '', id: '' }])
 
   const { id } = useParams()
-
-  useEffect(() => {
-    if (!isCreate) {
-      getProjectNoClient(id).then(proj => changeValue(proj, '')).then(setInitialValues).finally(() => setLoading(false))
-    }
-  }, [])
 
   const handleProject = async (form) => {
     try{
@@ -35,10 +32,23 @@ export default function NewEditProject() {
     }
   }
 
+  const handleClick = () => {
+    // setTimeout so /projects reloads with updated information after delete
+    deleteProjectById(id).then(() => setTimeout(() => {history.replace('/projects')}, 100))
+  }
+
+  useEffect(() => {
+    if (!isCreate) {
+      getProjectNoClient(id).then(proj => changeValue(proj, '')).then(setInitialValues)
+    }
+    getClients().then(setClientsAvailable).finally(() => setLoading(false))
+  }, [])
+
   return <div>
     {loading
       ? <h1>Loading...</h1>
-      : <ProjectForm {...{ handleProject, isCreate, initialValues }}/>
+      : <ProjectForm {...{ handleProject, clientsAvailable, initialValues }}/>
     }
+    {!isCreate && <Button handleClick={handleClick} buttonText={'Delete'}/>}
   </div>
 }

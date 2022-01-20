@@ -1,29 +1,22 @@
-import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { updateClient, createClient, getClients } from '../../services/clients'
+import { updateClient, createClient } from '../../services/clients'
 import Title from '../../components/Title/Title'
-import NewEditForm from '../../components/NewEditForm/NewEditForm'
+import EditClientForm from '../../components/ClientNewEditForm/EditClientForm'
+import NewClientForm from '../../components/ClientNewEditForm/NewClientForm'
 
 
 export default function NewEditClient({ isNew = false }) {
-  // const [clients, setClients] = useState([])
   const history = useHistory()
-  
-  // useEffect(() => {
-  //   const clients = getClients()
-  //   setClients(clients)
-  // }, [])
-
   let client
 
-  const formSubmit = async ({ client_name, email, phone, business_name, notes, user_id }) => {
+  const formSubmit = async ({ client_name, email, phone, business_name, notes, user_id, id }) => {
     try {
       if (isNew) {
         client = await createClient({ client_name, email, phone, business_name, notes, user_id })
         history.push(`/clients/${client.id}`)
       } else {
-        client = await updateClient({ client_name, email, phone, business_name, notes, user_id })
-        history.push(`/clients/${client.id}`)
+        client = await updateClient({ client_name, email, phone, business_name, notes, user_id, id })
+        history.push(`/clients/${id}`)
       }
     } catch (error) {
       throw error
@@ -31,13 +24,9 @@ export default function NewEditClient({ isNew = false }) {
   }
 
   return <div>
-    <Title pageTitle='new-edit client' pageHeader='New-Edit Client'/>
+    <Title pageTitle='new-edit client' pageHeader={ isNew ? 'Create New Client' : 'Update Client'}/>
     <main>
-      <NewEditForm 
-        formSubmit={formSubmit}
-        formLabel={ isNew ? 'Add New Client' : 'Update Client' }
-        // editPlaceholders={ isNew ? null : clients }
-      />
+      { isNew ? <NewClientForm formSubmit={formSubmit} /> : <EditClientForm formSubmit={formSubmit}/>}
     </main>
   </div>
 }

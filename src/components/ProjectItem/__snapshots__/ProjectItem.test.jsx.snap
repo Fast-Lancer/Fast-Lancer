@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display a project item with provided content 1`] = `
+<div>
+  <div
+    class="projectItem"
+  >
+    <div
+      class="col"
+    >
+      <h3
+        class="h3"
+      >
+        something
+      </h3>
+      <h4
+        class="h4"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <div>
+        Hourly Rate: 
+        33
+      </div>
+      <div>
+        Hours Quoted: 
+        55
+      </div>
+      <div>
+        Quoted Price: 
+        375
+      </div>
+    </div>
+  </div>
+</div>
+`;

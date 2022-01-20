@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 import { useUser } from '../../context/UserContext'
-import { getClient } from '../../services/clients'
-export default function NewEditForm({ formSubmit, formLabel, isNew }) {
+
+export default function NewClientForm({ formSubmit }) {
   const { user } = useUser()
   const [client_name, setClient_name] = useState('')
   const [email, setEmail] = useState('')
@@ -10,26 +9,12 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
   const [business_name, setBusiness_name] = useState('')
   const [notes, setNotes] = useState('')
 
-  const [client, setClient] = useState('')
-  const { id } = useParams()
-
-  useEffect(async () => {
-    try {
-      const client = await getClient(id)
-      setClient(client)
-    } catch (err){
-      isNew = true
-    }
-  }, [])
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
   }
-
-
   return <div>
-    <h2>{formLabel}</h2>
+    <h2>Client Details</h2>
     <fieldset>
       <form onSubmit={handleSubmit}>
         <label htmlFor='client_name'>Client Name</label>
@@ -71,7 +56,7 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
         />
-        <button type='submit'>{formLabel}</button>
+        <button type='submit'>Save</button>
       </form>
     </fieldset>
   </div>
