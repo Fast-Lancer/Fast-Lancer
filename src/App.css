@@ -7,16 +7,21 @@ font-family: 'Work Sans', sans-serif;
 */
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body,
 html {
-	min-height: 100vh;
-	width: 100%;
-	font-family: 'Work Sans', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 main {
@@ -30,32 +35,87 @@ main {
 }
 
 h1 {
-	font-size: 4em;
-	display: block;
-	padding-bottom: 40px;
-	font-family: 'Playfair Display', serif;
-	font-weight: 700;
-	text-transform: capitalize;
+  font-size: 4em;
+  display: block;
+  padding-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 h2 {
-	font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
-form {
-	display: block;
+/* Form Rules */
+fieldset {
+  width: 30em;
+  margin-top: 1em;
+  padding-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
-	font-size: 0.7em;
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2em;
+}
+
+form {
+  display: block;
+  padding: 10px;
+  width: 25em;
 }
 
 input {
-	display: block;
-	margin: 5px;
+  display: block;
+  width: 16em;
+  padding: 5px;
+  font-size: 1.25em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
 }
 
-a {
-	color: black;
-	text-decoration: none;
+textarea {
+  height: 7em;
+  width: 100%;
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
 }
+
+button {
+  margin-top: 1em;
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: -3px 3px darkgrey;
+}
+
+button:active {
+  box-shadow: 0px 0px darkgrey;
+  background-color: grey;
+  color: lightgrey;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/*
+ adding a line to trigger update on ACP
+ */
