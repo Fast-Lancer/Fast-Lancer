@@ -10,7 +10,7 @@ exports[`should render the fetched data 1`] = `
         <section
           class="title"
         >
-          bob1
+          bobs name
         </section>
         <ul
           class="tabnav"
@@ -33,7 +33,7 @@ exports[`should render the fetched data 1`] = `
           </li>
           <li>
             <a
-              href="/clients/edit/1"
+              href="/clients/edit/42"
             >
               Edit Client
             </a>
@@ -46,7 +46,7 @@ exports[`should render the fetched data 1`] = `
         <h3
           class="h3"
         >
-          business1
+          bobs business
         </h3>
         <div
           class="twoColRow"
@@ -61,6 +61,7 @@ exports[`should render the fetched data 1`] = `
                 alt="a phone icon"
                 src="phoneSmall.png"
               />
+              123
             </div>
             <div
               class="row"
@@ -69,6 +70,7 @@ exports[`should render the fetched data 1`] = `
                 alt="an email icon"
                 src="emailSmall.png"
               />
+              bob@bob.com
             </div>
           </div>
           <div
@@ -123,7 +125,7 @@ exports[`should render the fetched data 1`] = `
           <div
             class="notesDiv"
           >
-            No notes entered.
+            note
           </div>
         </div>
       </div>
