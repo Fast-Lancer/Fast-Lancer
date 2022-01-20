@@ -6,8 +6,7 @@ import NewEditForm from '../../components/NewEditForm/NewEditForm'
 import styles from './NewEditClient.module.css'
 
 export default function NewEditClient({ isNew = false }) {
-  const { id } = useParams()
-  const [clients, setClients] = useState([])
+  // const [clients, setClients] = useState([])
   const history = useHistory()
 
 
