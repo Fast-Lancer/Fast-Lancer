@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import NewClientForm from './NewClientForm'
+import Title from './Title'
 
-it('renders the New Client Form component accurately', () => {
+it('renders the Title component accurately', () => {
   const { container } = render(
     <Router>
-      <NewClientForm />
+      <Title/>
     </Router>
   )
   expect(container).toMatchSnapshot()

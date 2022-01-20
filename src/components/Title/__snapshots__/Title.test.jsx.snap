@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Title component accurately 1`] = `
+<div>
+  <div
+    class="titleBody"
+  >
+    <section
+      class="title"
+    />
+    err
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the Home view accurately 1`] = `
+exports[`renders the Edit client form component accurately 1`] = `
 <div>
   <div>
     <h2>
