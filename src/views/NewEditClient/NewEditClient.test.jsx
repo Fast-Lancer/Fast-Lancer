@@ -38,13 +38,13 @@ it('should render the fetched data', async () => {
       <UserProvider>
         <UserAdder />
         <Switch>
-          <Route path='/'>
-            <NewEditClient isNew />
-            <LocationGrabber />
-          </Route>
           <Route path='/clients/:id'>
-            <ClientDetailView />
             <LocationGrabber />
+            <ClientDetailView />
+          </Route>
+          <Route path='/'>
+            <LocationGrabber />
+            <NewEditClient isNew />
           </Route>
         </Switch>
       </UserProvider>
@@ -56,9 +56,7 @@ it('should render the fetched data', async () => {
   const phoneInput = await screen.findByLabelText('Phone Number')
   const businessInput = await screen.findByLabelText('Business Name')
   const notesInput = await screen.findByLabelText('Notes')
-  const submitButton = await screen.findByText((content, element) => (
-    content === 'Add New Client' && element.tagName.toLowerCase() === 'button'
-  ))
+  const submitButton = await screen.findByText('Save')
 
   fireEvent.change(nameInput, { target: { value: 'bobs name' } })
   fireEvent.change(emailInput, { target: { value: 'bob@bob.com' } })
@@ -66,23 +64,11 @@ it('should render the fetched data', async () => {
   fireEvent.change(businessInput, { target: { value: 'bobs business' } })
   fireEvent.change(notesInput, { target: { value: 'note' } })
 
-  console.log(location)
-  screen.debug(submitButton)
-
   fireEvent.click(submitButton)
 
-  //await waitFor(() => screen.getByText('Loading...'), 5000)
+  await waitFor(() => location.pathName === '/clients/42', { timeout: 1000 })
 
-  // TODO fix this once NewEditClient works
-  await waitFor(() => location.pathName === '/clients/1', { timeout: 1000 })
-  await waitFor(() => screen.getByText('bobs name'), { timeout: 1000 })
-  console.log(location)
-
-  await screen.findByText('bobs name')
-  await screen.findByText('bob@bob.com')
-  await screen.findByText('123')
   await screen.findByText('bobs business')
-  await screen.findByText('note')
 
   expect(container).toMatchSnapshot()
 })

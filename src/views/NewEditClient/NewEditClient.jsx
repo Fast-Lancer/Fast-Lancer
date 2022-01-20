@@ -13,7 +13,7 @@ export default function NewEditClient({ isNew = false }) {
     try {
       if (isNew) {
         client = await createClient({ client_name, email, phone, business_name, notes, user_id })
-        history.push(`/clients/${client.id}`)
+        history.push(`/clients/${client[0].id}`)
       } else {
         client = await updateClient({ client_name, email, phone, business_name, notes, user_id, id })
         history.push(`/clients/${id}`)
