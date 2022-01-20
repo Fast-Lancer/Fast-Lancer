@@ -25,17 +25,6 @@ a {
 }
 
 main {
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1em;
-  background-color: lightgrey;
-  padding: 40px;
-  font-weight: 700;
-=======
 	display: flex;
 	flex-direction: column;
 	font-family: 'Work Sans', sans-serif;
@@ -43,7 +32,6 @@ main {
 	background-color: lightgrey;
 	padding: 40px;
 	font-weight: 700;
->>>>>>> 40cb2a26f1241e6c9bd195fd3a404748d4b7d03c
 }
 
 h1 {
