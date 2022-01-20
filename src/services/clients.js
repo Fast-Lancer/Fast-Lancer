@@ -10,17 +10,17 @@ export async function getClient(id) {
   return parseData(request)
 }
 
-export async function updateClient({ name, email, phone, business_name, notes }) {
+export async function updateClient({ client_name, email, phone, business_name, notes }) {
   const request = await supaClient
     .from('clients')
-    .update({ name, email, phone, business_name, notes })
+    .update({ client_name, email, phone, business_name, notes })
     .match({ email })
   return parseData(request)
 }
 
-export async function createClient({ name, email, phone, business_name, notes }) {
+export async function createClient({ client_name, email, phone, business_name, notes, user_id }) {
   const request = await supaClient
     .from('clients')
-    .insert({ name, email, phone, business_name, notes })
+    .insert([{ client_name, email, phone, business_name, notes, user_id }])
   return parseData(request)
 }

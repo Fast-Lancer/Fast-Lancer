@@ -1,7 +1,11 @@
 import styles from './Title.module.css'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 export default function TitleNav({ pageTitle, pageHeader }) {
+
+  const { id } = useParams()
+
   switch (pageTitle) {
     case 'projects':
       return (
@@ -13,7 +17,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/clients">Clients</Link>
           </li>
           <li>
-            <Link to="/newproject">New Project</Link>
+            <Link to="/projects/new">New Project</Link>
           </li>
         </ul>
       )
@@ -28,7 +32,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/newclient">New Client</Link>
+            <Link to="/clients/newclient">New Client</Link>
           </li>
         </ul>
       )
@@ -43,7 +47,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/clients">Clients</Link>
           </li>
           <li>
-            <Link to="/editproject">Edit Project</Link>
+            <Link to={`/projects/edit/${id}`}>Edit Project</Link>
           </li>
         </ul>
       )
@@ -58,7 +62,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/editclient">Edit Client</Link>
+            <Link to={`/clients/edit/${id}`}>Edit Client</Link>
           </li>
         </ul>
       )

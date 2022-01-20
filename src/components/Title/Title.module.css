@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Work+Sans:ital,wght@0,300;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Work+Sans:ital,wght@0,300;1,300&display=swap');
 
 /* 
 font-family: 'IBM Plex Mono', monospace;
@@ -21,7 +21,7 @@ ul {
   font-size: 4em;
   display: block;
   padding-bottom: 40px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   text-transform: capitalize;
 }
@@ -31,11 +31,12 @@ ul {
   justify-content: center;
   align-items: center;
   font-weight: 700;
+  font-size: 1.2em;
   font-family: 'IBM Plex Mono', monospace;
 }
 
 /* 
-From CSS Tricks: (below)
+From CSS Tricks (below)
 https://css-tricks.com/tabs-with-round-out-borders/ 
 */
 
@@ -95,7 +96,7 @@ https://css-tricks.com/tabs-with-round-out-borders/
 .tabnav .active:before,
 .tabnav .active a:after,
 .tabnav .active a:before {
-  content: "";
+  content: '';
 }
 .tabnav .active:before,
 .tabnav .active:after {
@@ -142,8 +143,16 @@ https://css-tricks.com/tabs-with-round-out-borders/
   background: white;
 }
 .tabnav li a:before {
-  left: -20px;
+ left: -20px;
 }
 .tabnav li a:after {
   right: -20px;
 }
+
+/*
+ adding a line to trigger update on ACP
+
+
+
+
+ */

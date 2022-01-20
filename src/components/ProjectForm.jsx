@@ -1,67 +1,70 @@
 import { useEffect, useState } from 'react'
+import { useUser } from '../context/UserContext.jsx'
 import { getClients } from '../services/clients.js'
+import changeValue from '../utils/changeValue.js'
 
-export default function ProjectForm() {
-
-  const [startDate, setStartDate] = useState(null)
-  const [endDate, setEndDate] = useState(null)
-  const [hourlyRate, setHourlyRate] = useState(null)
-  const [hoursWorked, setHoursWorked] = useState(null)
-  const [URL, setURL] = useState(null)
-  const [description, setDescription] = useState(null)
-  const [completedAt, setCompletedAt] = useState(null)
-  const [priceQuoted, setPriceQuoted] = useState(null)
-  const [hoursQuoted, setHoursQuoted] = useState(null)
-  const [title, setTitle] = useState(null)
-  const [notes, setNotes] = useState(null)
-  const [client, setClient] = useState(null)
+export default function ProjectForm({ handleProject, isCreate, initialValues }) {
   const [clientsAvailable, setClientsAvailable] = useState([{ client_name: '', id: '' }])
+  const [form, setForm] = useState(initialValues)
 
+  const { user } = useUser()
+  
   useEffect(() => {
     getClients().then(setClientsAvailable)
   }, [])
 
-  const handleSubmit = () => {
-    console.log({ startDate, endDate, hourlyRate, hoursWorked, completedAt, URL, description, priceQuoted, hoursQuoted, title, notes, client })
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    // replace empty strings with null in form object without mutation by creating a two dimensional array to iterate through, then make it back into object
+    const nullifiedForm = changeValue(form, null)
+
+    handleProject({ ...nullifiedForm, user_id: user.id })
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+
+    setForm(prev => ({ ...prev, [name]: value }))
   }
 
   return <form onSubmit={handleSubmit}>
-    <label htmlFor='startDate'>Start Date:</label>
-    <input name='startDate' value={startDate} type='date' onChange={({ target }) => setStartDate(target.value)}/>
+    <label htmlFor='date_start'>Start Date:</label>
+    <input name='date_start' value={form.date_start} type='date' onChange={handleChange}/>
 
-    <label htmlFor='endDate'>End Date:</label>
-    <input name='endDate' value={endDate} type='date' onChange={({ target }) => setEndDate(target.value)}/>
+    <label htmlFor='date_end'>End Date:</label>
+    <input name='date_end' value={form.date_end} type='date' onChange={handleChange}/>
 
-    <label htmlFor='hourlyRate'>Hourly Rate:</label>
-    <input name='hourlyRate' value={hourlyRate} type='text' onChange={({ target }) => setHourlyRate(target.value)}/>
+    <label htmlFor='hourly_rate'>Hourly Rate:</label>
+    <input name='hourly_rate' value={form.hourly_rate} type='text' onChange={handleChange}/>
 
-    <label htmlFor='hoursWorked'>Hours Worked:</label>
-    <input name='hoursWorked' value={hoursWorked} type='text' onChange={({ target }) => setHoursWorked(target.value)}/>
+    <label htmlFor='hours_worked'>Hours Worked:</label>
+    <input name='hours_worked' value={form.hours_worked} type='text' onChange={handleChange}/>
 
     <label htmlFor='URL'>URL:</label>
-    <input name='URL' value={URL} type='text' onChange={({ target }) => setURL(target.value)}/>
+    <input name='URL' value={form.URL} type='text' onChange={handleChange}/>
 
     <label htmlFor='description'>Description:</label>
-    <input name='description' value={description} type='text' onChange={({ target }) => setDescription(target.value)}/>
+    <input name='description' value={form.description} type='text' onChange={handleChange}/>
 
-    <label htmlFor='completedAt'>Completed At:</label>
-    <input name='completedAt' value={completedAt} type='date' onChange={({ target }) => setCompletedAt(target.value)}/>
+    <label htmlFor='completed_at'>Completed At:</label>
+    <input name='completed_at' value={form.completed_at} type='date' onChange={handleChange}/>
     
-    <label htmlFor='priceQuoted'>Price Quoted:</label>
-    <input name='priceQuoted' value={priceQuoted} type='text' onChange={({ target }) => setPriceQuoted(target.value)}/>
+    <label htmlFor='price_quoted'>Price Quoted:</label>
+    <input name='price_quoted' value={form.price_quoted} type='text' onChange={handleChange}/>
 
-    <label htmlFor='hoursQuoted'>Hours Quoted:</label>
-    <input name='hoursQuoted' value={hoursQuoted} type='text' onChange={({ target }) => setHoursQuoted(target.value)}/>
+    <label htmlFor='hours_quoted'>Hours Quoted:</label>
+    <input name='hours_quoted' value={form.hours_quoted} type='text' onChange={handleChange}/>
 
     <label htmlFor='title'>Title:</label>
-    <input name='title' value={title} type='text' onChange={({ target }) => setTitle(target.value)}/>
+    <input name='title' value={form.title} type='text' onChange={handleChange}/>
 
     <label htmlFor='notes'>Notes:</label>
-    <input name='notes' value={notes} type='text' onChange={({ target }) => setNotes(target.value)}/>
+    <input name='notes' value={form.notes} type='text' onChange={handleChange}/>
 
-    <label htmlFor='client'>Client: </label>
-    <select name='client' value={client} onChange={({ target }) => setClient(target.value)}>
-      <option value={null}>Unspecified</option>
+    <label htmlFor='client_id'>Client: </label>
+    <select name='client_id' value={form.client_id} onChange={handleChange}>
+      <option value={''}>required</option>
       {clientsAvailable.map(client => <option key={client.id} value={client?.id}>{client?.client_name}</option>)}
     </select>
 

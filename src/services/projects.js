@@ -22,6 +22,50 @@ export async function getProjectById(id) {
   return data
 }
 
+export async function getProjectNoClient(id) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .select('*')
+    .match({ id })
+    .single()
+
+  if (error) throw Error
+
+  return data
+}
+
+export async function createProject(project) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .insert(project)
+      
+  if (error) throw Error
+    
+  return data
+}
+
+export async function updateProject(project) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .update(project)
+    .match({ id: project.id })
+  
+  if (error) throw Error
+    
+  return data
+}
+
+export async function deleteProjectById(id) {
+  const { data, error } = await supaClient
+    .from('projects')
+    .delete()
+    .match({ id })
+
+  if (error) throw Error
+
+  return data
+}
+
 export async function getProjectsByClient(client_id) {
   const { data, error } = await supaClient
     .from('projects')
@@ -32,3 +76,4 @@ export async function getProjectsByClient(client_id) {
 
   return data
 }
+

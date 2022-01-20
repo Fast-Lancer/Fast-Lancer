@@ -32,7 +32,7 @@ exports[`should render the fetched data 1`] = `
         </li>
         <li>
           <a
-            href="/newclient"
+            href="/clients/newclient"
           >
             New Client
           </a>
@@ -56,7 +56,7 @@ exports[`should render the fetched data 1`] = `
           <h4
             class="h4"
           >
-            bus1
+            business1
           </h4>
         </div>
         <div
@@ -98,7 +98,7 @@ exports[`should render the fetched data 1`] = `
           <h4
             class="h4"
           >
-            bus2
+            business2
           </h4>
         </div>
         <div
@@ -140,7 +140,7 @@ exports[`should render the fetched data 1`] = `
           <h4
             class="h4"
           >
-            bus3
+            business3
           </h4>
         </div>
         <div
