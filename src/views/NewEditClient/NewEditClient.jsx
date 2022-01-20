@@ -6,14 +6,13 @@ import NewEditForm from '../../components/NewEditForm/NewEditForm'
 
 
 export default function NewEditClient({ isNew = false }) {
-  const [clients, setClients] = useState([])
+  // const [clients, setClients] = useState([])
   const history = useHistory()
-
-
-  useEffect(() => {
-    const clients = getClients()
-    setClients(clients)
-  }, [])
+  
+  // useEffect(() => {
+  //   const clients = getClients()
+  //   setClients(clients)
+  // }, [])
 
   let client
 
@@ -37,7 +36,7 @@ export default function NewEditClient({ isNew = false }) {
       <NewEditForm 
         formSubmit={formSubmit}
         formLabel={ isNew ? 'Add New Client' : 'Update Client' }
-        editPlaceholders={ isNew ? null : { ...clients }} 
+        // editPlaceholders={ isNew ? null : clients }
       />
     </main>
   </div>

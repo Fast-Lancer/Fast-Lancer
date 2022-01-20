@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
-export default function NewEditForm({ formSubmit, formLabel, editPlaceholders }) {
+import { getClient } from '../../services/clients'
+export default function NewEditForm({ formSubmit, formLabel, isNew }) {
   const { user } = useUser()
   const [client_name, setClient_name] = useState('')
   const [email, setEmail] = useState('')
@@ -8,11 +10,24 @@ export default function NewEditForm({ formSubmit, formLabel, editPlaceholders })
   const [business_name, setBusiness_name] = useState('')
   const [notes, setNotes] = useState('')
 
+  const [client, setClient] = useState('')
+  const { id } = useParams()
+
+  useEffect(async () => {
+    try {
+      const client = await getClient(id)
+      setClient(client)
+    } catch (err){
+      isNew = true
+    }
+  }, [])
+
+  console.log(client)
   const handleSubmit = async (e) => {
     e.preventDefault()
     await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
   }
-  console.log(editPlaceholders)
+
 
   return <div>
     <h2>{formLabel}</h2>
