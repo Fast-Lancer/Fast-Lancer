@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { updateClient, createClient, getClients } from '../../services/clients'
 import Title from '../../components/Title/Title'
 import NewEditForm from '../../components/NewEditForm/NewEditForm'
 
 
 export default function NewEditClient({ isNew = false }) {
-  // const [clients, setClients] = useState([])
+  const [clients, setClients] = useState([])
   const history = useHistory()
 
 
@@ -37,7 +37,7 @@ export default function NewEditClient({ isNew = false }) {
       <NewEditForm 
         formSubmit={formSubmit}
         formLabel={ isNew ? 'Add New Client' : 'Update Client' }
-        // editPlaceholders={ isNew ? null : { ...clients }} 
+        editPlaceholders={ isNew ? null : { ...clients }} 
       />
     </main>
   </div>

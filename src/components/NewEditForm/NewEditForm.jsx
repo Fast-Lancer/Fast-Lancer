@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useUser } from '../../context/UserContext'
-export default function NewEditForm({ formSubmit, formLabel }) {
+export default function NewEditForm({ formSubmit, formLabel, editPlaceholders }) {
   const { user } = useUser()
   const [client_name, setClient_name] = useState('')
   const [email, setEmail] = useState('')
@@ -12,6 +12,7 @@ export default function NewEditForm({ formSubmit, formLabel }) {
     e.preventDefault()
     await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
   }
+  console.log(editPlaceholders)
 
   return <div>
     <h2>{formLabel}</h2>
