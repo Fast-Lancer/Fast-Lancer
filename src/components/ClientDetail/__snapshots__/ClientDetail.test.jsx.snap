@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div>
+  <div
+    class="clientDetail"
+  >
+    <h3
+      class="h3"
+    >
+      bobs business
+    </h3>
+    <div
+      class="twoColRow"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="row"
+        >
+          <img
+            alt="a phone icon"
+            src="phoneSmall.png"
+          />
+          123
+        </div>
+        <div
+          class="row"
+        >
+          <img
+            alt="an email icon"
+            src="emailSmall.png"
+          />
+          bob@bob.com
+        </div>
+      </div>
+      <div
+        class="col"
+      >
+        <div
+          class="row"
+        >
+          <img
+            alt="a palette icon"
+            src="paletteSmall.png"
+          />
+          Client Projects
+        </div>
+        <ul
+          class="linkList"
+        >
+          <li>
+            <a
+              href="/projects/1"
+            >
+              project1
+            </a>
+          </li>
+          <li>
+            <a
+              href="/projects/2"
+            >
+              project2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div
+        class="row"
+      >
+        <img
+          alt="a notes icon"
+          src="emailSmall.png"
+        />
+        Notes
+      </div>
+      <div
+        class="notesDiv"
+      >
+        yo bobs pretty cool
+      </div>
+    </div>
+  </div>
+</div>
+`;

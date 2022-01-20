@@ -14,14 +14,11 @@ export default function ProjectDetailView() {
     getProjectById(id).then(setProject).finally(() => setLoading(false))
   }, [])
 
-  return <div>
-    {
-      loading
-        ? <h1>Loading...</h1>
-        : <div>
-          <Title pageTitle='project detail' pageHeader={project.title} />
-          <ProjectDetail project={project} />
-        </div>
-    }
-  </div>
+  if(loading) return <h1>Loading...</h1>
+  return (
+    <div>
+      <Title pageTitle='project detail' pageHeader={project.title} />
+      <ProjectDetail project={project} />
+    </div>
+  )
 }

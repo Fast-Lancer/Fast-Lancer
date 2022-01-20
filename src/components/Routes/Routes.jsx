@@ -28,7 +28,7 @@ export default function Routes() {
         <NewEditClient />
       </Route>
       {/* MAKE PRIVATE: */}
-      <Route exact path='/clients/new' >
+      <Route exact path='/clients/newclient' >
         <NewEditClient isNew/>
       </Route>
       <PrivateRoute exact path='/clients/:id'>

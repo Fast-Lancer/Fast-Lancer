@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      Sign Up
+    </h1>
+    <label>
+      Email:
+      <input
+        value=""
+      />
+    </label>
+    <label>
+      Password:
+      <input
+        type="password"
+        value=""
+      />
+    </label>
+    <button>
+      Sign Up
+    </button>
+    <div
+      class="linkButton"
+    >
+      Log In Instead
+    </div>
+  </div>
+</div>
+`;

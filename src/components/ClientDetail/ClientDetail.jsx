@@ -10,7 +10,8 @@ export default function ClientDetail({ client }) {
     email,
     phone,
     business_name: businessName,
-    notes
+    notes,
+    projects
   } = client
 
   return (
@@ -36,7 +37,7 @@ export default function ClientDetail({ client }) {
           </div>
           <ul className={styles.linkList}>
             {
-              client.projects.map((project) => (
+              projects.map((project) => (
                 <li key={project.id}>
                   <Link to={`/projects/${project.id}`}>
                     {project.title}
