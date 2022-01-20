@@ -41,6 +41,15 @@ export const server = setupServer(
       )
     }
   }),
+  rest.post(url + '/clients', (req, res, ctx) => {
+    const [client] = req.body
+    console.log(client)
+    return res(
+      ctx.json([
+        client
+      ])
+    )
+  }),
   rest.get(url + '/projects', (req, res, ctx) => {
     const select = req.url.searchParams.get('select')
     const id = req.url.searchParams.get('id')
