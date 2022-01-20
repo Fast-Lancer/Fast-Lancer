@@ -1,28 +1,35 @@
 import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { useUser } from '../context/UserContext.jsx'
 import { getClients } from '../services/clients.js'
+import { createProject, updateProject } from '../services/projects.js'
 
 export default function ProjectForm() {
 
-  const [startDate, setStartDate] = useState(null)
-  const [endDate, setEndDate] = useState(null)
-  const [hourlyRate, setHourlyRate] = useState(null)
-  const [hoursWorked, setHoursWorked] = useState(null)
-  const [URL, setURL] = useState(null)
-  const [description, setDescription] = useState(null)
-  const [completedAt, setCompletedAt] = useState(null)
-  const [priceQuoted, setPriceQuoted] = useState(null)
-  const [hoursQuoted, setHoursQuoted] = useState(null)
-  const [title, setTitle] = useState(null)
-  const [notes, setNotes] = useState(null)
-  const [client, setClient] = useState(null)
+  const [startDate, setStartDate] = useState('')
+  const [endDate, setEndDate] = useState('')
+  const [hourlyRate, setHourlyRate] = useState('')
+  const [hoursWorked, setHoursWorked] = useState('')
+  const [URL, setURL] = useState('')
+  const [description, setDescription] = useState('')
+  const [completedAt, setCompletedAt] = useState('')
+  const [priceQuoted, setPriceQuoted] = useState('')
+  const [hoursQuoted, setHoursQuoted] = useState('')
+  const [title, setTitle] = useState('')
+  const [notes, setNotes] = useState('')
+  const [clientId, setClientId] = useState('')
   const [clientsAvailable, setClientsAvailable] = useState([{ client_name: '', id: '' }])
+  const { user } = useUser()
+  const history = useHistory()
 
   useEffect(() => {
     getClients().then(setClientsAvailable)
   }, [])
 
-  const handleSubmit = () => {
-    console.log({ startDate, endDate, hourlyRate, hoursWorked, completedAt, URL, description, priceQuoted, hoursQuoted, title, notes, client })
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    createProject({ date_start: startDate, date_end: endDate, hourly_rate: hourlyRate, hours_worked: hoursWorked, client_id: Number(clientId), URL, description, completed_at: completedAt, price_quoted: priceQuoted, hours_quoted: hoursQuoted, title, notes, user_id: user.id }).then(project => history.push(`/projects/${project[0].id}`))
   }
 
   return <form onSubmit={handleSubmit}>
@@ -60,8 +67,7 @@ export default function ProjectForm() {
     <input name='notes' value={notes} type='text' onChange={({ target }) => setNotes(target.value)}/>
 
     <label htmlFor='client'>Client: </label>
-    <select name='client' value={client} onChange={({ target }) => setClient(target.value)}>
-      <option value={null}>Unspecified</option>
+    <select name='client' value={clientId} onChange={({ target }) => setClientId(target.value)}>
       {clientsAvailable.map(client => <option key={client.id} value={client?.id}>{client?.client_name}</option>)}
     </select>
 
