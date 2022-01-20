@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the EDIT Client view 1`] = `
+<div>
+  <div>
+    <div
+      class="titleBody"
+    >
+      <section
+        class="title"
+      >
+        Update Client
+      </section>
+      <ul
+        class="tabnav"
+      >
+        <li
+          class="active"
+        >
+          <a
+            href="/clients"
+          >
+            Clients
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+          >
+            Projects
+          </a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div>
+        <h2>
+          Edit Client
+        </h2>
+        <fieldset>
+          <form>
+            <label
+              for="client_name"
+            >
+              Client Name
+            </label>
+            <input
+              id="client_name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label
+              for="email"
+            >
+              E-Mail
+            </label>
+            <input
+              id="email"
+              required=""
+              type="email"
+              value=""
+            />
+            <label
+              for="phone"
+            >
+              Phone Number
+            </label>
+            <input
+              id="phone"
+              required=""
+              type="text"
+              value=""
+            />
+            <label
+              for="business_name"
+            >
+              Business Name
+            </label>
+            <input
+              id="business_name"
+              placeholder="Optional"
+              type="text"
+              value=""
+            />
+            <label
+              for="notes"
+            >
+              Notes
+            </label>
+            <textarea
+              id="notes"
+              placeholder="Optional"
+            />
+            <button
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+          <section>
+            <button>
+              DELETE CLIENT
+            </button>
+          </section>
+        </fieldset>
+      </div>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`should render the New Client view 1`] = `
+<div>
+  <div>
+    <div
+      class="titleBody"
+    >
+      <section
+        class="title"
+      >
+        Create New Client
+      </section>
+      <ul
+        class="tabnav"
+      >
+        <li
+          class="active"
+        >
+          <a
+            href="/clients"
+          >
+            Clients
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects"
+          >
+            Projects
+          </a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div>
+        <h2>
+          Client Details
+        </h2>
+        <fieldset>
+          <form>
+            <label
+              for="client_name"
+            >
+              Client Name
+            </label>
+            <input
+              id="client_name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label
+              for="email"
+            >
+              E-Mail
+            </label>
+            <input
+              id="email"
+              required=""
+              type="email"
+              value=""
+            />
+            <label
+              for="phone"
+            >
+              Phone Number
+            </label>
+            <input
+              id="phone"
+              required=""
+              type="number"
+              value=""
+            />
+            <label
+              for="business_name"
+            >
+              Business Name
+            </label>
+            <input
+              id="business_name"
+              placeholder="Optional"
+              type="text"
+              value=""
+            />
+            <label
+              for="notes"
+            >
+              Notes
+            </label>
+            <textarea
+              id="notes"
+              placeholder="Optional"
+            />
+            <button
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </fieldset>
+      </div>
+    </main>
+  </div>
+</div>
+`;
