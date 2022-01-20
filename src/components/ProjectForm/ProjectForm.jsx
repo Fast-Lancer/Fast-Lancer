@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { useUser } from '../../context/UserContext.jsx'
-import { getClients } from '../../services/clients.js'
+
 import changeValue from '../../utils/changeValue.js'
 
 export default function ProjectForm({ handleProject, clientsAvailable, initialValues }) {

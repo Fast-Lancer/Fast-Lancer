@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import Button from '../../components/Button/Button.jsx'
 import ProjectDetail from '../../components/ProjectDetail/ProjectDetail.jsx'
 import Title from '../../components/Title/Title.jsx'
 import { getProjectById } from '../../services/projects.js'
