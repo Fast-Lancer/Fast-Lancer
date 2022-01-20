@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useUser } from '../context/UserContext.jsx'
-import { getClients } from '../services/clients.js'
-import changeValue from '../utils/changeValue.js'
+import { useUser } from '../../context/UserContext.jsx'
+import { getClients } from '../../services/clients.js'
+import changeValue from '../../utils/changeValue.js'
 
-export default function ProjectForm({ handleProject, isCreate, initialValues }) {
-  const [clientsAvailable, setClientsAvailable] = useState([{ client_name: '', id: '' }])
+export default function ProjectForm({ handleProject, clientsAvailable, initialValues }) {
   const [form, setForm] = useState(initialValues)
-
   const { user } = useUser()
   
-  useEffect(() => {
-    getClients().then(setClientsAvailable)
-  }, [])
-
   const handleSubmit = (e) => {
     e.preventDefault()
 

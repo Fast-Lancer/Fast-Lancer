@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display project detail with provided content 1`] = `
+<div>
+  <div
+    class="projectDetail"
+  >
+    <div
+      class="clientName"
+    >
+      <h1>
+        No client name entered
+      </h1>
+    </div>
+    <section
+      class="infoSection"
+    >
+      <div>
+        Hourly Rate: 
+        33
+      </div>
+      <div>
+        Repo: 
+        something
+      </div>
+      <div>
+        Start Date: 
+        2022-01-20
+      </div>
+      <div>
+        End Date: 
+        2022-01-20
+      </div>
+    </section>
+    <section
+      class="alignLeft"
+    >
+      <h2>
+        Description
+      </h2>
+      <p>
+        something
+      </p>
+    </section>
+    <section
+      class="alignLeft"
+    >
+      <h2>
+        Notes
+      </h2>
+      <p>
+        something
+      </p>
+    </section>
+  </div>
+</div>
+`;
