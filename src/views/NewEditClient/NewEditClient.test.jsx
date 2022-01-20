@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import { Route, Switch } from 'react-router-dom'
 import { MemoryRouter } from 'react-router-dom'
 import NewEditClient from './NewEditClient.jsx'
@@ -29,15 +29,15 @@ it('should render the New Client view', async () => {
 
 it('should render the EDIT Client view', async () => {
   const { container } = render(
-    <MemoryRouter initialEntries={['/']}>
+    <MemoryRouter initialEntries={['/clients/edit/1']}>
       <Switch>
-        <Route path='/'>
-          <NewEditClient/>
+        <Route path='/clients/edit/1'>
+          <NewEditClient />
         </Route>
       </Switch>
     </MemoryRouter>
   )
 
-  await screen.findByText('Update Client')
+  await screen.findByText(/Save/i)
   expect(container).toMatchSnapshot()
 })

@@ -35,7 +35,10 @@ export const server = setupServer(
           {
             id: 1,
             client_name: 'bob1',
-            business_name: 'business1'
+            business_name: 'business1',
+            email:'email@email.com',
+            phone:'123456',
+            notes: 'bobby 1 is cooler than bobby 2'
           }
         ])
       )
