@@ -22,7 +22,6 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
     }
   }, [])
 
-  console.log(client)
   const handleSubmit = async (e) => {
     e.preventDefault()
     await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
