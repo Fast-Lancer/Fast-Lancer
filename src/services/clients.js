@@ -10,11 +10,11 @@ export async function getClient(id) {
   return parseData(request)
 }
 
-export async function updateClient({ client_name, email, phone, business_name, notes }) {
+export async function updateClient({ client_name, email, phone, business_name, notes, id }) {
   const request = await supaClient
     .from('clients')
     .update({ client_name, email, phone, business_name, notes })
-    .match({ email })
+    .match({ id })
   return parseData(request)
 }
 

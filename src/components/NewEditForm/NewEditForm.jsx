@@ -21,10 +21,10 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
         isNew = true
       }}
   }, [])
-  console.log(client)
+  console.log(client.id)
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
+    await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id, id: client.id })
   }
   return <div>
     <h2>{formLabel}</h2>
@@ -45,7 +45,7 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
           <input 
             id='email'
             type='email'
-            value={client.email}
+            defaultValue={client.email}
             required
             onChange={(e) => setEmail(e.target.value)} />
 
@@ -53,7 +53,7 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
           <input 
             id='phone'
             type='text'
-            value={client.phone}
+            defaultValue={client.phone}
             required
             onChange={(e) => setPhone(e.target.value)} />
 
@@ -61,7 +61,7 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
           <input 
             id='business_name'
             type='text'
-            value={client.business_name}
+            defaultValue={client.business_name}
             placeholder='Optional'
             onChange={(e) => setBusiness_name(e.target.value)} />
 
@@ -69,7 +69,7 @@ export default function NewEditForm({ formSubmit, formLabel, isNew }) {
           <textarea
             id='notes'
             placeholder='Optional'
-            value={client.notes ? client.notes : undefined}
+            defaultValue={client.notes ? client.notes : undefined}
             onChange={(e) => setNotes(e.target.value)}
           />
           <button type='submit'>{formLabel}</button>

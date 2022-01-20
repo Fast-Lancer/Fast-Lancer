@@ -13,6 +13,9 @@ import NewEditProject from '../../views/Projects/NewEditProject.jsx'
 export default function Routes() {
   return (
     <Switch>
+      <PrivateRoute exact path='/projects/edit/:id'>
+        <NewEditProject />
+      </PrivateRoute>
       <PrivateRoute exact path='/projects/new'>
         <NewEditProject />
       </PrivateRoute>

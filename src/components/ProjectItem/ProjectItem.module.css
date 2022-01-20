@@ -1,22 +1,49 @@
 .projectItem {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px black solid;
-  padding: 2vmax;
+  background-color: #d3d3d3;
+  padding: .2em;
+  border-bottom: 1px solid black;
 }
 
-.titleSection {
-  position: relative;
-  left: 1vw;
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
 }
 
-.projectItem > section > * {
-  padding: 0.1vh;
-  margin: 0;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
 }
 
-.clientName {
-  text-indent: 1vw;
-  color: darkgray;
+.h3 {
+  margin: .1em 0px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.h4 {
+  margin: .1em 0px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+  margin-left: .4em;
+}
+
+@media(max-width: 768px) {
+  .projectItem {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .col {
+    align-items: center;
+  }
 }

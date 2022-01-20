@@ -15,15 +15,16 @@ export default function ProjectListView() {
 
   return (
     <div className={styles.projectListView}>
-      <Title pageTitle='projects' pageHeader={'Projects'} />
+      <Title pageTitle='projects' pageHeader='Projects' />
       {loading ? (
         <h1>Loading...</h1>
-      ) : <main>{
-        projects.map((project) => <Link key={project.id} to={`/projects/${project.id}`}><ProjectItem key={project.id}  project={project}  />
-        </Link>)
-      }
-      </main>
-      }
+      ) : (
+        projects.map((project) => (
+          <Link key={project.id} to={`/projects/${project.id}`}>
+            <ProjectItem key={project.id} project={project} />
+          </Link>
+        ))
+      )}
     </div>
   )
 }
