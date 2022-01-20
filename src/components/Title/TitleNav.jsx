@@ -58,7 +58,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/editclient">Edit Client</Link>
+            <Link to="/clients/editclient">Edit Client</Link>
           </li>
         </ul>
       )

@@ -4,22 +4,23 @@ import { useUser } from '../../context/UserContext'
 import { getClient } from '../../services/clients'
 export default function NewEditForm({ formSubmit, formLabel, isNew }) {
   const { user } = useUser()
+  const { id } = useParams()
   const [client_name, setClient_name] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [business_name, setBusiness_name] = useState('')
   const [notes, setNotes] = useState('')
-
   const [client, setClient] = useState('')
-  const { id } = useParams()
 
-  useEffect(async () => {
-    try {
-      const client = await getClient(id)
-      setClient(client)
-    } catch (err){
-      isNew = true
-    }
+
+  useEffect(() => {
+    if (!isNew){
+      try {
+        getClient(id)
+          .then (setClient)
+      } catch (err){
+        isNew = true
+      }}
   }, [])
 
   const handleSubmit = async (e) => {
