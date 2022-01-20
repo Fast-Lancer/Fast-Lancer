@@ -15,7 +15,6 @@ export default function ClientDetailView() {
       .then(([client, projects]) => {
         setClient({ ...client, projects })
       })
-      .catch(e => console.error(e))
       .finally(() => setLoading(false))
   }, [])
   
