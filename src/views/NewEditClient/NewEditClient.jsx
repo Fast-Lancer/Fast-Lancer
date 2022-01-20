@@ -21,7 +21,6 @@ export default function NewEditClient({ isNew = false }) {
     try {
       if (isNew) {
         client = await createClient({ client_name, email, phone, business_name, notes, user_id })
-        console.log(client)
         history.push(`/clients/${client[0].id}`)
       } else {
         client = await updateClient({ client_name, email, phone, business_name, notes, user_id })
