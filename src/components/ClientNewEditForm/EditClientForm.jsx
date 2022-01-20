@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { getClient } from '../../services/clients'
+import { useParams, useHistory } from 'react-router-dom'
+import { deleteClient, getClient } from '../../services/clients'
 import { useUser } from '../../context/UserContext'
-export default function NewEditForm({ formSubmit }) {
+import styles from './ClientForms.css'
+
+export default function EditClientForm({ formSubmit }) {
 
   const { user } = useUser()
   const { id } = useParams()
+  const history = useHistory()
   const [client, setClient] = useState('')
 
   useEffect(() => {
@@ -24,13 +27,19 @@ export default function NewEditForm({ formSubmit }) {
   const [business_name, setBusiness_name] = useState(client.business_name)
   const [notes, setNotes] = useState(client.notes)
   
-
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id, id: client.id })
   }
-  return <div>
+
+  const handleDelete = async (e) => {
+    try { await deleteClient(id)
+      history.push('/clients')
+    } catch (error){
+      alert('This Client cannot be deleted with open projects! Delete open projects before removing client. Open projects can be found on the client detail page.')
+    }}
+
+  return <div className={styles.editForm}>
     <h2>Edit Client</h2>
     <fieldset>
       <form onSubmit={handleSubmit}>
@@ -75,6 +84,9 @@ export default function NewEditForm({ formSubmit }) {
         />
         <button type='submit'>Save</button>
       </form>  
+      <section className={styles.deleteContainer}>
+        <button className={styles.deleteButton} onClick={(e) => handleDelete(id)}>DELETE CLIENT</button>
+      </section>
     </fieldset>
   </div>
 }

@@ -24,3 +24,11 @@ export async function createClient({ client_name, email, phone, business_name, n
     .insert([{ client_name, email, phone, business_name, notes, user_id }])
   return parseData(request)
 }
+
+export async function deleteClient(id) {
+  const request = await supaClient
+    .from('clients')
+    .delete()
+    .match({ id })
+  return parseData(request)
+}
