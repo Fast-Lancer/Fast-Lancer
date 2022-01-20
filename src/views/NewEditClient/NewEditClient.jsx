@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { updateClient, createClient } from '../../services/clients'
 import Title from '../../components/Title/Title'
@@ -24,11 +23,11 @@ export default function NewEditClient({ isNew = false }) {
   }
 
   return <div>
-    <Title pageTitle='new-edit client' pageHeader='New-Edit Client'/>
+    <Title pageTitle='new-edit client' pageHeader={ isNew ? 'Create New Client' : 'Update Client'}/>
     <main>
       <NewEditForm 
         formSubmit={formSubmit}
-        formLabel={ isNew ? 'Add New Client' : 'Update Client' }
+        formLabel={ isNew ? 'New Client' : 'Edit' }
       />
     </main>
   </div>
