@@ -1,7 +1,8 @@
 import { useHistory } from 'react-router-dom'
 import { updateClient, createClient } from '../../services/clients'
 import Title from '../../components/Title/Title'
-import NewEditForm from '../../components/NewEditForm/NewEditForm'
+import EditClientForm from '../../components/ClientNewEditForm/EditClientForm'
+import NewClientForm from '../../components/ClientNewEditForm/NewClientForm'
 
 
 export default function NewEditClient({ isNew = false }) {
@@ -25,10 +26,7 @@ export default function NewEditClient({ isNew = false }) {
   return <div>
     <Title pageTitle='new-edit client' pageHeader={ isNew ? 'Create New Client' : 'Update Client'}/>
     <main>
-      <NewEditForm 
-        formSubmit={formSubmit}
-        formLabel={ isNew ? 'New Client' : 'Edit' }
-      />
+      { isNew ? <NewClientForm formSubmit={formSubmit} /> : <EditClientForm formSubmit={formSubmit}/>}
     </main>
   </div>
 }
