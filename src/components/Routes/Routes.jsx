@@ -8,10 +8,14 @@ import About from '../../views/About/About.jsx'
 import NewEditClient from '../../views/NewEditClient/NewEditClient.jsx'
 import ProjectDetailView from '../../views/Projects/ProjectDetailView.jsx'
 import ProjectListView from '../../views/Projects/ProjectListView.jsx'
+import NewEditProject from '../../views/Projects/NewEditProject.jsx'
 
 export default function Routes() {
   return (
     <Switch>
+      <PrivateRoute exact path='/projects/new'>
+        <NewEditProject />
+      </PrivateRoute>
       <PrivateRoute exact path='/projects/:id'>
         <ProjectDetailView />
       </PrivateRoute>
