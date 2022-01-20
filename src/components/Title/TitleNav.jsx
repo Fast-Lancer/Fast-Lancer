@@ -13,7 +13,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/clients">Clients</Link>
           </li>
           <li>
-            <Link to="/newproject">New Project</Link>
+            <Link to="/projects/newproject">New Project</Link>
           </li>
         </ul>
       )
@@ -28,7 +28,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/newclient">New Client</Link>
+            <Link to="/clients/newclient">New Client</Link>
           </li>
         </ul>
       )
