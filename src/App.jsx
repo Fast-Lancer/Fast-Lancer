@@ -1,16 +1,19 @@
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import { UserProvider } from './context/UserContext.jsx';
-import Routes from './views/Routes/Routes.jsx';
+import { BrowserRouter } from 'react-router-dom'
+import { UserProvider } from './context/UserContext.jsx'
+import Layout from './components/Layout/Layout.jsx'
+import Routes from './components/Routes/Routes.jsx'
+import './App.css'
 
 function App() {
   return (
     <UserProvider>
       <BrowserRouter>
-        <Routes />
+        <Layout>
+          <Routes />
+        </Layout>
       </BrowserRouter>
     </UserProvider>
-  );
+  )
 }
 
-export default App;
+export default App

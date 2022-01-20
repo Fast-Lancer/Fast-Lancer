@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="logoDiv"
+    >
+      <img
+        alt="fast lancer logo"
+        src="FastLancerLogo.svg"
+      />
+    </div>
+    <nav
+      class=""
+    >
+      <a
+        href="/login"
+      >
+        Log In
+      </a>
+      <a
+        href="/signup"
+      >
+        Sign Up
+      </a>
+    </nav>
+    <button
+      class="hamburger"
+    >
+      <span
+        class="bar"
+      />
+      <span
+        class="bar"
+      />
+      <span
+        class="bar"
+      />
+    </button>
+  </header>
+</div>
+`;

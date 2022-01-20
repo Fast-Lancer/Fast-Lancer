@@ -1,0 +1,49 @@
+.clientItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d3d3d3;
+  padding: .2em;
+  border-bottom: 1px solid black;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.h3 {
+  margin: .1em 0px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.h4 {
+  margin: .1em 0px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+  margin-left: .4em;
+}
+
+@media(max-width: 768px) {
+  .clientItem {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .col {
+    align-items: center;
+  }
+}

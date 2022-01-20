@@ -7,9 +7,9 @@ import PrivateRoute from './PrivateRoute.jsx'
 it('should render the children or redirect', async () => {
   const { container } = render(
     <UserProvider>
-      <MemoryRouter initialEntries={['/profile']}>
+      <MemoryRouter initialEntries={['/projects']}>
         <Switch>
-          <PrivateRoute path='/profile'>
+          <PrivateRoute path='/projects'>
             <h2>profile</h2>
           </PrivateRoute>
           <Route path='/login'>

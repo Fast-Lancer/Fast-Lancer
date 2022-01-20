@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Work+Sans:ital,wght@0,300;1,300&display=swap');
+
+/* 
+font-family: 'IBM Plex Mono', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Work Sans', sans-serif; 
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body,
+html {
   min-height: 100vh;
+  width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	background-color: lightgrey;
+	padding: 40px;
+	font-weight: 700;
+}
+
+h1 {
+  font-size: 4em;
+  display: block;
+  padding-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Form Rules */
+fieldset {
+  width: 30em;
+  margin-top: 1em;
+  padding-bottom: 2em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display: block;
+  padding: 10px;
+  width: 25em;
 }
+
+input {
+  display: block;
+  width: 16em;
+  padding: 5px;
+  font-size: 1.25em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+
+textarea {
+  height: 7em;
+  width: 100%;
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  margin-top: 1em;
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  background-color: white;
+  border: 1px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: -3px 3px darkgrey;
+}
+
+button:active {
+  box-shadow: 0px 0px darkgrey;
+  background-color: grey;
+  color: lightgrey;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/*
+ adding a line to trigger update on ACP
+ */
