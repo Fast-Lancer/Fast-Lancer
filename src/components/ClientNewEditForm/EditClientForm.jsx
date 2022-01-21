@@ -29,8 +29,11 @@ export default function EditClientForm({ formSubmit }) {
   
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id, id: client.id })
-  }
+    try{
+      await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id, id: client.id })
+    } catch (error){
+      'err'
+    }}
 
   const handleDelete = async (e) => {
     try { await deleteClient(id)

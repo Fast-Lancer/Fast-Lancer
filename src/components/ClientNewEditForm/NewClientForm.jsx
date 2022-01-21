@@ -11,8 +11,12 @@ export default function NewClientForm({ formSubmit }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
-  }
+    try {
+      await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
+    } catch (err){
+      'err'
+    }}
+
   return <div>
     <h2>Client Details</h2>
     <fieldset>

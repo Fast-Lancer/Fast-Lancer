@@ -1,6 +1,5 @@
 import { Route, Switch } from 'react-router-dom'
 import Auth from '../../views/Auth/Auth.jsx'
-import Home from '../../views/Home/Home.jsx'
 import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx'
 import ClientListView from '../../views/ClientListView/ClientListView.jsx'
 import ClientDetailView from '../../views/ClientDetailView/ClientDetailView.jsx'
@@ -47,7 +46,7 @@ export default function Routes() {
         <About />
       </Route>
       <Route exact path='/'>
-        <Home />
+        <Auth />
       </Route>
     </Switch>
   )
