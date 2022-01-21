@@ -39,89 +39,91 @@ exports[`should display a loading screen, then a project detail view 1`] = `
         </li>
       </ul>
     </div>
-    <div
-      class="projectDetail"
-    >
+    <main>
       <div
-        class="clientName"
+        class="projectDetail"
       >
-        <h1
-          aria-label="client-name"
+        <div
+          class="clientName"
         >
-          bob1
-        </h1>
+          <h1
+            aria-label="client-name"
+          >
+            bob1
+          </h1>
+        </div>
+        <section
+          class="infoSection"
+        >
+          <div
+            aria-label="hourly-rate"
+          >
+            Hourly Rate: $
+            33
+          </div>
+          <div
+            aria-label="URL"
+          >
+            URL: 
+            something@something.com
+          </div>
+          <div
+            aria-label="start-date"
+          >
+            Start Date: 
+            2022-01-20
+          </div>
+          <div
+            aria-label="end-date"
+          >
+            End Date: 
+            2022-01-21
+          </div>
+        </section>
+        <section
+          class="alignLeft"
+        >
+          <h2>
+            Description
+          </h2>
+          <p
+            aria-label="description"
+          >
+            ok
+          </p>
+        </section>
+        <section
+          class="alignLeft"
+        >
+          <h2>
+            Hours and Pricing
+          </h2>
+          <p>
+            Hours Worked: 
+          </p>
+          <p>
+            Hours Quoted: 
+            22
+          </p>
+          <p>
+            Price Quoted: 
+            300
+          </p>
+        </section>
+        <section
+          class="alignLeft"
+        >
+          <h2>
+            Notes
+          </h2>
+          <p
+            aria-label="notes"
+          >
+            test notes
+          </p>
+        </section>
       </div>
-      <section
-        class="infoSection"
-      >
-        <div
-          aria-label="hourly-rate"
-        >
-          Hourly Rate: 
-          33
-        </div>
-        <div
-          aria-label="URL"
-        >
-          URL: 
-          something@something.com
-        </div>
-        <div
-          aria-label="start-date"
-        >
-          Start Date: 
-          2022-01-20
-        </div>
-        <div
-          aria-label="end-date"
-        >
-          End Date: 
-          2022-01-21
-        </div>
-      </section>
-      <section
-        class="alignLeft"
-      >
-        <h2>
-          Description
-        </h2>
-        <p
-          aria-label="description"
-        >
-          ok
-        </p>
-      </section>
-      <section
-        class="alignLeft"
-      >
-        <h2>
-          Notes
-        </h2>
-        <p
-          aria-label="notes"
-        >
-          test notes
-        </p>
-      </section>
-      <section
-        class="alignLeft"
-      >
-        <h2>
-          Hours and Pricing
-        </h2>
-        <p>
-          Hours Worked: 
-        </p>
-        <p>
-          Hours Quoted: 
-          22
-        </p>
-        <p>
-          Price Quoted: 
-          300
-        </p>
-      </section>
-    </div>
+    </main>
   </div>
 </div>
 `;
