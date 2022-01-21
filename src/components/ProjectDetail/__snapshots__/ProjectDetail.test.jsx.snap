@@ -6,6 +6,7 @@ exports[`should display project detail with provided content 1`] = `
     <div
       class="projectDetail"
     >
+      Client Name
       <div
         class="clientName"
       >
@@ -20,26 +21,46 @@ exports[`should display project detail with provided content 1`] = `
       >
         <div
           aria-label="hourly-rate"
+          class="infoItem"
         >
+          <img
+            alt="money"
+            src="moneySmall.png"
+          />
           Hourly Rate: $
           33
         </div>
         <div
           aria-label="URL"
+          class="infoItem"
         >
+          <img
+            alt="www"
+            src="wwwSmall.png"
+          />
           URL: 
           something
         </div>
         <div
           aria-label="start-date"
+          class="infoItem"
         >
+          <img
+            alt="clock"
+            src="clockSmall.png"
+          />
           Start Date: 
           2022-01-20
         </div>
         <div
           aria-label="end-date"
+          class="infoItem"
         >
-          End Date: 
+          <img
+            alt="clock"
+            src="clockSmall.png"
+          />
+          Deadline: 
           2022-01-20
         </div>
       </section>
@@ -47,10 +68,11 @@ exports[`should display project detail with provided content 1`] = `
         class="alignLeft"
       >
         <h2>
-          Description
+          Project Description:
         </h2>
         <p
           aria-label="description"
+          class="textBlock"
         >
           something
         </p>
@@ -59,16 +81,34 @@ exports[`should display project detail with provided content 1`] = `
         class="alignLeft"
       >
         <h2>
-          Hours and Pricing
+          Hours and Pricing:
         </h2>
-        <p>
+        <p
+          class="alignItem"
+        >
+          <img
+            alt="clock"
+            src="clockSmall.png"
+          />
           Hours Worked: 
         </p>
-        <p>
+        <p
+          class="alignItem"
+        >
+          <img
+            alt="clock"
+            src="clockSmall.png"
+          />
           Hours Quoted: 
         </p>
-        <p>
-          Price Quoted: 
+        <p
+          class="alignItem"
+        >
+          <img
+            alt="money"
+            src="moneySmall.png"
+          />
+          Price Quoted: $
         </p>
       </section>
       <section
@@ -79,6 +119,7 @@ exports[`should display project detail with provided content 1`] = `
         </h2>
         <p
           aria-label="notes"
+          class="textBlock"
         >
           something
         </p>

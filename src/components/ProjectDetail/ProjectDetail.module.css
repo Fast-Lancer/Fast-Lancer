@@ -13,6 +13,10 @@
   padding: 10px;
 }
 
+h2 {
+  padding:5px;
+}
+
 .infoSection {
   width: 100%;
   display: flex;
@@ -22,17 +26,29 @@
   padding-bottom:1.2em;
 }
 
+.infoItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoItem img{
+  padding: 5px;
+}
+
 .clientName {
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid black;  
+
+  font-family:'IBM Plex Mono', monospace;
 }
 
-h1 {
-  font-size: 1em;
+.clientName h1 {
   font-family:'IBM Plex Mono', monospace;
+  font-size: 2em;
 }
 
 .clientName > * {
@@ -43,10 +59,30 @@ h1 {
   align-self: center;
   border-bottom: 1px black solid;
   width:100%;
+  padding: 10px;
 }
 
 .alignLeft > p {
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.alignItem{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 10px;
+  font-size: 1.1em;
+}
+
+.alignItem img{
+  padding: 5px;
+}
+
+.textBlock{
+  padding: 10px;
+  font-family:'IBM Plex Sans', monospace;
 }
 
 @media(max-width: 768px) {
