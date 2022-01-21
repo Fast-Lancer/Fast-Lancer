@@ -1,7 +1,7 @@
 import styles from './ProjectDetail.module.css'
 
 export default function ProjectDetail({ project }) {
-  const { hourly_rate, URL, date_start, date_end, description, notes, clients } = project
+  const { hourly_rate, URL, date_start, date_end, description, notes, clients, hours_worked, price_quoted, hours_quoted } = project
 
   return (
     <div className={styles.projectDetail}>
@@ -12,7 +12,7 @@ export default function ProjectDetail({ project }) {
       </div>
       <section className={styles.infoSection}>
         <div aria-label='hourly-rate'>Hourly Rate: {hourly_rate}</div>
-        {URL && <div aria-label='URL'>Repo: {URL}</div>}
+        {URL && <div aria-label='URL'>URL: {URL}</div>}
         <div aria-label='start-date'>Start Date: {date_start}</div>
         <div aria-label='end-date'>End Date: {date_end}</div>
       </section>
@@ -27,6 +27,12 @@ export default function ProjectDetail({ project }) {
         <p aria-label='notes'>
           {notes ? notes : 'No notes entered.'}
         </p>
+      </section>
+      <section className={styles.alignLeft}>
+        <h2>Hours and Pricing</h2>
+        <p>Hours Worked: {hours_worked}</p>
+        <p>Hours Quoted: {hours_quoted}</p>
+        <p>Price Quoted: {price_quoted}</p>
       </section>
     </div>
   )
