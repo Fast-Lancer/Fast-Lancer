@@ -2,86 +2,88 @@
 
 exports[`should display project detail with provided content 1`] = `
 <div>
-  <main
-    class="projectDetail"
-  >
+  <main>
     <div
-      class="clientName"
+      class="projectDetail"
     >
-      <h1
-        aria-label="client-name"
+      <div
+        class="clientName"
       >
-        No client name entered
-      </h1>
+        <h1
+          aria-label="client-name"
+        >
+          No client name entered
+        </h1>
+      </div>
+      <section
+        class="infoSection"
+      >
+        <div
+          aria-label="hourly-rate"
+        >
+          Hourly Rate: $
+          33
+        </div>
+        <div
+          aria-label="URL"
+        >
+          URL: 
+          something
+        </div>
+        <div
+          aria-label="start-date"
+        >
+          Start Date: 
+          2022-01-20
+        </div>
+        <div
+          aria-label="end-date"
+        >
+          End Date: 
+          2022-01-20
+        </div>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Description
+        </h2>
+        <p
+          aria-label="description"
+        >
+          something
+        </p>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Hours and Pricing
+        </h2>
+        <p>
+          Hours Worked: 
+        </p>
+        <p>
+          Hours Quoted: 
+        </p>
+        <p>
+          Price Quoted: 
+        </p>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Notes
+        </h2>
+        <p
+          aria-label="notes"
+        >
+          something
+        </p>
+      </section>
     </div>
-    <section
-      class="infoSection"
-    >
-      <div
-        aria-label="hourly-rate"
-      >
-        Hourly Rate: 
-        33
-      </div>
-      <div
-        aria-label="URL"
-      >
-        URL: 
-        something
-      </div>
-      <div
-        aria-label="start-date"
-      >
-        Start Date: 
-        2022-01-20
-      </div>
-      <div
-        aria-label="end-date"
-      >
-        End Date: 
-        2022-01-20
-      </div>
-    </section>
-    <section
-      class="alignLeft"
-    >
-      <h2>
-        Description
-      </h2>
-      <p
-        aria-label="description"
-      >
-        something
-      </p>
-    </section>
-    <section
-      class="alignLeft"
-    >
-      <h2>
-        Notes
-      </h2>
-      <p
-        aria-label="notes"
-      >
-        something
-      </p>
-    </section>
-    <section
-      class="alignLeft"
-    >
-      <h2>
-        Hours and Pricing
-      </h2>
-      <p>
-        Hours Worked: 
-      </p>
-      <p>
-        Hours Quoted: 
-      </p>
-      <p>
-        Price Quoted: 
-      </p>
-    </section>
   </main>
 </div>
 `;
