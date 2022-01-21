@@ -26,7 +26,7 @@ exports[`should display project detail with provided content 1`] = `
       <div
         aria-label="URL"
       >
-        Repo: 
+        URL: 
         something
       </div>
       <div
@@ -64,6 +64,22 @@ exports[`should display project detail with provided content 1`] = `
         aria-label="notes"
       >
         something
+      </p>
+    </section>
+    <section
+      class="alignLeft"
+    >
+      <h2>
+        Hours and Pricing
+      </h2>
+      <p>
+        Hours Worked: 
+      </p>
+      <p>
+        Hours Quoted: 
+      </p>
+      <p>
+        Price Quoted: 
       </p>
     </section>
   </div>
