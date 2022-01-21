@@ -63,7 +63,7 @@ exports[`should display a loading screen, then a project detail view 1`] = `
         <div
           aria-label="URL"
         >
-          Repo: 
+          URL: 
           something@something.com
         </div>
         <div
@@ -101,6 +101,24 @@ exports[`should display a loading screen, then a project detail view 1`] = `
           aria-label="notes"
         >
           test notes
+        </p>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Hours and Pricing
+        </h2>
+        <p>
+          Hours Worked: 
+        </p>
+        <p>
+          Hours Quoted: 
+          22
+        </p>
+        <p>
+          Price Quoted: 
+          300
         </p>
       </section>
     </div>
