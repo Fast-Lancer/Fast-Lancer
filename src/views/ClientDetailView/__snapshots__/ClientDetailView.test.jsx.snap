@@ -40,7 +40,7 @@ exports[`should render the fetched data 1`] = `
           </li>
         </ul>
       </div>
-      <div
+      <main
         class="clientDetail"
       >
         <h3
@@ -126,7 +126,7 @@ exports[`should render the fetched data 1`] = `
             No notes entered.
           </div>
         </div>
-      </div>
+      </main>
     </div>
   </div>
 </div>
