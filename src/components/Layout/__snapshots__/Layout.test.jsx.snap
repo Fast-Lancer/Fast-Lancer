@@ -8,10 +8,14 @@ exports[`should match the snapshot 1`] = `
     <div
       class="logoDiv"
     >
-      <img
-        alt="fast lancer logo"
-        src="FastLancerLogo.svg"
-      />
+      <a
+        href="/"
+      >
+        <img
+          alt="fast lancer logo"
+          src="FastLancerLogo.svg"
+        />
+      </a>
     </div>
     <nav
       class=""

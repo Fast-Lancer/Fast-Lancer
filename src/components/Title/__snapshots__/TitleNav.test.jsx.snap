@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the TitleNav component accurately 1`] = `
+<div>
+  err
+</div>
+`;
