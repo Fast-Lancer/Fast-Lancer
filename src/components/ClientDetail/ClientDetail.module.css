@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: spread;
+  align-items: center;
   background-color: #d3d3d3;
   border-bottom: 1px solid black;
-  font-size: 18px;
+  font-size: 1.2em;
+  font-weight: 700;
+  width: 90%;
 }
 
 .clientDetail > * {
@@ -15,12 +17,12 @@
 .twoColRow {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   background-color: #d3d3d3;
   padding: .2em;
   border-bottom: 1px solid black;
-  font-size: 18px;
+  font-size: 1.1em;
   width: 100%;
 }
 
@@ -33,7 +35,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 50%;
 }
 
 .row {
@@ -49,8 +50,9 @@
 }
 
 .h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+  font-size: 2.2em;
   border-bottom: 1px solid black;
   width: 100%;
   text-align: center;

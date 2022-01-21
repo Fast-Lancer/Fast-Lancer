@@ -40,93 +40,95 @@ exports[`should render the fetched data 1`] = `
           </li>
         </ul>
       </div>
-      <div
-        class="clientDetail"
-      >
-        <h3
-          class="h3"
-        >
-          business1
-        </h3>
+      <main>
         <div
-          class="twoColRow"
+          class="clientDetail"
         >
+          <h3
+            class="h3"
+          >
+            business1
+          </h3>
           <div
-            class="col"
+            class="twoColRow"
           >
             <div
-              class="row"
+              class="col"
             >
-              <img
-                alt="a phone icon"
-                src="phoneSmall.png"
-              />
+              <div
+                class="row"
+              >
+                <img
+                  alt="a phone icon"
+                  src="phoneSmall.png"
+                />
+              </div>
+              <div
+                class="row"
+              >
+                <img
+                  alt="an email icon"
+                  src="emailSmall.png"
+                />
+              </div>
             </div>
+            <div
+              class="col"
+            >
+              <div
+                class="row"
+              >
+                <img
+                  alt="a palette icon"
+                  src="paletteSmall.png"
+                />
+                Client Projects
+              </div>
+              <ul
+                class="linkList"
+              >
+                <li>
+                  <a
+                    href="/projects/1"
+                  >
+                    project1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/projects/2"
+                  >
+                    project2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/projects/3"
+                  >
+                    project3
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
             <div
               class="row"
             >
               <img
-                alt="an email icon"
+                alt="a notes icon"
                 src="emailSmall.png"
               />
+              Notes
             </div>
-          </div>
-          <div
-            class="col"
-          >
             <div
-              class="row"
+              class="notesDiv"
             >
-              <img
-                alt="a palette icon"
-                src="paletteSmall.png"
-              />
-              Client Projects
+              No notes entered.
             </div>
-            <ul
-              class="linkList"
-            >
-              <li>
-                <a
-                  href="/projects/1"
-                >
-                  project1
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/projects/2"
-                >
-                  project2
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/projects/3"
-                >
-                  project3
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
-        <div>
-          <div
-            class="row"
-          >
-            <img
-              alt="a notes icon"
-              src="emailSmall.png"
-            />
-            Notes
-          </div>
-          <div
-            class="notesDiv"
-          >
-            No notes entered.
-          </div>
-        </div>
-      </div>
+      </main>
     </div>
   </div>
 </div>
