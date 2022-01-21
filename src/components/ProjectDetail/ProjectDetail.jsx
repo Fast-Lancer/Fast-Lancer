@@ -4,7 +4,8 @@ export default function ProjectDetail({ project }) {
   const { hourly_rate, URL, date_start, date_end, description, notes, clients, hours_worked, price_quoted, hours_quoted } = project
 
   return (
-    <div className={styles.projectDetail}>
+    
+    <main className={styles.projectDetail}>
       <div className={styles.clientName}>
         <h1 aria-label='client-name'>
           {clients?.client_name ?? 'No client name entered'}
@@ -34,6 +35,6 @@ export default function ProjectDetail({ project }) {
         <p>Hours Quoted: {hours_quoted}</p>
         <p>Price Quoted: {price_quoted}</p>
       </section>
-    </div>
+    </main>
   )
 }

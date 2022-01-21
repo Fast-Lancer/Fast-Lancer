@@ -39,7 +39,7 @@ exports[`should display a loading screen, then a project detail view 1`] = `
         </li>
       </ul>
     </div>
-    <div
+    <main
       class="projectDetail"
     >
       <div
@@ -121,7 +121,7 @@ exports[`should display a loading screen, then a project detail view 1`] = `
           300
         </p>
       </section>
-    </div>
+    </main>
   </div>
 </div>
 `;

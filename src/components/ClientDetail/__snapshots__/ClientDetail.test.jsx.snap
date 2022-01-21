@@ -2,7 +2,7 @@
 
 exports[`should match the snapshot 1`] = `
 <div>
-  <div
+  <main
     class="clientDetail"
   >
     <h3
@@ -83,6 +83,6 @@ exports[`should match the snapshot 1`] = `
         yo bobs pretty cool
       </div>
     </div>
-  </div>
+  </main>
 </div>
 `;
