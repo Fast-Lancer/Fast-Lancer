@@ -11,10 +11,11 @@ export default function AuthForm({
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const AuthText = isSigningUp ? 'Sign Up' : 'Log In'
+  const AntiAuthText = isSigningUp ? 'Log In' : 'Sign Up'
 
   return (
     <div className={styles.authContent}>
-      <Title pageTitle='auth' pageHeader='Log In'/>
+      <Title pageTitle='auth' pageHeader={AuthText}AntiAuthText/>
       <main>
         <fieldset>
           <label>
