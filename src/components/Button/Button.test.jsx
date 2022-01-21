@@ -5,7 +5,7 @@ import Button from './Button'
 it('renders the button component accurately', () => {
   const { container } = render(
     <Router>
-      <Button />
+      <Button buttonText='test'/>
     </Router>
   )
   expect(container).toMatchSnapshot()

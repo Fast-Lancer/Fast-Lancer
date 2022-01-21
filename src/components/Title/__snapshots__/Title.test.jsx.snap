@@ -7,8 +7,36 @@ exports[`renders the Title component accurately 1`] = `
   >
     <section
       class="title"
-    />
-    err
+    >
+      Header
+    </section>
+    <ul
+      class="tabnav"
+    >
+      <li
+        class="active"
+      >
+        <a
+          href=" "
+        >
+          Header
+        </a>
+      </li>
+      <li>
+        <a
+          href="/clients"
+        >
+          Clients
+        </a>
+      </li>
+      <li>
+        <a
+          href="/projects/new"
+        >
+          New Project
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 `;

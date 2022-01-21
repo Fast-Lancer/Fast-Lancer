@@ -2,6 +2,8 @@
 
 exports[`renders the button component accurately 1`] = `
 <div>
-  <button />
+  <button>
+    test
+  </button>
 </div>
 `;
