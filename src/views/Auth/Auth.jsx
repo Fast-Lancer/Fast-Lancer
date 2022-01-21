@@ -26,7 +26,6 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: change this if we don't end up using /projects
           history.push('/projects')
         }
       } catch(e) {
@@ -39,7 +38,6 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: change this if we don't end up using /projects
           history.push('/projects')
         }
       } catch(e) {

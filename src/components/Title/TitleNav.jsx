@@ -91,6 +91,18 @@ export default function TitleNav({ pageTitle, pageHeader }) {
         </ul>
       )
 
+    case 'auth':
+      return (
+        <ul className={styles.tabnav}>
+          <li className={styles.active}>
+            <a href={' '}>Log In</a>
+          </li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
+        </ul>
+      )
+
     default:
       return 'err'
   }

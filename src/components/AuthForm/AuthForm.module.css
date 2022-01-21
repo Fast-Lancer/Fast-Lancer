@@ -1,9 +1,32 @@
 .linkButton {
-  background: none!important;
+  /* background: none!important;
   border: none;
   padding: 0!important;
-  font-family: inheret;
+  font-family: 'Work Sans', sans-serif;
   color: #069;
   text-decoration: underline;
+  cursor: pointer; */
+
+  background: none!important;
+  border: none;
+  padding-top: 1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: .5em;
   cursor: pointer;
+}
+
+.authContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+main {
+  border-radius: 20px;
 }
