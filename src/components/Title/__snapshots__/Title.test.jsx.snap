@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Title component accurately 1`] = `
+<div>
+  <div
+    class="titleBody"
+  >
+    <section
+      class="title"
+    >
+      Header
+    </section>
+    <ul
+      class="tabnav"
+    >
+      <li
+        class="active"
+      >
+        <a
+          href=" "
+        >
+          Header
+        </a>
+      </li>
+      <li>
+        <a
+          href="/clients"
+        >
+          Clients
+        </a>
+      </li>
+      <li>
+        <a
+          href="/projects/new"
+        >
+          New Project
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

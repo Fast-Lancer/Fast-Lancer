@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the TitleNav component accurately 1`] = `
+<div>
+  <ul
+    class="tabnav"
+  >
+    <li
+      class="active"
+    >
+      <a
+        href=" "
+      >
+        Header
+      </a>
+    </li>
+    <li>
+      <a
+        href="/clients"
+      >
+        Clients
+      </a>
+    </li>
+    <li>
+      <a
+        href="/projects/new"
+      >
+        New Project
+      </a>
+    </li>
+  </ul>
+</div>
+`;

@@ -1,7 +1,11 @@
 import styles from './Title.module.css'
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-export default function TitleNav({ pageTitle, pageHeader }) {
+export default function TitleNav({ pageTitle, pageHeader, AntiAuthText }) {
+
+  const { id } = useParams()
+
   switch (pageTitle) {
     case 'projects':
       return (
@@ -43,7 +47,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/clients">Clients</Link>
           </li>
           <li>
-            <Link to="/editproject">Edit Project</Link>
+            <Link to={`/projects/edit/${id}`}>Edit Project</Link>
           </li>
         </ul>
       )
@@ -58,7 +62,7 @@ export default function TitleNav({ pageTitle, pageHeader }) {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/editclient">Edit Client</Link>
+            <Link to={`/clients/edit/${id}`}>Edit Client</Link>
           </li>
         </ul>
       )
@@ -83,6 +87,18 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           </li>
           <li>
             <Link to="/projects">Projects</Link>
+          </li>
+        </ul>
+      )
+
+    case 'auth':
+      return (
+        <ul className={styles.tabnav}>
+          <li className={styles.active}>
+            <a href={' '}>{pageHeader}</a>
+          </li>
+          <li>
+            <Link to={'/'}>⚛︎</Link>
           </li>
         </ul>
       )

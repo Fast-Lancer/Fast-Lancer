@@ -1,9 +1,15 @@
 import { fireEvent, render, screen } from '@testing-library/react'
+import { MemoryRouter, Route } from 'react-router-dom'
 import AuthForm from './AuthForm.jsx'
 
 it('should match the snapshot', () => {
+
   const { container } = render(
-    <AuthForm isSigningUp={true} />
+    <MemoryRouter initialEntries={['/']}>
+      <Route path='/'>
+        <AuthForm isSigningUp={true} />
+      </Route>
+    </MemoryRouter>
   )
 
   expect(container).toMatchSnapshot()
@@ -21,7 +27,12 @@ it('should call the handleSubimt prop with the entered username and password', a
   })
 
   const { container } = render(
-    <AuthForm isSigningUp={true} handleSubmit={mockSubmit}/>
+    <MemoryRouter initialEntries={['/']}>
+      <Route path='/'>
+        <AuthForm isSigningUp={true} handleSubmit={mockSubmit}/>
+      </Route>
+    </MemoryRouter>
+
   )
   
   const emailInput = await screen.findByLabelText('Email:')

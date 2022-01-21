@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`properly renders the Routes component 1`] = `
+<div>
+  <div
+    class="test"
+  >
+    <div
+      class="authContent"
+    >
+      <div
+        class="titleBody"
+      >
+        <section
+          class="title"
+        >
+          Log In
+        </section>
+        <ul
+          class="tabnav"
+        >
+          <li
+            class="active"
+          >
+            <a
+              href=" "
+            >
+              Log In
+            </a>
+          </li>
+          <li>
+            <a
+              href="/"
+            >
+              ⚛︎
+            </a>
+          </li>
+        </ul>
+      </div>
+      <main>
+        <fieldset>
+          <label>
+            Email:
+            <input
+              value=""
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              value=""
+            />
+          </label>
+          <button>
+            Log In
+          </button>
+          <div
+            class="linkButton"
+          >
+            Sign Up Instead
+          </div>
+        </fieldset>
+      </main>
+    </div>
+  </div>
+</div>
+`;

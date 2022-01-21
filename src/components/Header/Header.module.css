@@ -1,4 +1,5 @@
 .header {
+  margin-top:1em;
   display: grid;
   grid-template: 1fr 1fr 1fr / 2fr 8fr 2fr;
   height: 150px;
@@ -10,7 +11,7 @@
 }
 
 .header > nav {
-  background-color: rgb(180, 180, 180);
+  background-color: lightgrey;
   border: 1px solid rgb(82, 81, 81);
   margin: 10px;
   border-radius: 10px;
@@ -19,6 +20,8 @@
   justify-content: space-evenly;
   align-items: center;
   font-size: 18px;
+  font-weight: 700;
+  z-index: 5;
 }
 
 .header > nav > * {
@@ -26,6 +29,7 @@
 }
 
 .logoDiv {
+  margin-top:3.2em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,6 +44,7 @@
   grid-column: 3 / 4;
   width: 40px;
   height: 40px;
+  z-index: 20;
 }
 
 .bar {
@@ -60,7 +65,7 @@
   position: relative;
   background: black;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 10;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
@@ -124,7 +129,7 @@
   
   .hamburger {
     display: block;
-    z-index: 1;
+    z-index: 20;
   }
 
   .header img {

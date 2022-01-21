@@ -1,6 +1,12 @@
 .error {
-  bg-color: red;
-  color: white;
+  margin:2em;
+  background-color: rgba(249, 218, 218, 0.585);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: 700;
 }
 
 .link-button {

@@ -1,6 +1,5 @@
 import { Route, Switch } from 'react-router-dom'
 import Auth from '../../views/Auth/Auth.jsx'
-import Home from '../../views/Home/Home.jsx'
 import PrivateRoute from '../PrivateRoute/PrivateRoute.jsx'
 import ClientListView from '../../views/ClientListView/ClientListView.jsx'
 import ClientDetailView from '../../views/ClientDetailView/ClientDetailView.jsx'
@@ -13,6 +12,9 @@ import NewEditProject from '../../views/Projects/NewEditProject.jsx'
 export default function Routes() {
   return (
     <Switch>
+      <PrivateRoute exact path='/projects/edit/:id'>
+        <NewEditProject />
+      </PrivateRoute>
       <PrivateRoute exact path='/projects/new'>
         <NewEditProject />
       </PrivateRoute>
@@ -22,15 +24,12 @@ export default function Routes() {
       <PrivateRoute exact path='/projects'>
         <ProjectListView />
       </PrivateRoute>
-
-      {/* MAKE PRIVATE: */}
-      <Route exact path='/clients/edit/:id' >
+      <PrivateRoute exact path='/clients/edit/:id' >
         <NewEditClient />
-      </Route>
-      {/* MAKE PRIVATE: */}
-      <Route exact path='/clients/newclient' >
+      </PrivateRoute>
+      <PrivateRoute exact path='/clients/newclient' >
         <NewEditClient isNew/>
-      </Route>
+      </PrivateRoute>
       <PrivateRoute exact path='/clients/:id'>
         <ClientDetailView />
       </PrivateRoute>
@@ -47,7 +46,7 @@ export default function Routes() {
         <About />
       </Route>
       <Route exact path='/'>
-        <Home />
+        <Auth />
       </Route>
     </Switch>
   )

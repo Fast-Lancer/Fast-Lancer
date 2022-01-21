@@ -13,6 +13,7 @@ export default function ClientDetailView() {
   useEffect(() => {
     Promise.all([getClient(id), getProjectsByClient(id)])
       .then(([client, projects]) => {
+        projects = projects ?? []
         setClient({ ...client, projects })
       })
       .finally(() => setLoading(false))
