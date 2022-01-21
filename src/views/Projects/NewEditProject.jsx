@@ -23,12 +23,16 @@ export default function NewEditProject() {
 
   const handleProject = async (form) => {
     try{
-      const updatedProject = await (isCreate ? createProject(form) : updateProject(form))
+      let project
+      if(isCreate) {
+        project = await createProject(form)
+      } else {
+        project = await updateProject(form)
+      }
 
-      history.push(isCreate ? `/projects/${updatedProject[0].id}` : `/projects/${form.id}`)
+      history.push(isCreate ? `/projects/${project[0].id}` : `/projects/${form.id}`)
 
-    } catch(error) {
-      throw new Error(error)
+    } catch(e) {
     }
   }
 

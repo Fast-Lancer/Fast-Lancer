@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the fetched data 1`] = `
+<div>
+  <div>
+    <div
+      class="titleBody"
+    >
+      <section
+        class="title"
+      >
+        test title
+      </section>
+      <ul
+        class="tabnav"
+      >
+        <li
+          class="active"
+        >
+          <a
+            href="/projects"
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="/clients"
+          >
+            Clients
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects/edit/42"
+          >
+            Edit Project
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="projectDetail"
+    >
+      <div
+        class="clientName"
+      >
+        <h1
+          aria-label="client-name"
+        >
+          No client name entered
+        </h1>
+      </div>
+      <section
+        class="infoSection"
+      >
+        <div
+          aria-label="hourly-rate"
+        >
+          Hourly Rate: 
+          2
+        </div>
+        <div
+          aria-label="URL"
+        >
+          Repo: 
+          abc.com
+        </div>
+        <div
+          aria-label="start-date"
+        >
+          Start Date: 
+        </div>
+        <div
+          aria-label="end-date"
+        >
+          End Date: 
+        </div>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Description
+        </h2>
+        <p
+          aria-label="description"
+        >
+          desc
+        </p>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Notes
+        </h2>
+        <p
+          aria-label="notes"
+        >
+          test notes
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+`;

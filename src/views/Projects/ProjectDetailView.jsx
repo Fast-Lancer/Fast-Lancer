@@ -10,7 +10,7 @@ export default function ProjectDetailView() {
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    getProjectById(id).then(setProject).finally(() => setLoading(false))
+    getProjectById(id).then(data => setProject(data)).finally(() => setLoading(false))
   }, [])
 
   if(loading) return <h1>Loading...</h1>
