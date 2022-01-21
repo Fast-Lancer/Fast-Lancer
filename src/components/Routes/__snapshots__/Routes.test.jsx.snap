@@ -1,3 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`properly renders the Routes component 1`] = `<div />`;
+exports[`properly renders the Routes component 1`] = `
+<div>
+  <div
+    class="test"
+  >
+    <div>
+      <h1>
+        Log In
+      </h1>
+      <label>
+        Email:
+        <input
+          value=""
+        />
+      </label>
+      <label>
+        Password:
+        <input
+          type="password"
+          value=""
+        />
+      </label>
+      <button>
+        Log In
+      </button>
+      <div
+        class="linkButton"
+      >
+        Sign Up Instead
+      </div>
+    </div>
+  </div>
+</div>
+`;

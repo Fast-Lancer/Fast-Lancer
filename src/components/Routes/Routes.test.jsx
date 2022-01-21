@@ -6,11 +6,7 @@ import ClientListView from '../../views/ClientListView/ClientListView'
 it('properly renders the Routes component', () => {
   const { container } = render(
     <MemoryRouter initialEntries={['/']}>
-      <Switch>
-        <Route path='/clients'>
-          <ClientListView />
-        </Route>
-      </Switch>
+      <Routes />
     </MemoryRouter>
   )
   expect(container).toMatchSnapshot()
