@@ -33,6 +33,7 @@ ul {
   font-weight: 700;
   font-size: 1.2em;
   font-family: 'IBM Plex Mono', monospace;
+  text-transform: capitalize;
 }
 
 /* 
