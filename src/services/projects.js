@@ -5,7 +5,7 @@ export async function getProjects() {
     .from('projects')
     .select('*, clients (client_name)')
 
-  if (error) throw Error
+  if (error) throw new Error(error)
 
   return data
 }
@@ -17,7 +17,7 @@ export async function getProjectById(id) {
     .match({ id })
     .single()
 
-  if (error) throw Error
+  if (error) throw new Error(error)
 
   return data
 }
@@ -29,7 +29,7 @@ export async function getProjectNoClient(id) {
     .match({ id })
     .single()
 
-  if (error) throw Error
+  if (error) throw new Error(error)
 
   return data
 }
@@ -39,7 +39,7 @@ export async function createProject(project) {
     .from('projects')
     .insert(project)
       
-  if (error) throw Error
+  if (error) throw new Error(error)
     
   return data
 }
@@ -50,7 +50,7 @@ export async function updateProject(project) {
     .update(project)
     .match({ id: project.id })
   
-  if (error) throw Error
+  if (error) throw new Error(error)
     
   return data
 }
@@ -61,7 +61,7 @@ export async function deleteProjectById(id) {
     .delete()
     .match({ id })
 
-  if (error) throw Error
+  if (error) throw new Error(error)
 
   return data
 }
@@ -72,7 +72,7 @@ export async function getProjectsByClient(client_id) {
     .select('*')
     .eq('client_id', client_id)
 
-  if (error) throw Error
+  if (error) throw new Error(error)
 
   return data
 }

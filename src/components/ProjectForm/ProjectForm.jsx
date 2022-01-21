@@ -24,40 +24,40 @@ export default function ProjectForm({ handleProject, clientsAvailable, initialVa
 
   return <form onSubmit={handleSubmit}>
     <label htmlFor='date_start'>Start Date:</label>
-    <input name='date_start' value={form.date_start} type='date' onChange={handleChange}/>
+    <input id='date_start' name='date_start' value={form.date_start} type='date' onChange={handleChange}/>
 
     <label htmlFor='date_end'>End Date:</label>
-    <input name='date_end' value={form.date_end} type='date' onChange={handleChange}/>
+    <input id='date_end' name='date_end' value={form.date_end} type='date' onChange={handleChange}/>
 
     <label htmlFor='hourly_rate'>Hourly Rate:</label>
-    <input name='hourly_rate' value={form.hourly_rate} type='text' onChange={handleChange}/>
+    <input id='hourly_rate' name='hourly_rate' value={form.hourly_rate} type='text' onChange={handleChange}/>
 
     <label htmlFor='hours_worked'>Hours Worked:</label>
-    <input name='hours_worked' value={form.hours_worked} type='text' onChange={handleChange}/>
+    <input id='hours_worked' name='hours_worked' value={form.hours_worked} type='text' onChange={handleChange}/>
 
     <label htmlFor='URL'>URL:</label>
-    <input name='URL' value={form.URL} type='text' onChange={handleChange}/>
+    <input id='URL' name='URL' value={form.URL} type='text' onChange={handleChange}/>
 
     <label htmlFor='description'>Description:</label>
-    <input name='description' value={form.description} type='text' onChange={handleChange}/>
+    <input id='description' name='description' value={form.description} type='text' onChange={handleChange}/>
 
     <label htmlFor='completed_at'>Completed At:</label>
-    <input name='completed_at' value={form.completed_at} type='date' onChange={handleChange}/>
+    <input id='completed_at' name='completed_at' value={form.completed_at} type='date' onChange={handleChange}/>
     
     <label htmlFor='price_quoted'>Price Quoted:</label>
-    <input name='price_quoted' value={form.price_quoted} type='text' onChange={handleChange}/>
+    <input id='price_quoted' name='price_quoted' value={form.price_quoted} type='text' onChange={handleChange}/>
 
     <label htmlFor='hours_quoted'>Hours Quoted:</label>
-    <input name='hours_quoted' value={form.hours_quoted} type='text' onChange={handleChange}/>
+    <input id='hours_quoted' name='hours_quoted' value={form.hours_quoted} type='text' onChange={handleChange}/>
 
     <label htmlFor='title'>Title:</label>
-    <input name='title' value={form.title} type='text' onChange={handleChange}/>
+    <input id='title' name='title' value={form.title} type='text' onChange={handleChange}/>
 
     <label htmlFor='notes'>Notes:</label>
-    <input name='notes' value={form.notes} type='text' onChange={handleChange}/>
+    <input id='notes' name='notes' value={form.notes} type='text' onChange={handleChange}/>
 
     <label htmlFor='client_id'>Client: </label>
-    <select name='client_id' value={form.client_id} onChange={handleChange}>
+    <select id='client_id' name='client_id' value={form.client_id} onChange={handleChange}>
       <option value={''}>required</option>
       {clientsAvailable.map(client => <option key={client.id} value={client?.id}>{client?.client_name}</option>)}
     </select>

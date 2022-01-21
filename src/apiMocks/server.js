@@ -4,6 +4,7 @@ import { setupServer } from 'msw/node'
 const url = process.env.REACT_APP_SUPABASE_URL + '/rest/v1'
 
 let postedClient = {}
+let postedProject = {}
 
 export const server = setupServer(
   rest.get(url + '/clients', (req, res, ctx) => {
@@ -67,7 +68,7 @@ export const server = setupServer(
   rest.get(url + '/projects', (req, res, ctx) => {
     const select = req.url.searchParams.get('select')
     const id = req.url.searchParams.get('id')
-    if(select === '*' && !id) {
+    if(!id) {
       // response for getProjects()
       return res(
         ctx.json([
@@ -99,18 +100,40 @@ export const server = setupServer(
       )
     } else if(id) {
       // response for getProjectById(id)
-      return res(
-        ctx.json([
-          {
-            id: 1,
-            title: 'project1',
-            client_id: '1',
-            clients: {
-              client_name: 'bob1'
+      if(id === 'eq.42') {
+        return res(
+          ctx.json(postedProject)
+        )
+      } else {
+        return res(
+          ctx.json(
+            {
+              id: 1,
+              title: 'project1',
+              client_id: '1',
+              clients: {
+                client_name: 'bob1'
+              },
+              date_start:'2022-01-20',
+              date_end:'2022-01-21',
+              URL: 'something@something.com',
+              description: 'ok',
+              notes: 'test notes',
+              hourly_rate: 33,
+              hours_quoted: 22,
+              price_quoted: 300
             }
-          }
-        ])
-      )
+          )
+        )
+      }
     }
+  }),
+  rest.post(url + '/projects', (req, res, ctx) => {
+    let project = req.body
+    project = { ...project, id: 42 }
+    postedProject = project
+    return res(
+      ctx.json([project])
+    )
   })
 )

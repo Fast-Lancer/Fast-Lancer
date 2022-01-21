@@ -9,6 +9,7 @@ exports[`should display a form with empty field values 1`] = `
       Start Date:
     </label>
     <input
+      id="date_start"
       name="date_start"
       type="date"
       value=""
@@ -19,6 +20,7 @@ exports[`should display a form with empty field values 1`] = `
       End Date:
     </label>
     <input
+      id="date_end"
       name="date_end"
       type="date"
       value=""
@@ -29,6 +31,7 @@ exports[`should display a form with empty field values 1`] = `
       Hourly Rate:
     </label>
     <input
+      id="hourly_rate"
       name="hourly_rate"
       type="text"
       value=""
@@ -39,6 +42,7 @@ exports[`should display a form with empty field values 1`] = `
       Hours Worked:
     </label>
     <input
+      id="hours_worked"
       name="hours_worked"
       type="text"
       value=""
@@ -49,6 +53,7 @@ exports[`should display a form with empty field values 1`] = `
       URL:
     </label>
     <input
+      id="URL"
       name="URL"
       type="text"
       value=""
@@ -59,6 +64,7 @@ exports[`should display a form with empty field values 1`] = `
       Description:
     </label>
     <input
+      id="description"
       name="description"
       type="text"
       value=""
@@ -69,6 +75,7 @@ exports[`should display a form with empty field values 1`] = `
       Completed At:
     </label>
     <input
+      id="completed_at"
       name="completed_at"
       type="date"
       value=""
@@ -79,6 +86,7 @@ exports[`should display a form with empty field values 1`] = `
       Price Quoted:
     </label>
     <input
+      id="price_quoted"
       name="price_quoted"
       type="text"
       value=""
@@ -89,6 +97,7 @@ exports[`should display a form with empty field values 1`] = `
       Hours Quoted:
     </label>
     <input
+      id="hours_quoted"
       name="hours_quoted"
       type="text"
       value=""
@@ -99,6 +108,7 @@ exports[`should display a form with empty field values 1`] = `
       Title:
     </label>
     <input
+      id="title"
       name="title"
       type="text"
       value=""
@@ -109,6 +119,7 @@ exports[`should display a form with empty field values 1`] = `
       Notes:
     </label>
     <input
+      id="notes"
       name="notes"
       type="text"
       value=""
@@ -119,6 +130,7 @@ exports[`should display a form with empty field values 1`] = `
       Client: 
     </label>
     <select
+      id="client_id"
       name="client_id"
     >
       <option
@@ -155,6 +167,7 @@ exports[`should display a form with provided values 1`] = `
       Start Date:
     </label>
     <input
+      id="date_start"
       name="date_start"
       type="date"
       value="2022-01-20"
@@ -165,6 +178,7 @@ exports[`should display a form with provided values 1`] = `
       End Date:
     </label>
     <input
+      id="date_end"
       name="date_end"
       type="date"
       value="2022-01-21"
@@ -175,6 +189,7 @@ exports[`should display a form with provided values 1`] = `
       Hourly Rate:
     </label>
     <input
+      id="hourly_rate"
       name="hourly_rate"
       type="text"
       value="30"
@@ -185,6 +200,7 @@ exports[`should display a form with provided values 1`] = `
       Hours Worked:
     </label>
     <input
+      id="hours_worked"
       name="hours_worked"
       type="text"
       value="50"
@@ -195,6 +211,7 @@ exports[`should display a form with provided values 1`] = `
       URL:
     </label>
     <input
+      id="URL"
       name="URL"
       type="text"
       value="some@url.com"
@@ -205,6 +222,7 @@ exports[`should display a form with provided values 1`] = `
       Description:
     </label>
     <input
+      id="description"
       name="description"
       type="text"
       value="testing"
@@ -215,6 +233,7 @@ exports[`should display a form with provided values 1`] = `
       Completed At:
     </label>
     <input
+      id="completed_at"
       name="completed_at"
       type="date"
       value="2022-01-21"
@@ -225,6 +244,7 @@ exports[`should display a form with provided values 1`] = `
       Price Quoted:
     </label>
     <input
+      id="price_quoted"
       name="price_quoted"
       type="text"
       value="4000"
@@ -235,6 +255,7 @@ exports[`should display a form with provided values 1`] = `
       Hours Quoted:
     </label>
     <input
+      id="hours_quoted"
       name="hours_quoted"
       type="text"
       value="100"
@@ -245,6 +266,7 @@ exports[`should display a form with provided values 1`] = `
       Title:
     </label>
     <input
+      id="title"
       name="title"
       type="text"
       value="testing"
@@ -255,6 +277,7 @@ exports[`should display a form with provided values 1`] = `
       Notes:
     </label>
     <input
+      id="notes"
       name="notes"
       type="text"
       value="testing"
@@ -265,6 +288,7 @@ exports[`should display a form with provided values 1`] = `
       Client: 
     </label>
     <select
+      id="client_id"
       name="client_id"
     >
       <option
