@@ -4,7 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom'
 import Button from '../../components/Button/Button.jsx'
 import ProjectForm from '../../components/ProjectForm/ProjectForm.jsx'
 import { getClients } from '../../services/clients.js'
-import { createProject, deleteProjectById, getProjectNoClient, updateProject } from '../../services/projects.js'
+import { createProject, deleteProjectById, getProjectById,  updateProject } from '../../services/projects.js'
 import changeValue from '../../utils/changeValue.js'
 
 export default function NewEditProject() {
@@ -43,7 +43,7 @@ export default function NewEditProject() {
 
   useEffect(() => {
     if (!isCreate) {
-      getProjectNoClient(id).then(proj => changeValue(proj, '')).then(setInitialValues)
+      getProjectById(id).then(proj => changeValue(proj, '')).then(setInitialValues)
     }
     getClients().then(setClientsAvailable).finally(() => setLoading(false))
   }, [])

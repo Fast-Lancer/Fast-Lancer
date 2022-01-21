@@ -78,7 +78,15 @@ export const server = setupServer(
             client_id: '1',
             clients: {
               client_name: 'bob1'
-            }
+            },
+            date_start:'2022-01-20',
+            date_end:'2022-01-21',
+            URL: 'something@something.com',
+            description: 'ok',
+            notes: 'test notes',
+            hourly_rate: 33,
+            hours_quoted: 22,
+            price_quoted: 300
           },
           {
             id: 2,
@@ -86,7 +94,17 @@ export const server = setupServer(
             client_id: '2',
             clients: {
               client_name: 'bob2'
-            }
+            },
+            
+            date_start:'2022-01-20',
+            date_end:'2022-01-21',
+            URL: 'something@something.com',
+            description: 'ok',
+            notes: 'test notes',
+            hourly_rate: 33,
+            hours_quoted: 22,
+            price_quoted: 300
+          
           },
           {
             id: 3,
@@ -94,7 +112,15 @@ export const server = setupServer(
             client_id: '3',
             clients: {
               client_name: 'bob3'
-            }
+            },
+            date_start:'2022-01-20',
+            date_end:'2022-01-21',
+            URL: 'something@something.com',
+            description: 'ok',
+            notes: 'test notes',
+            hourly_rate: 33,
+            hours_quoted: 22,
+            price_quoted: 300
           }
         ])
       )

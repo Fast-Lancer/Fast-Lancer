@@ -22,18 +22,6 @@ export async function getProjectById(id) {
   return data
 }
 
-export async function getProjectNoClient(id) {
-  const { data, error } = await supaClient
-    .from('projects')
-    .select('*')
-    .match({ id })
-    .single()
-
-  if (error) throw new Error(error)
-
-  return data
-}
-
 export async function createProject(project) {
   const { data, error } = await supaClient
     .from('projects')
@@ -44,11 +32,15 @@ export async function createProject(project) {
   return data
 }
 
-export async function updateProject(project) {
+export async function updateProject({
+  id, date_start, date_end, hourly_rate, hours_worked, URL, description, completed_at, price_quoted, hours_quoted, title, notes, client_id, user_id
+}) {
   const { data, error } = await supaClient
     .from('projects')
-    .update(project)
-    .match({ id: project.id })
+    .update({
+      date_start, date_end, hourly_rate, hours_worked, URL, description, completed_at, price_quoted, hours_quoted, title, notes, client_id, user_id
+    })
+    .match({ id })
   
   if (error) throw new Error(error)
     
