@@ -1,8 +1,7 @@
 .projectItem {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
   background-color: #d3d3d3;
   padding: .2em;
   border-bottom: 1px solid black;
@@ -13,7 +12,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  max-width: 50%;
+}
+
+.detailCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.detailContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .row {
@@ -27,7 +39,8 @@
 .h3 {
   margin: .1em 0px;
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
+  font-size: 2.5em;
+  text-transform: capitalize;
 }
 
 .h4 {
@@ -46,4 +59,8 @@
   .col {
     align-items: center;
   }
+}
+
+.detailContainer img{
+  padding:10px;
 }
