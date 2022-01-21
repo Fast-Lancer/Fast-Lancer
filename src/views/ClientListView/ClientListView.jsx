@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ClientItem from '../../components/ClientItem/ClientItem.jsx'
 import Title from '../../components/Title/Title.jsx'
 import { getClients } from '../../services/clients.js'
+import styles from './ClientListView.module.css'
 
 export default function ClientListView() {
   const [loading, setLoading] = useState(true)
@@ -15,13 +16,17 @@ export default function ClientListView() {
   if(loading) return <h1>Loading...</h1>
 
   return (
-    <div>
+    <div>      
       <Title pageTitle='clients' pageHeader='Clients' />
-      {clients.map((client) => (
-        <Link key={client.id} to={`/clients/${client.id}`}>
-          <ClientItem key={client.id}  client={client}  />
-        </Link>
-      ))}
+      <main>
+        <section className={styles.itemContainer}>
+          {clients.map((client) => (
+            <Link key={client.id} to={`/clients/${client.id}`}>
+              <ClientItem key={client.id}  client={client}  />
+            </Link>
+          ))}
+        </section>
+      </main>
     </div>
   )
 }

@@ -91,6 +91,13 @@ textarea {
   font-weight: 700;
 }
 
+select {
+  padding:.5em;
+  font-size:1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+
 button {
   margin-top: 1em;
   padding: 5px;
@@ -116,6 +123,7 @@ button:active {
   color: lightgrey;
 }
 
+select:focus,
 input:focus,
 textarea:focus,
 button:focus {
