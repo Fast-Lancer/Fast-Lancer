@@ -18,7 +18,7 @@ exports[`should render the ClientItem with the client info 1`] = `
       </h4>
     </div>
     <div
-      class="col"
+      class="col2"
     >
       <div
         class="row"

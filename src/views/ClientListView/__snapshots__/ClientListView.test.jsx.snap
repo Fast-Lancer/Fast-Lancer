@@ -39,132 +39,138 @@ exports[`should render the fetched data 1`] = `
         </li>
       </ul>
     </div>
-    <a
-      href="/clients/1"
-    >
-      <div
-        class="clientItem"
+    <main>
+      <section
+        class="itemContainer"
       >
-        <div
-          class="col"
-        >
-          <h3
-            class="h3"
-          >
-            bob1
-          </h3>
-          <h4
-            class="h4"
-          >
-            business1
-          </h4>
-        </div>
-        <div
-          class="col"
+        <a
+          href="/clients/1"
         >
           <div
-            class="row"
+            class="clientItem"
           >
-            <img
-              alt="a phone icon"
-              src="phoneSmall.png"
-            />
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                bob1
+              </h3>
+              <h4
+                class="h4"
+              >
+                business1
+              </h4>
+            </div>
+            <div
+              class="col2"
+            >
+              <div
+                class="row"
+              >
+                <img
+                  alt="a phone icon"
+                  src="phoneSmall.png"
+                />
+              </div>
+              <div
+                class="row"
+              >
+                <img
+                  alt="a email icon"
+                  src="emailSmall.png"
+                />
+              </div>
+            </div>
           </div>
-          <div
-            class="row"
-          >
-            <img
-              alt="a email icon"
-              src="emailSmall.png"
-            />
-          </div>
-        </div>
-      </div>
-    </a>
-    <a
-      href="/clients/2"
-    >
-      <div
-        class="clientItem"
-      >
-        <div
-          class="col"
-        >
-          <h3
-            class="h3"
-          >
-            bob2
-          </h3>
-          <h4
-            class="h4"
-          >
-            business2
-          </h4>
-        </div>
-        <div
-          class="col"
-        >
-          <div
-            class="row"
-          >
-            <img
-              alt="a phone icon"
-              src="phoneSmall.png"
-            />
-          </div>
-          <div
-            class="row"
-          >
-            <img
-              alt="a email icon"
-              src="emailSmall.png"
-            />
-          </div>
-        </div>
-      </div>
-    </a>
-    <a
-      href="/clients/3"
-    >
-      <div
-        class="clientItem"
-      >
-        <div
-          class="col"
-        >
-          <h3
-            class="h3"
-          >
-            bob3
-          </h3>
-          <h4
-            class="h4"
-          >
-            business3
-          </h4>
-        </div>
-        <div
-          class="col"
+        </a>
+        <a
+          href="/clients/2"
         >
           <div
-            class="row"
+            class="clientItem"
           >
-            <img
-              alt="a phone icon"
-              src="phoneSmall.png"
-            />
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                bob2
+              </h3>
+              <h4
+                class="h4"
+              >
+                business2
+              </h4>
+            </div>
+            <div
+              class="col2"
+            >
+              <div
+                class="row"
+              >
+                <img
+                  alt="a phone icon"
+                  src="phoneSmall.png"
+                />
+              </div>
+              <div
+                class="row"
+              >
+                <img
+                  alt="a email icon"
+                  src="emailSmall.png"
+                />
+              </div>
+            </div>
           </div>
+        </a>
+        <a
+          href="/clients/3"
+        >
           <div
-            class="row"
+            class="clientItem"
           >
-            <img
-              alt="a email icon"
-              src="emailSmall.png"
-            />
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                bob3
+              </h3>
+              <h4
+                class="h4"
+              >
+                business3
+              </h4>
+            </div>
+            <div
+              class="col2"
+            >
+              <div
+                class="row"
+              >
+                <img
+                  alt="a phone icon"
+                  src="phoneSmall.png"
+                />
+              </div>
+              <div
+                class="row"
+              >
+                <img
+                  alt="a email icon"
+                  src="emailSmall.png"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </a>
+        </a>
+      </section>
+    </main>
   </div>
 </div>
 `;

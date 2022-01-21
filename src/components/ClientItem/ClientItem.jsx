@@ -20,7 +20,7 @@ export default function ClientItem({ client }) {
           {businessName}
         </h4>
       </div>
-      <div className={styles.col}>
+      <div className={styles.col2}>
         <div className={styles.row}>
           <img src={phoneIcon} alt='a phone icon' />
           {phone}
@@ -31,5 +31,6 @@ export default function ClientItem({ client }) {
         </div>
       </div>
     </div>
+
   )
 }
