@@ -5,7 +5,7 @@ import Title from './Title'
 it('renders the Title component accurately', () => {
   const { container } = render(
     <Router>
-      <Title/>
+      <Title pageTitle='projects' pageHeader='Header'/>
     </Router>
   )
   expect(container).toMatchSnapshot()

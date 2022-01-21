@@ -5,7 +5,7 @@ import TitleNav from './TitleNav'
 it('renders the TitleNav component accurately', () => {
   const { container } = render(
     <Router>
-      <TitleNav />
+      <TitleNav pageTitle='projects' pageHeader='Header' />
     </Router>
   )
   expect(container).toMatchSnapshot()
