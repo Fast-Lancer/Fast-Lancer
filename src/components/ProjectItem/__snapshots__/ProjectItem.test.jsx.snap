@@ -18,18 +18,37 @@ exports[`should display a project item with provided content 1`] = `
       />
     </div>
     <div
-      class="col"
+      class="detailCol"
     >
-      <div>
-        Hourly Rate: 
+      <div
+        class="detailContainer"
+      >
+        <img
+          alt="clock"
+          src="clockSmall.png"
+        />
+        Hourly Rate: $
         33
       </div>
-      <div>
+      <div
+        class="detailContainer"
+      >
+        <img
+          alt="clock"
+          src="clockSmall.png"
+        />
         Hours Quoted: 
         55
+        hrs
       </div>
-      <div>
-        Quoted Price: 
+      <div
+        class="detailContainer"
+      >
+        <img
+          alt="money"
+          src="moneySmall.png"
+        />
+        Quoted Price: $
         375
       </div>
     </div>

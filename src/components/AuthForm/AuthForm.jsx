@@ -15,7 +15,7 @@ export default function AuthForm({
 
   return (
     <div className={styles.authContent}>
-      <Title pageTitle='auth' pageHeader={AuthText}AntiAuthText/>
+      <Title pageTitle='auth' pageHeader={AuthText}/>
       <main>
         <fieldset>
           <label>

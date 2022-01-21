@@ -52,10 +52,9 @@ export default function Auth() {
     setIsSigningUp(prev => !prev)
   }
 
-  // TODO: pick ideal wording for text
   return (
     <div className='test'>
-
+      
       <AuthForm {...{ isSigningUp, handleSubmit, toggleIsSigningUp }} />
 
       {!!wasRedirected ? <div className={styles.error}>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}

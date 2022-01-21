@@ -2,9 +2,7 @@
 
 exports[`should display a loading screen, then a project list view 1`] = `
 <div>
-  <div
-    class="projectListView"
-  >
+  <div>
     <div
       class="titleBody"
     >
@@ -41,120 +39,183 @@ exports[`should display a loading screen, then a project list view 1`] = `
         </li>
       </ul>
     </div>
-    <a
-      href="/projects/1"
-    >
-      <div
-        class="projectItem"
+    <main>
+      <section
+        class="content"
       >
-        <div
-          class="col"
+        <a
+          href="/projects/1"
         >
-          <h3
-            class="h3"
+          <div
+            class="projectItem"
           >
-            project1
-          </h3>
-          <h4
-            class="h4"
-          >
-            bob1
-          </h4>
-        </div>
-        <div
-          class="col"
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                project1
+              </h3>
+              <h4
+                class="h4"
+              >
+                bob1
+              </h4>
+            </div>
+            <div
+              class="detailCol"
+            >
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hourly Rate: $
+                33
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hours Quoted: 
+                22
+                hrs
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="money"
+                  src="moneySmall.png"
+                />
+                Quoted Price: $
+                300
+              </div>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/projects/2"
         >
-          <div>
-            Hourly Rate: 
-            33
-          </div>
-          <div>
-            Hours Quoted: 
-            22
-          </div>
-          <div>
-            Quoted Price: 
-            300
-          </div>
-        </div>
-      </div>
-    </a>
-    <a
-      href="/projects/2"
-    >
-      <div
-        class="projectItem"
-      >
-        <div
-          class="col"
-        >
-          <h3
-            class="h3"
+          <div
+            class="projectItem"
           >
-            project2
-          </h3>
-          <h4
-            class="h4"
-          >
-            bob2
-          </h4>
-        </div>
-        <div
-          class="col"
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                project2
+              </h3>
+              <h4
+                class="h4"
+              >
+                bob2
+              </h4>
+            </div>
+            <div
+              class="detailCol"
+            >
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hourly Rate: $
+                33
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hours Quoted: 
+                22
+                hrs
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="money"
+                  src="moneySmall.png"
+                />
+                Quoted Price: $
+                300
+              </div>
+            </div>
+          </div>
+        </a>
+        <a
+          href="/projects/3"
         >
-          <div>
-            Hourly Rate: 
-            33
-          </div>
-          <div>
-            Hours Quoted: 
-            22
-          </div>
-          <div>
-            Quoted Price: 
-            300
-          </div>
-        </div>
-      </div>
-    </a>
-    <a
-      href="/projects/3"
-    >
-      <div
-        class="projectItem"
-      >
-        <div
-          class="col"
-        >
-          <h3
-            class="h3"
+          <div
+            class="projectItem"
           >
-            project3
-          </h3>
-          <h4
-            class="h4"
-          >
-            bob3
-          </h4>
-        </div>
-        <div
-          class="col"
-        >
-          <div>
-            Hourly Rate: 
-            33
+            <div
+              class="col"
+            >
+              <h3
+                class="h3"
+              >
+                project3
+              </h3>
+              <h4
+                class="h4"
+              >
+                bob3
+              </h4>
+            </div>
+            <div
+              class="detailCol"
+            >
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hourly Rate: $
+                33
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="clock"
+                  src="clockSmall.png"
+                />
+                Hours Quoted: 
+                22
+                hrs
+              </div>
+              <div
+                class="detailContainer"
+              >
+                <img
+                  alt="money"
+                  src="moneySmall.png"
+                />
+                Quoted Price: $
+                300
+              </div>
+            </div>
           </div>
-          <div>
-            Hours Quoted: 
-            22
-          </div>
-          <div>
-            Quoted Price: 
-            300
-          </div>
-        </div>
-      </div>
-    </a>
+        </a>
+      </section>
+    </main>
   </div>
 </div>
 `;
