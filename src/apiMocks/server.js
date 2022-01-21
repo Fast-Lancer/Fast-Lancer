@@ -8,9 +8,8 @@ let postedProject = {}
 
 export const server = setupServer(
   rest.get(url + '/clients', (req, res, ctx) => {
-    const select = req.url.searchParams.get('select')
     const id = req.url.searchParams.get('id')
-    if(select === '*' && !id) {
+    if(!id) {
       // response for getClients()
       return res(
         ctx.json([
@@ -34,7 +33,6 @@ export const server = setupServer(
     } else if(id) {
       // response for getClient(id)
       if(id === 'eq.42') {
-        // Janky workaround to make testing edit/create possible.
         // The post route mock will set the id to 42
         // So this responds with the posted data when client.id is 42
         return res(
@@ -66,7 +64,6 @@ export const server = setupServer(
     )
   }),
   rest.get(url + '/projects', (req, res, ctx) => {
-    const select = req.url.searchParams.get('select')
     const id = req.url.searchParams.get('id')
     if(!id) {
       // response for getProjects()
