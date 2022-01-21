@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: spread;
+  align-items: center;
   background-color: #d3d3d3;
   border-bottom: 1px solid black;
-  font-size: 18px;
+  font-size: 1.2em;
+  width:90%;
 }
 
 .projectDetail > * {
@@ -17,7 +18,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 18px;
+  font-size: 1.2em;
+  padding-bottom:1.2em;
 }
 
 .infoSection > * {
@@ -29,7 +31,12 @@
   height: fit-content;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black;  
+}
+
+h1 {
+  font-size: 1em;
+  font-family:'IBM Plex Mono', monospace;
 }
 
 .clientName > * {
@@ -37,7 +44,9 @@
 }
 
 .alignLeft {
-  align-self: flex-start;
+  align-self: center;
+  border-bottom: 1px black solid;
+  width:100%;
 }
 
 .alignLeft > p {
