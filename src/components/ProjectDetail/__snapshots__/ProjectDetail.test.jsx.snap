@@ -2,7 +2,7 @@
 
 exports[`should display project detail with provided content 1`] = `
 <div>
-  <div
+  <main
     class="projectDetail"
   >
     <div
@@ -82,6 +82,6 @@ exports[`should display project detail with provided content 1`] = `
         Price Quoted: 
       </p>
     </section>
-  </div>
+  </main>
 </div>
 `;

@@ -15,7 +15,7 @@ export default function ClientDetail({ client }) {
   } = client
 
   return (
-    <div className={styles.clientDetail}>
+    <main className={styles.clientDetail}>
       <h3 className={styles.h3}>
         {businessName}
       </h3>
@@ -57,6 +57,6 @@ export default function ClientDetail({ client }) {
           {notes ?? 'No notes entered.'}
         </div>
       </div>
-    </div>
+    </main>
   )
 }

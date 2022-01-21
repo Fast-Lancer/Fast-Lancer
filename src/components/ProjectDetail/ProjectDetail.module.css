@@ -20,6 +20,10 @@
   font-size: 18px;
 }
 
+.infoSection > * {
+  font-weight: bold;
+}
+
 .clientName {
   width: 100%;
   height: fit-content;

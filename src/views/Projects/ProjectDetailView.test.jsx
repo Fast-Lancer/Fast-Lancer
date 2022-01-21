@@ -23,7 +23,6 @@ it('should display a loading screen, then a project detail view', async () => {
   
   expect(screen.getByText(/loading/gi)).toBeInTheDocument()
   
-  await screen.findByText(/bob1/gi)
   await screen.findByText(/33/gi)
   await screen.findByText(/something@something.com/gi)
   await screen.findByText(/project1/gi)
