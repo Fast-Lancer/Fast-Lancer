@@ -27,7 +27,7 @@ it('should render the sign up page and sign up a user', async () => {
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Sign Up' && element.tagName.toLowerCase() === 'h1'
+    return content === 'Sign Up' && element.tagName.toLowerCase() === 'section'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -51,7 +51,7 @@ it('should render the log in page and log in a user', async () => {
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Log In' && element.tagName.toLowerCase() === 'h1'
+    return content === 'Log In' && element.tagName.toLowerCase() === 'section'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -76,7 +76,7 @@ it('should change log in text to sign up when navigating to /login from /signup'
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Sign Up' && element.tagName.toLowerCase() === 'h1'
+    return content === 'Sign Up' && element.tagName.toLowerCase() === 'section'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -84,7 +84,7 @@ it('should change log in text to sign up when navigating to /login from /signup'
   history.push('/login')
 
   const logInText = await screen.findByText((content, element) => {
-    return content === 'Log In' && element.tagName.toLowerCase() === 'h1'
+    return content === 'Log In' && element.tagName.toLowerCase() === 'section'
   })
 
   expect(logInText).toBeInTheDocument()

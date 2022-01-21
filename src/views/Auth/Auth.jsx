@@ -4,6 +4,7 @@ import { useUser } from '../../context/UserContext.jsx'
 import { useLocation } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import AuthForm from '../../components/AuthForm/AuthForm.jsx'
+import styles from './Auth.module.css'
 
 export default function Auth() {
   const history = useHistory()
@@ -26,7 +27,6 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: change this if we don't end up using /projects
           history.push('/projects')
         }
       } catch(e) {
@@ -39,7 +39,6 @@ export default function Auth() {
         if(wasRedirected) {
           history.goBack()
         } else {
-          // TODO: change this if we don't end up using /projects
           history.push('/projects')
         }
       } catch(e) {
@@ -53,12 +52,13 @@ export default function Auth() {
     setIsSigningUp(prev => !prev)
   }
 
-  // TODO: pick ideal wording for text
   return (
     <div className='test'>
-      {!!wasRedirected ? <div>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}
-      {!!errorMessage ? <div>{errorMessage}</div> : <></>}
+      
       <AuthForm {...{ isSigningUp, handleSubmit, toggleIsSigningUp }} />
+
+      {!!wasRedirected ? <div className={styles.error}>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}
+      {!!errorMessage ? <div className={styles.error}>{errorMessage}</div> : <></>}
     </div>
   )
 }

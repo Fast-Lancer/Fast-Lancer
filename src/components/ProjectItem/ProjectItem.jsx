@@ -1,4 +1,6 @@
 import styles from './ProjectItem.module.css'
+import clock from '../../assets/icons/clockSmall.png'
+import money from '../../assets/icons/moneySmall.png'
 
 export default function ProjectItem({ project }) {
   const { title, clients, hourly_rate, hours_quoted, price_quoted } = project
@@ -13,10 +15,13 @@ export default function ProjectItem({ project }) {
           {clients.client_name}
         </h4>
       </div>
-      <div className={styles.col}>
-        <div>Hourly Rate: {hourly_rate}</div>
-        <div>Hours Quoted: {hours_quoted}</div>
-        <div>Quoted Price: {price_quoted}</div>
+      <div className={styles.detailCol}>
+        <div className={styles.detailContainer}><img src={clock} alt='clock'/>Hourly Rate: ${hourly_rate}</div>
+        <div className={styles.detailContainer}>
+          <img src={clock} alt='clock'/>Hours Quoted: {hours_quoted}hrs</div>
+        <div className={styles.detailContainer}>
+          <img src={money} alt='money'/>
+          Quoted Price: ${price_quoted}</div>
       </div>
     </div>
   )
