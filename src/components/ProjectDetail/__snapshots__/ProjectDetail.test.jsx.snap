@@ -8,26 +8,36 @@ exports[`should display project detail with provided content 1`] = `
     <div
       class="clientName"
     >
-      <h1>
+      <h1
+        aria-label="client-name"
+      >
         No client name entered
       </h1>
     </div>
     <section
       class="infoSection"
     >
-      <div>
+      <div
+        aria-label="hourly-rate"
+      >
         Hourly Rate: 
         33
       </div>
-      <div>
+      <div
+        aria-label="URL"
+      >
         Repo: 
         something
       </div>
-      <div>
+      <div
+        aria-label="start-date"
+      >
         Start Date: 
         2022-01-20
       </div>
-      <div>
+      <div
+        aria-label="end-date"
+      >
         End Date: 
         2022-01-20
       </div>
@@ -38,7 +48,9 @@ exports[`should display project detail with provided content 1`] = `
       <h2>
         Description
       </h2>
-      <p>
+      <p
+        aria-label="description"
+      >
         something
       </p>
     </section>
@@ -48,7 +60,9 @@ exports[`should display project detail with provided content 1`] = `
       <h2>
         Notes
       </h2>
-      <p>
+      <p
+        aria-label="notes"
+      >
         something
       </p>
     </section>

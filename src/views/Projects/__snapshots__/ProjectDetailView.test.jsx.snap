@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display a loading screen, then a project detail view 1`] = `
+<div>
+  <div>
+    <div
+      class="titleBody"
+    >
+      <section
+        class="title"
+      >
+        project1
+      </section>
+      <ul
+        class="tabnav"
+      >
+        <li
+          class="active"
+        >
+          <a
+            href="/projects"
+          >
+            Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="/clients"
+          >
+            Clients
+          </a>
+        </li>
+        <li>
+          <a
+            href="/projects/edit/undefined"
+          >
+            Edit Project
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="projectDetail"
+    >
+      <div
+        class="clientName"
+      >
+        <h1
+          aria-label="client-name"
+        >
+          bob1
+        </h1>
+      </div>
+      <section
+        class="infoSection"
+      >
+        <div
+          aria-label="hourly-rate"
+        >
+          Hourly Rate: 
+          33
+        </div>
+        <div
+          aria-label="URL"
+        >
+          Repo: 
+          something@something.com
+        </div>
+        <div
+          aria-label="start-date"
+        >
+          Start Date: 
+          2022-01-20
+        </div>
+        <div
+          aria-label="end-date"
+        >
+          End Date: 
+          2022-01-21
+        </div>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Description
+        </h2>
+        <p
+          aria-label="description"
+        >
+          ok
+        </p>
+      </section>
+      <section
+        class="alignLeft"
+      >
+        <h2>
+          Notes
+        </h2>
+        <p
+          aria-label="notes"
+        >
+          test notes
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+`;
