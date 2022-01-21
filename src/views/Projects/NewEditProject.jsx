@@ -41,9 +41,10 @@ export default function NewEditProject() {
 
   useEffect(() => {
     if (!isCreate) {
-      getProjectById(id).then(proj => changeValue(proj, '')).then(setInitialValues)
+      getProjectById(id).then(proj => changeValue(proj, '')).then(setInitialValues).then(() => getClients()).then(setClientsAvailable).finally(() => setLoading(false))
+    } else {
+      getClients().then(setClientsAvailable).finally(() => setLoading(false))
     }
-    getClients().then(setClientsAvailable).finally(() => setLoading(false))
   }, [])
 
   return <div>
