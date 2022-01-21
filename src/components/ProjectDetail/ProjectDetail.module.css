@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #d3d3d3;
-  border-bottom: 1px solid black;
   font-size: 1.2em;
   width:90%;
 }
@@ -62,10 +61,15 @@ h2 {
   padding: 10px;
 }
 
+
 .alignLeft > p {
   margin-left: 20px;
   display: flex;
   align-items: center;
+}
+
+.alignLeft:last-child{
+  border:none;
 }
 
 .alignItem{
