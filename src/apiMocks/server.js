@@ -9,7 +9,7 @@ let postedProject = {}
 export const server = setupServer(
   rest.get(url + '/clients', (req, res, ctx) => {
     const id = req.url.searchParams.get('id')
-    if(!id) {
+    if (!id) {
       // response for getClients()
       return res(
         ctx.json([
@@ -30,9 +30,9 @@ export const server = setupServer(
           }
         ])
       )
-    } else if(id) {
+    } else if (id) {
       // response for getClient(id)
-      if(id === 'eq.42') {
+      if (id === 'eq.42') {
         // The post route mock will set the id to 42
         // So this responds with the posted data when client.id is 42
         return res(
@@ -65,7 +65,7 @@ export const server = setupServer(
   }),
   rest.get(url + '/projects', (req, res, ctx) => {
     const id = req.url.searchParams.get('id')
-    if(!id) {
+    if (!id) {
       // response for getProjects()
       return res(
         ctx.json([
@@ -76,8 +76,8 @@ export const server = setupServer(
             clients: {
               client_name: 'bob1'
             },
-            date_start:'2022-01-20',
-            date_end:'2022-01-21',
+            date_start: '2022-01-20',
+            date_end: '2022-01-21',
             URL: 'something@something.com',
             description: 'ok',
             notes: 'test notes',
@@ -92,16 +92,16 @@ export const server = setupServer(
             clients: {
               client_name: 'bob2'
             },
-            
-            date_start:'2022-01-20',
-            date_end:'2022-01-21',
+
+            date_start: '2022-01-20',
+            date_end: '2022-01-21',
             URL: 'something@something.com',
             description: 'ok',
             notes: 'test notes',
             hourly_rate: 33,
             hours_quoted: 22,
             price_quoted: 300
-          
+
           },
           {
             id: 3,
@@ -110,8 +110,8 @@ export const server = setupServer(
             clients: {
               client_name: 'bob3'
             },
-            date_start:'2022-01-20',
-            date_end:'2022-01-21',
+            date_start: '2022-01-20',
+            date_end: '2022-01-21',
             URL: 'something@something.com',
             description: 'ok',
             notes: 'test notes',
@@ -121,9 +121,9 @@ export const server = setupServer(
           }
         ])
       )
-    } else if(id) {
+    } else if (id) {
       // response for getProjectById(id)
-      if(id === 'eq.42') {
+      if (id === 'eq.42') {
         return res(
           ctx.json(postedProject)
         )
@@ -137,8 +137,8 @@ export const server = setupServer(
               clients: {
                 client_name: 'bob1'
               },
-              date_start:'2022-01-20',
-              date_end:'2022-01-21',
+              date_start: '2022-01-20',
+              date_end: '2022-01-21',
               URL: 'something@something.com',
               description: 'ok',
               notes: 'test notes',

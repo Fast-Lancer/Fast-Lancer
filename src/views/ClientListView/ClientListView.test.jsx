@@ -32,19 +32,3 @@ it('should render the fetched data', async () => {
 
   expect(container).toMatchSnapshot()
 })
-
-/*
-it('should render the fetched data', async () => {
-  render(
-    <MemoryRouter initialEntries={['/']}>
-      <Switch>
-        <Route path='/'>
-          <ClientListView />
-        </Route>
-      </Switch>
-    </MemoryRouter>
-  )
-
-  await screen.findByText('Loading...')
-})
-*/

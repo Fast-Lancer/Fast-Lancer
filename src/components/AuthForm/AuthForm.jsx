@@ -15,15 +15,15 @@ export default function AuthForm({
 
   return (
     <div className={styles.authContent}>
-      <Title pageTitle='auth' pageHeader={AuthText}/>
+      <Title pageTitle='auth' pageHeader={AuthText} />
       <main>
         <fieldset>
           <label>
-        Email:
-            <input value={email} onChange={({ target }) => setEmail(target.value)}/>
+            Email:
+            <input value={email} onChange={({ target }) => setEmail(target.value)} />
           </label>
           <label>
-        Password:
+            Password:
             <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />
           </label>
           <Button handleClick={() => handleSubmit(email, password)} buttonText={AuthText} />

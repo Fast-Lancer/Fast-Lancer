@@ -22,8 +22,8 @@ function HistoryGrabber() {
 it('should render the sign up page and sign up a user', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
-      <Routes/>
-      <LocationGrabber/>
+      <Routes />
+      <LocationGrabber />
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
@@ -35,7 +35,7 @@ it('should render the sign up page and sign up a user', async () => {
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
   const signupButton = await screen.findByRole('button')
-  
+
   fireEvent.change(emailInput, { target: { value: 'asdf' } })
   fireEvent.change(emailInput, { target: { value: '1234' } })
   fireEvent.click(signupButton)
@@ -46,8 +46,8 @@ it('should render the sign up page and sign up a user', async () => {
 it('should render the log in page and log in a user', async () => {
   render(
     <MemoryRouter initialEntries={['/login']}>
-      <Routes/>
-      <LocationGrabber/>
+      <Routes />
+      <LocationGrabber />
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
@@ -55,11 +55,11 @@ it('should render the log in page and log in a user', async () => {
   })
 
   expect(signUpText).toBeInTheDocument()
-  
+
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
   const signupButton = await screen.findByRole('button')
-  
+
   fireEvent.change(emailInput, { target: { value: 'asdf' } })
   fireEvent.change(emailInput, { target: { value: '1234' } })
   fireEvent.click(signupButton)
@@ -71,7 +71,7 @@ it('should render the log in page and log in a user', async () => {
 it('should change log in text to sign up when navigating to /login from /signup', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
-      <Routes/>
+      <Routes />
       <HistoryGrabber />
     </MemoryRouter>
   )

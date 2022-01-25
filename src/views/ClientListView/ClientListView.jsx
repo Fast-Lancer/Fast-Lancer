@@ -13,16 +13,16 @@ export default function ClientListView() {
     getClients().then(setClients).finally(() => setLoading(false))
   }, [])
 
-  if(loading) return <h1>Loading...</h1>
+  if (loading) return <h1>Loading...</h1>
 
   return (
-    <div>      
+    <div>
       <Title pageTitle='clients' pageHeader='Clients' />
       <main>
         <section className={styles.itemContainer}>
           {clients.map((client) => (
             <Link key={client.id} to={`/clients/${client.id}`}>
-              <ClientItem key={client.id}  client={client}  />
+              <ClientItem key={client.id} client={client} />
             </Link>
           ))}
         </section>

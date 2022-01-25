@@ -22,18 +22,18 @@ export default function Header() {
       </div>
       <nav className={isNavOpen ? styles.active : ''}>
         {currentPage === '/login' ||
-        currentPage === '/signup' ||
-        currentPage === '/' ? (
-            <>
-              <Link to="/login">Log In</Link>
-              <Link to="/signup">Sign Up</Link>
-            </>
-          ) : (
-            <>
-              <Link to="/clients">Clients</Link>
-              <Link to="/projects">Projects</Link>
-            </>
-          )}
+          currentPage === '/signup' ||
+          currentPage === '/' ? (
+          <>
+            <Link to="/login">Log In</Link>
+            <Link to="/signup">Sign Up</Link>
+          </>
+        ) : (
+          <>
+            <Link to="/clients">Clients</Link>
+            <Link to="/projects">Projects</Link>
+          </>
+        )}
         {user.id && (
           <Link onClick={() => setUser({})} to="/login">
             Log Out

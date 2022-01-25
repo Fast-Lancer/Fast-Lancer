@@ -29,12 +29,12 @@ it('should call the handleSubimt prop with the entered username and password', a
   const { container } = render(
     <MemoryRouter initialEntries={['/']}>
       <Route path='/'>
-        <AuthForm isSigningUp={true} handleSubmit={mockSubmit}/>
+        <AuthForm isSigningUp={true} handleSubmit={mockSubmit} />
       </Route>
     </MemoryRouter>
 
   )
-  
+
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
   const button = await screen.findByRole('button')

@@ -26,9 +26,9 @@ export async function createProject(project) {
   const { data, error } = await supaClient
     .from('projects')
     .insert(project)
-      
+
   if (error) throw new Error(error)
-    
+
   return data
 }
 
@@ -41,9 +41,9 @@ export async function updateProject({
       date_start, date_end, hourly_rate, hours_worked, URL, description, completed_at, price_quoted, hours_quoted, title, notes, client_id, user_id
     })
     .match({ id })
-  
+
   if (error) throw new Error(error)
-    
+
   return data
 }
 

@@ -34,7 +34,7 @@ export default function ClientDetail({ client }) {
           <div className={styles.col}>
             <div className={styles.row}>
               <img src={paletteIcon} alt='a palette icon' />
-            Client Projects
+              Client Projects
             </div>
             <ul className={styles.linkList}>
               {
@@ -52,7 +52,7 @@ export default function ClientDetail({ client }) {
         <div>
           <div className={styles.row}>
             <img src={emailIcon} alt='a notes icon' />
-          Notes
+            Notes
           </div>
           <div className={styles.notesDiv}>
             {notes ?? 'No notes entered.'}
