@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button.jsx'
 import ProjectForm from '../../components/ProjectForm/ProjectForm.jsx'
 import Title from '../../components/Title/Title.jsx'
 import { getClients } from '../../services/clients.js'
-import { createProject, deleteProjectById, getProjectById,  updateProject } from '../../services/projects.js'
+import { createProject, deleteProjectById, getProjectById, updateProject } from '../../services/projects.js'
 import changeValue from '../../utils/changeValue.js'
 
 export default function NewEditProject() {
@@ -24,19 +24,19 @@ export default function NewEditProject() {
   const { id } = useParams()
 
   const handleProject = async (form) => {
-    try{
-      const project = await(isCreate ? createProject(form) : updateProject(form))
+    try {
+      const project = await (isCreate ? createProject(form) : updateProject(form))
 
       history.push(isCreate ? `/projects/${project[0].id}` : `/projects/${form.id}`)
 
-    } catch(err) {
+    } catch (err) {
       throw new Error(err)
     }
   }
 
   const handleClick = () => {
     // setTimeout so /projects reloads with updated information after delete
-    deleteProjectById(id).then(() => setTimeout(() => {history.replace('/projects')}, 100))
+    deleteProjectById(id).then(() => setTimeout(() => { history.replace('/projects') }, 100))
   }
 
   useEffect(() => {
@@ -48,11 +48,11 @@ export default function NewEditProject() {
   }, [])
 
   return <div>
-    <Title pageTitle={'new-edit project'} pageHeader={title}/> 
+    <Title pageTitle={'new-edit project'} pageHeader={title} />
     {loading
       ? <h1>Loading...</h1>
-      : <ProjectForm {...{ handleProject, clientsAvailable, initialValues }}/>
+      : <ProjectForm {...{ handleProject, clientsAvailable, initialValues }} />
     }
-    {!isCreate && <Button handleClick={handleClick} buttonText={'Delete'}/>}
+    {!isCreate && <Button handleClick={handleClick} buttonText={'Delete'} />}
   </div>
 }

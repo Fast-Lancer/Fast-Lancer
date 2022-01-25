@@ -20,28 +20,28 @@ export default function Auth() {
 
   async function handleSubmit(email, password) {
     setErrorMessage('')
-    if(isSigningUp) {
+    if (isSigningUp) {
       try {
         const user = await signUpUser(email, password)
         setUser(user)
-        if(wasRedirected) {
+        if (wasRedirected) {
           history.goBack()
         } else {
           history.push('/projects')
         }
-      } catch(e) {
+      } catch (e) {
         setErrorMessage(e.message)
       }
     } else {
       try {
         const user = await signInUser(email, password)
         setUser(user)
-        if(wasRedirected) {
+        if (wasRedirected) {
           history.goBack()
         } else {
           history.push('/projects')
         }
-      } catch(e) {
+      } catch (e) {
         setErrorMessage(e.message)
       }
     }
@@ -54,7 +54,7 @@ export default function Auth() {
 
   return (
     <div className='test'>
-      
+
       <AuthForm {...{ isSigningUp, handleSubmit, toggleIsSigningUp }} />
 
       {!!wasRedirected ? <div className={styles.error}>Please {isSigningUp ? 'Signup' : 'Login'} to Continue</div> : <></>}

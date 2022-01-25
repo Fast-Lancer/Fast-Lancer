@@ -14,40 +14,46 @@ export default function EditClientForm({ formSubmit }) {
   useEffect(() => {
     try {
       getClient(id)
-        .then (setClient)
-    } catch (err){
-      'err'
+        .then(setClient)
+    } catch (err) {
+      console.error(err); // or handle it more gracefully
     }
   }, [])
 
 
+  // You could also use an object to hold form state
+  // and use a single handler function for updating it
+  //  e.g: [event.target.name]: event.target.value
   const [client_name, setClient_name] = useState(client.client_name)
   const [email, setEmail] = useState(client.email)
   const [phone, setPhone] = useState(client.phone)
   const [business_name, setBusiness_name] = useState(client.business_name)
   const [notes, setNotes] = useState(client.notes)
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try{
+    try {
       await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id, id: client.id })
-    } catch (error){
-      throw error 
-    }}
+    } catch (error) {
+      throw error
+    }
+  }
 
   const handleDelete = async (e) => {
-    try { await deleteClient(id)
+    try {
+      await deleteClient(id)
       history.push('/clients')
-    } catch (error){
+    } catch (error) {
       alert('This Client cannot be deleted with open projects! Delete open projects before removing client. Open projects can be found on the client detail page.')
-    }}
+    }
+  }
 
   return <div className={styles.editForm}>
     <h2>Edit Client</h2>
     <fieldset>
       <form onSubmit={handleSubmit}>
         <label htmlFor='client_name'>Client Name</label>
-        <input 
+        <input
           id='client_name'
           type='text'
           defaultValue={client.client_name}
@@ -55,7 +61,7 @@ export default function EditClientForm({ formSubmit }) {
           onChange={(e) => setClient_name(e.target.value)} />
 
         <label htmlFor='email'>E-Mail</label>
-        <input 
+        <input
           id='email'
           type='email'
           defaultValue={client.email}
@@ -63,7 +69,7 @@ export default function EditClientForm({ formSubmit }) {
           onChange={(e) => setEmail(e.target.value)} />
 
         <label htmlFor='phone'>Phone Number</label>
-        <input 
+        <input
           id='phone'
           type='text'
           defaultValue={client.phone}
@@ -71,7 +77,7 @@ export default function EditClientForm({ formSubmit }) {
           onChange={(e) => setPhone(e.target.value)} />
 
         <label htmlFor='business_name'>Business Name</label>
-        <input 
+        <input
           id='business_name'
           type='text'
           defaultValue={client.business_name}
@@ -86,7 +92,7 @@ export default function EditClientForm({ formSubmit }) {
           onChange={(e) => setNotes(e.target.value)}
         />
         <button type='submit'>Save</button>
-      </form>  
+      </form>
       <section className={styles.deleteContainer}>
         <button className={styles.deleteButton} onClick={(e) => handleDelete(id)}>DELETE CLIENT</button>
       </section>

@@ -24,9 +24,9 @@ export default function NewEditClient({ isNew = false }) {
   }
 
   return <div>
-    <Title pageTitle='new-edit client' pageHeader={ isNew ? 'Create New Client' : 'Update Client'}/>
+    <Title pageTitle='new-edit client' pageHeader={isNew ? 'Create New Client' : 'Update Client'} />
     <main>
-      { isNew ? <NewClientForm formSubmit={formSubmit} /> : <EditClientForm formSubmit={formSubmit}/>}
+      {isNew ? <NewClientForm formSubmit={formSubmit} /> : <EditClientForm formSubmit={formSubmit} />}
     </main>
   </div>
 }

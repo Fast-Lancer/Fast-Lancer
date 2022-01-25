@@ -20,9 +20,9 @@ it('should display a loading screen, then a project detail view', async () => {
     </MemoryRouter>
   )
 
-  
+
   expect(screen.getByText(/loading/gi)).toBeInTheDocument()
-  
+
   await screen.findByText(/33/gi)
   await screen.findByText(/something@something.com/gi)
   await screen.findByText(/project1/gi)

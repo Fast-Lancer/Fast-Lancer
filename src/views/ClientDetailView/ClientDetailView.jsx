@@ -18,7 +18,7 @@ export default function ClientDetailView() {
       })
       .finally(() => setLoading(false))
   }, [])
-  
+
   return (
     <div>
       {
@@ -26,7 +26,7 @@ export default function ClientDetailView() {
           ? <h1>Loading...</h1>
           : <div>
             <Title pageTitle='client detail' pageHeader={client.client_name} />
-            <ClientDetail client={client}/>
+            <ClientDetail client={client} />
           </div>
       }
     </div>

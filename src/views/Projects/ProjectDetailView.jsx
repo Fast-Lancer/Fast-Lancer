@@ -8,12 +8,12 @@ export default function ProjectDetailView() {
   const { id } = useParams()
   const [project, setProject] = useState({})
   const [loading, setLoading] = useState(true)
-  
+
   useEffect(() => {
     getProjectById(id).then(data => setProject(data)).finally(() => setLoading(false))
   }, [])
 
-  if(loading) return <h1>Loading...</h1>
+  if (loading) return <h1>Loading...</h1>
   return (
     <div>
       <Title pageTitle='project detail' pageHeader={project.title} />

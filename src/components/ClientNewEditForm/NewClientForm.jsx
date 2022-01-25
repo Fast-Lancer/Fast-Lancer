@@ -13,16 +13,17 @@ export default function NewClientForm({ formSubmit }) {
     e.preventDefault()
     try {
       await formSubmit({ client_name, email, phone, business_name, notes, user_id: user.id })
-    } catch (err){
+    } catch (err) {
       'err'
-    }}
+    }
+  }
 
   return <div>
     <h2>Client Details</h2>
     <fieldset>
       <form onSubmit={handleSubmit}>
         <label htmlFor='client_name'>Client Name</label>
-        <input 
+        <input
           id='client_name'
           type='text'
           value={client_name}
@@ -30,7 +31,7 @@ export default function NewClientForm({ formSubmit }) {
           onChange={(e) => setClient_name(e.target.value)} />
 
         <label htmlFor='email'>E-Mail</label>
-        <input 
+        <input
           id='email'
           type='email'
           value={email}
@@ -38,7 +39,7 @@ export default function NewClientForm({ formSubmit }) {
           onChange={(e) => setEmail(e.target.value)} />
 
         <label htmlFor='phone'>Phone Number</label>
-        <input 
+        <input
           id='phone'
           type='number'
           value={phone}
@@ -46,7 +47,7 @@ export default function NewClientForm({ formSubmit }) {
           onChange={(e) => setPhone(e.target.value)} />
 
         <label htmlFor='business_name'>Business Name</label>
-        <input 
+        <input
           id='business_name'
           type='text'
           value={business_name}
