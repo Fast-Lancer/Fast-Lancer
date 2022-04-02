@@ -8,7 +8,9 @@ export default function ProjectDetail({ project }) {
 
   return (
     <main>
+    
       <div className={styles.projectDetail}>
+        <div className={styles.projectTitle}>{project.title}</div>
       Client Name
         <div className={styles.clientName}>
          
@@ -21,7 +23,7 @@ export default function ProjectDetail({ project }) {
             <img src={money} alt='money'/>
             Hourly Rate: ${hourly_rate}</div>
 
-          {URL && <div className={styles.infoItem} aria-label='URL'><img src={www} alt='www'/>URL: {URL}</div>}
+          {URL && <div className={styles.infoItem} aria-label='URL'><img src={www} alt='www'/>{URL}</div>}
           <div className={styles.infoItem}aria-label='start-date'><img src={clock} alt='clock'/>Start Date: {date_start}</div>
           <div className={styles.infoItem}aria-label='end-date'><img src={clock} alt='clock'/>Deadline: {date_end}</div>
         </section>
@@ -31,12 +33,12 @@ export default function ProjectDetail({ project }) {
             {description ? description : 'No description entered.'}
           </p>
         </section>
-        <section className={styles.alignLeft}>
+        {/* <section className={styles.alignLeft}>
           <h2>Hours and Pricing:</h2>
           <p className={styles.alignItem}><img src={clock} alt='clock'/>Hours Worked: {hours_worked}</p>
           <p className={styles.alignItem}><img src={clock} alt='clock'/>Hours Quoted: {hours_quoted}</p>
           <p className={styles.alignItem}><img src={money} alt='money'/>Price Quoted: ${price_quoted}</p>
-        </section>
+        </section> */}
         <section className={styles.alignLeft}>
           <h2>Notes</h2>
           <p className={styles.textBlock} aria-label='notes'>
