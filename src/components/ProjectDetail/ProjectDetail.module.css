@@ -1,3 +1,28 @@
+
+/*  Parent Wrapper  */
+.projectDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #d3d3d3;
+  font-size: .85em;
+  width:90%;
+}
+
+.projectDetail a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#595959;
+  text-transform: uppercase;
+}
+
+.projectDetail a:hover{
+  color:#fff;
+text-transform: none;
+}
+
 .projectTitle {
   font-family: 'Playfair Display',  serif;
   font-size: 4em;
@@ -12,6 +37,7 @@
   align-content: center;
   align-items: center;
   font-family:'IBM Plex Mono', monospace;
+  font-style: italic;
   font-size: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid black;
@@ -20,72 +46,62 @@
 .clientName h1 {
   font-family:'IBM Plex Mono', monospace;
   font-size: 2.5em;
+  font-style: normal;
   text-underline-offset: 0.5em;
   text-decoration: underline;
   padding-bottom: .5em;
 }
 
-.projectDetail {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #d3d3d3;
-  font-size: 1.2em;
-  width:90%;
+.infoWrapper h3 {
+  margin-top:1vw;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.25em;
 }
 
 .infoSection {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 1.2em;
-  padding-bottom:1.2em;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items:start;
+  column-gap: 5vw;
+  font-size: 1.25em;
+  padding: 1em 0 1.2em 0;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .infoItem{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 0 1vw 1vw;
 }
 
 .infoItem img{
-  padding: 5px;
+  padding: 0 1em 0 0;
+  height: 1.2em;
 }
 
 .alignLeft {
   align-self: center;
-  border-bottom: 1px black solid;
   width:100%;
   padding: 10px;
 }
 
+.alignLeft h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  font-weight: 800;
 
-.alignLeft > p {
-  margin-left: 20px;
+}
+
+.textBlock { 
   display: flex;
   align-items: center;
-}
-
-.alignLeft:last-child{
-  border:none;
-}
-
-.alignItem{
-  display: flex;
-  padding-top: 10px;
-  font-size: 1.1em;
-}
-
-.alignItem img{
-  padding: 5px;
-}
-
-.textBlock{
-  padding: 10px;
-  font-family:'Work sans', sans-serif;
+  padding-bottom: 1.5vw;
+  margin: 1vw 0 1vw 1vw;
+  border-bottom: 1px black solid;
+  font-family:'IBM Plex Mono', sans-serif;
   font-weight: 600;
+  font-size: 1.3em;
 }
 
 @media(max-width: 768px) {
