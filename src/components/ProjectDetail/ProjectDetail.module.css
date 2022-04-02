@@ -1,3 +1,8 @@
+.projectTitle {
+  font-family: 'Playfair Display',  serif;
+  font-size: 4em;
+}
+
 .projectDetail {
   display: flex;
   flex-direction: column;
@@ -74,8 +79,6 @@ h2 {
 
 .alignItem{
   display: flex;
-  align-items: center;
-  padding: 10px;
   padding-top: 10px;
   font-size: 1.1em;
 }
@@ -86,7 +89,8 @@ h2 {
 
 .textBlock{
   padding: 10px;
-  font-family:'IBM Plex Sans', monospace;
+  font-family:'Work sans', sans-serif;
+  font-weight: 600;
 }
 
 @media(max-width: 768px) {
