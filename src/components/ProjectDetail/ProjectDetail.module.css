@@ -1,6 +1,28 @@
 .projectTitle {
   font-family: 'Playfair Display',  serif;
   font-size: 4em;
+  padding-bottom:.25em;
+}
+
+.clientName {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
+}
+
+.clientName h1 {
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 2.5em;
+  text-underline-offset: 0.5em;
+  text-decoration: underline;
+  padding-bottom: .5em;
 }
 
 .projectDetail {
@@ -11,14 +33,6 @@
   background-color: #d3d3d3;
   font-size: 1.2em;
   width:90%;
-}
-
-.projectDetail > * {
-  padding: 10px;
-}
-
-h2 {
-  padding:5px;
 }
 
 .infoSection {
@@ -38,25 +52,6 @@ h2 {
 
 .infoItem img{
   padding: 5px;
-}
-
-.clientName {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid black;  
-
-  font-family:'IBM Plex Mono', monospace;
-}
-
-.clientName h1 {
-  font-family:'IBM Plex Mono', monospace;
-  font-size: 2em;
-}
-
-.clientName > * {
-  margin: 0;
 }
 
 .alignLeft {
