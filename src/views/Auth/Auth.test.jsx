@@ -34,7 +34,7 @@ it('should render the sign up page and sign up a user', async () => {
 
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
-  const signupButton = await screen.findByRole('button')
+  const signupButton = await screen.findByText((content, element) => element.tagName.toLowerCase() === 'button' && content === 'Sign Up')
   
   fireEvent.change(emailInput, { target: { value: 'asdf' } })
   fireEvent.change(emailInput, { target: { value: '1234' } })
@@ -58,7 +58,7 @@ it('should render the log in page and log in a user', async () => {
   
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
-  const signupButton = await screen.findByRole('button')
+  const signupButton = await screen.findByText((content, element) => element.tagName.toLowerCase() === 'button' && content === 'Log In')
   
   fireEvent.change(emailInput, { target: { value: 'asdf' } })
   fireEvent.change(emailInput, { target: { value: '1234' } })

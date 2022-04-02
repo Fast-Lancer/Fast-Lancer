@@ -37,7 +37,7 @@ it('should call the handleSubimt prop with the entered username and password', a
   
   const emailInput = await screen.findByLabelText('Email:')
   const passwordInput = await screen.findByLabelText('Password:')
-  const button = await screen.findByRole('button')
+  const button = await screen.findByText((content, element) => element.tagName.toLowerCase() === 'button' && content === 'Sign Up')
 
   fireEvent.change(emailInput, { target: { value: '123' } })
   fireEvent.change(passwordInput, { target: { value: 'abc' } })
