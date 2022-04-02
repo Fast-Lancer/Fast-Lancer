@@ -55,6 +55,9 @@ exports[`properly renders the Routes component 1`] = `
           <button>
             Log In
           </button>
+          <button>
+            Log In With Demo Account
+          </button>
           <div
             class="linkButton"
           >
