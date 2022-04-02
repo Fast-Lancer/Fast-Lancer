@@ -20,7 +20,7 @@ export default function Header() {
       <div className={styles.logoDiv}>
         <Link to='/'><img src={FastLancerLogo} alt="fast lancer logo" /></Link>
       </div>
-      <nav className={isNavOpen ? styles.active : ''}>
+      <nav className={isNavOpen ? styles.active : styles.newNav}>
         {currentPage === '/login' ||
         currentPage === '/signup' ||
         currentPage === '/' ? (
@@ -29,10 +29,7 @@ export default function Header() {
               <Link to="/signup">Sign Up</Link>
             </>
           ) : (
-            <>
-              <Link to="/clients">Clients</Link>
-              <Link to="/projects">Projects</Link>
-            </>
+            null
           )}
         {user.id && (
           <Link onClick={() => setUser({})} to="/login">
