@@ -1,6 +1,6 @@
 .projectItem {
   display: grid;
-  grid-gap: 40em;
+  grid-gap: 10vw;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
   background-color: #d3d3d3;
@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 50vw;
 }
 
 .detailCol {
