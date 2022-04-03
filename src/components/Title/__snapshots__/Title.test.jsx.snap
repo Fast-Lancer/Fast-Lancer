@@ -31,6 +31,13 @@ exports[`renders the Title component accurately 1`] = `
           New Project
         </a>
       </li>
+      <li>
+        <a
+          href="/login"
+        >
+          Log Out
+        </a>
+      </li>
     </ul>
   </div>
 </div>

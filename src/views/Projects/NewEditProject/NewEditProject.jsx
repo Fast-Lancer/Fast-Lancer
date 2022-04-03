@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
-import ProjectForm from '../../components/ProjectForm/ProjectForm.jsx'
-import Title from '../../components/Title/Title.jsx'
-import { getClients } from '../../services/clients.js'
-import { createProject, deleteProjectById, getProjectById,  updateProject } from '../../services/projects.js'
-import changeValue from '../../utils/changeValue.js'
+import ProjectForm from '../../../components/ProjectForm/ProjectForm.jsx'
+import Title from '../../../components/Title/Title.jsx'
+import { getClients } from '../../../services/clients.js'
+import { createProject, deleteProjectById, getProjectById,  updateProject } from '../../../services/projects.js'
+import changeValue from '../../../utils/changeValue.js'
 
 export default function NewEditProject() {
   const history = useHistory()

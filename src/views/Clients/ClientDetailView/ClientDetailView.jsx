@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import ClientDetail from '../../components/ClientDetail/ClientDetail.jsx'
-import Title from '../../components/Title/Title.jsx'
-import { getClient, getClients } from '../../services/clients.js'
-import { getProjectsByClient } from '../../services/projects.js'
+import ClientDetail from '../../../components/ClientDetail/ClientDetail.jsx'
+import Title from '../../../components/Title/Title.jsx'
+import { getClient } from '../../../services/clients.js'
+import { getProjectsByClient } from '../../../services/projects.js'
 
 export default function ClientDetailView() {
   const { id } = useParams()

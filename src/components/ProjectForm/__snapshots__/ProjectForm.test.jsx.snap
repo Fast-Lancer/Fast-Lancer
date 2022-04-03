@@ -146,12 +146,17 @@ exports[`should display a form with empty field values 1`] = `
         id="notes"
         name="notes"
       />
-      <button
-        type="submit"
-      >
-        Submit
-      </button>
     </form>
+    <div
+      class="buttonWrapper"
+    >
+      <button>
+        Save
+      </button>
+      <button>
+        Delete
+      </button>
+    </div>
   </main>
 </div>
 `;
@@ -306,12 +311,17 @@ exports[`should display a form with provided values 1`] = `
       >
         testing
       </textarea>
-      <button
-        type="submit"
-      >
-        Submit
-      </button>
     </form>
+    <div
+      class="buttonWrapper"
+    >
+      <button>
+        Save
+      </button>
+      <button>
+        Delete
+      </button>
+    </div>
   </main>
 </div>
 `;

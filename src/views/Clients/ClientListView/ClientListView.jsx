@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import ClientItem from '../../components/ClientItem/ClientItem.jsx'
-import Title from '../../components/Title/Title.jsx'
-import { getClients } from '../../services/clients.js'
-import styles from './ClientListView.module.css'
+import ClientItem from '../../../components/ClientItem/ClientItem.jsx'
+import Title from '../../../components/Title/Title.jsx'
+import { getClients } from '../../../services/clients.js'
 
 export default function ClientListView() {
   const [loading, setLoading] = useState(true)
@@ -19,7 +18,7 @@ export default function ClientListView() {
     <div>      
       <Title pageTitle='clients' pageHeader='Clients' />
       <main>
-        <section className={styles.itemContainer}>
+        <section>
           {clients.map((client) => (
             <Link key={client.id} to={`/clients/${client.id}`}>
               <ClientItem key={client.id}  client={client}  />

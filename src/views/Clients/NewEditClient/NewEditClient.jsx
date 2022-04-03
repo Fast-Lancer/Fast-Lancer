@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom'
-import { updateClient, createClient } from '../../services/clients'
-import Title from '../../components/Title/Title'
-import EditClientForm from '../../components/ClientNewEditForm/EditClientForm'
-import NewClientForm from '../../components/ClientNewEditForm/NewClientForm'
+import { updateClient, createClient } from '../../../services/clients'
+import Title from '../../../components/Title/Title'
+import EditClientForm from '../../../components/ClientNewEditForm/EditClientForm'
+import NewClientForm from '../../../components/ClientNewEditForm/NewClientForm'
 
 
 export default function NewEditClient({ isNew = false }) {

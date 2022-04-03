@@ -3,9 +3,9 @@ import { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import { MemoryRouter } from 'react-router-dom'
-import { server } from '../../apiMocks/server.js'
-import { UserProvider, useUser } from '../../context/UserContext.jsx'
-import ProjectDetailView from './ProjectDetailView.jsx'
+import { server } from '../../../apiMocks/server.js'
+import { UserProvider, useUser } from '../../../context/UserContext.jsx'
+import ProjectDetailView from '../ProjectDetailView/ProjectDetailView.jsx'
 import NewEditProject from './NewEditProject.jsx'
 
 beforeAll(() => {
