@@ -1,9 +1,10 @@
 import styles from './Title.module.css'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import { useUser } from '../../context/UserContext.jsx'
 
 export default function TitleNav({ pageTitle, pageHeader }) {
-
+  const { user, setUser } = useUser()
   const { id } = useParams()
 
   switch (pageTitle) {
@@ -18,6 +19,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           </li>
           <li>
             <Link to="/projects/new">New Project</Link>
+          </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
           </li>
         </ul>
       )
@@ -34,6 +40,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           <li>
             <Link to="/clients/newclient">New Client</Link>
           </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
+          </li>
         </ul>
       )
 
@@ -48,6 +59,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           </li>
           <li>
             <Link to={`/projects/edit/${id}`}>Edit Project</Link>
+          </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
           </li>
         </ul>
       )
@@ -64,6 +80,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           <li>
             <Link to={`/clients/edit/${id}`}>Edit Client</Link>
           </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
+          </li>
         </ul>
       )
 
@@ -76,6 +97,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           <li>
             <Link to="/clients">Clients</Link>
           </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
+          </li>
         </ul>
       )
 
@@ -87,6 +113,11 @@ export default function TitleNav({ pageTitle, pageHeader }) {
           </li>
           <li>
             <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link onClick={() => setUser({})} to="/login">
+            Log Out
+            </Link>
           </li>
         </ul>
       )

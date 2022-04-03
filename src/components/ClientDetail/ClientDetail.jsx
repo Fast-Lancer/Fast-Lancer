@@ -39,15 +39,15 @@ export default function ClientDetail2({ client }) {
           </h3>         
 
           <section className={styles.projectSection}> 
-            <h2><img src={paletteIcon} alt="palette" />
-            Client Projects</h2>
+            <h2>
+            Open Projects</h2>
             <section className={styles.projectList}>
               <ul>
                 {
                   projects.map((project) => (
                     <li key={project.id}>
                       <Link to={`/projects/${project.id}`}>
-                        {project.title}
+                        <img src={paletteIcon} alt="palette" /> {project.title}
                       </Link>
                       <section className={styles.projectDescription}>
                         {project.description}
@@ -59,9 +59,9 @@ export default function ClientDetail2({ client }) {
             </section>
           </section>
         </div>
-        <section className={styles.alignLeft}>
+        <section className={styles.notesSection}>
           <h2>Notes</h2>
-          <p className={styles.textBlock} aria-label="notes">
+          <p className={styles.notes} aria-label="notes">
             {notes ? notes : 'No notes entered.'}
           </p>
         </section>

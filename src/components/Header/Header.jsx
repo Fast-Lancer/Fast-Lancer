@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logoDiv}>
-        <Link to='/'><img src={FastLancerLogo} alt="fast lancer logo" /></Link>
+        <Link to='/'><img src={FastLancerLogo} alt="fast lancer logo"/></Link>
       </div>
       <nav className={isNavOpen ? styles.active : styles.newNav}>
         {currentPage === '/login' ||

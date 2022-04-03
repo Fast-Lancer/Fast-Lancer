@@ -5,14 +5,14 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #d3d3d3;
-  font-size: 0.85em;
+  font-size: 0.95em;
   width: 90vw;
 }
 
 .clientDetail a {
   display: flex;
   color: #595959;
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 .clientDetail a:hover {
@@ -64,7 +64,7 @@
 }
 
 .contactDetails img {
-  padding: 0 1em 0 0;
+  padding: 0 0.5em 0 1em;
   height: 1.2em;
 }
 
@@ -84,23 +84,29 @@
 }
 
 .projectSection h2 {
-  font-size: 1.75em;
+  font-family: "Ibm plex Mono", monospace;
+  font-size: 1.5em;
+  font-weight: 800;
   padding-top: 1vw;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
 }
 
 .projectSection img {
   padding-right: 1vw;
+  height: 1.1em;
 }
 
 .projectList {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 30vw;
+  padding: 1vw 0 0 0;
 }
 
 .projectList li {
-  list-style: circle;
+  list-style: none;
   margin-left: 0;
   padding: 1vw 0 0 0;
 }
@@ -109,19 +115,19 @@
   font-style: italic;
 }
 
-.alignLeft {
+.notesSection {
   align-self: center;
   width: 100%;
   padding: 10px;
 }
 
-.alignLeft h2 {
+.notesSection h2 {
   font-family: "Playfair Display", serif;
   font-size: 3em;
   font-weight: 800;
 }
 
-.textBlock {
+.notes {
   display: flex;
   align-items: center;
   padding-bottom: 1.5vw;
@@ -133,11 +139,11 @@
 }
 
 @media (max-width: 768px) {
-  .infoSection {
+  .contactDetails {
     flex-direction: column;
   }
 
-  .projectDetail {
+  .projectSection {
     align-items: center;
   }
 }

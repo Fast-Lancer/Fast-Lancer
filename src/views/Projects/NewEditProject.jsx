@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useHistory, useLocation } from 'react-router-dom'
-import Button from '../../components/Button/Button.jsx'
 import ProjectForm from '../../components/ProjectForm/ProjectForm.jsx'
 import Title from '../../components/Title/Title.jsx'
 import { getClients } from '../../services/clients.js'
@@ -34,10 +33,11 @@ export default function NewEditProject() {
     }
   }
 
-  const handleClick = () => {
+  const handleDelete = () => {
     // setTimeout so /projects reloads with updated information after delete
     deleteProjectById(id).then(() => setTimeout(() => {history.replace('/projects')}, 100))
   }
+
 
   useEffect(() => {
     if (!isCreate) {
@@ -51,8 +51,7 @@ export default function NewEditProject() {
     <Title pageTitle={'new-edit project'} pageHeader={title}/> 
     {loading
       ? <h1>Loading...</h1>
-      : <ProjectForm {...{ handleProject, clientsAvailable, initialValues }}/>
+      : <ProjectForm {...{ handleProject, clientsAvailable, initialValues, isCreate, handleDelete }}/>
     }
-    {!isCreate && <Button handleClick={handleClick} buttonText={'Delete'}/>}
   </div>
 }
