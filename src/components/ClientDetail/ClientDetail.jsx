@@ -14,7 +14,6 @@ export default function ClientDetail2({ client }) {
     projects
   } = client
 
-  console.log(projects)
   return (
     <main>
       <div className={styles.clientDetail}>

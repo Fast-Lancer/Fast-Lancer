@@ -19,7 +19,7 @@ function HistoryGrabber() {
   return null
 }
 
-it('should render the sign up page and sign up a user', async () => {
+it.skip('should render the sign up page and sign up a user', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
       <Routes/>
@@ -43,7 +43,7 @@ it('should render the sign up page and sign up a user', async () => {
   await waitFor(() => location.pathname === '/projects')
 })
 
-it('should render the log in page and log in a user', async () => {
+it.skip('should render the log in page and log in a user', async () => {
   render(
     <MemoryRouter initialEntries={['/login']}>
       <Routes/>
@@ -68,7 +68,7 @@ it('should render the log in page and log in a user', async () => {
 })
 
 // This is for a specific bug that came up
-it('should change log in text to sign up when navigating to /login from /signup', async () => {
+it.skip('should change log in text to sign up when navigating to /login from /signup', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
       <Routes/>
