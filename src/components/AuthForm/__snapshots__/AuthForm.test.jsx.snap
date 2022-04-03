@@ -8,11 +8,6 @@ exports[`should match the snapshot 1`] = `
     <div
       class="titleBody"
     >
-      <section
-        class="title"
-      >
-        Sign Up
-      </section>
       <ul
         class="tabnav"
       >

@@ -11,11 +11,6 @@ exports[`properly renders the Routes component 1`] = `
       <div
         class="titleBody"
       >
-        <section
-          class="title"
-        >
-          Log In
-        </section>
         <ul
           class="tabnav"
         >

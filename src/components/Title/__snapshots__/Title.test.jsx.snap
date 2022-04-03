@@ -5,11 +5,6 @@ exports[`renders the Title component accurately 1`] = `
   <div
     class="titleBody"
   >
-    <section
-      class="title"
-    >
-      Header
-    </section>
     <ul
       class="tabnav"
     >
