@@ -1,92 +1,143 @@
+/*  Parent Wrapper  */
 .clientDetail {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: #d3d3d3;
-  border-bottom: 1px solid black;
-  font-size: 1.2em;
-  font-weight: 700;
-  width: 90%;
+  font-size: 0.85em;
+  width: 90vw;
 }
 
-.clientDetail > * {
-  padding: 10px;
-}
-
-.twoColRow {
+.clientDetail a {
   display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
-  background-color: #d3d3d3;
-  padding: .2em;
-  border-bottom: 1px solid black;
-  font-size: 1.1em;
+  color: #595959;
+  font-size: 1.25em;
+}
+
+.clientDetail a:hover {
+  color: #fff;
+  text-transform: none;
+}
+
+.clientName {
+  font-family: "Playfair Display", serif;
+  font-size: 4em;
+  padding-bottom: 0.25em;
+}
+
+.businessName {
   width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-style: italic;
+  font-size: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid black;
 }
 
-.twoColRow > * {
-  padding: 10px;
+.businessName h1 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 2.5em;
+  font-style: normal;
+  text-underline-offset: 0.5em;
+  text-decoration: underline;
+  padding-bottom: 0.5em;
+  color: #595959;
 }
 
-.col {
+.infoWrapper h3 {
+  margin-top: 1vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.25em;
+}
+
+.contactDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactDetails img {
+  padding: 0 1em 0 0;
+  height: 1.2em;
+}
+
+.contactItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  padding: 1em 0 1.2em 0;
+  font-family: "IBM Plex Mono", monospace;
 }
 
-.row > * {
-  margin: 5px;
+.projectSection h2 {
+  font-size: 1.75em;
+  padding-top: 1vw;
 }
 
-.h3 {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 500;
-  font-size: 2.2em;
-  border-bottom: 1px solid black;
-  width: 100%;
-  text-align: center;
-  padding: 20px;
+.projectSection img {
+  padding-right: 1vw;
 }
 
-.h4 {
-  margin: .1em 0px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 200;
-  margin-left: .4em;
+.projectList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30vw;
 }
 
-.notesDiv {
-  margin: 10px;
-  text-align: center;
-}
-
-.linkList {
+.projectList li {
   list-style: circle;
+  margin-left: 0;
+  padding: 1vw 0 0 0;
 }
 
-.linkList {
-  padding-left: 50px;
+.projectDescription {
+  font-style: italic;
 }
-@media(max-width: 768px) {
-  .twoColRow {
+
+.alignLeft {
+  align-self: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.alignLeft h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  font-weight: 800;
+}
+
+.textBlock {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5vw;
+  margin: 1vw 0 1vw 1vw;
+  border-bottom: 1px black solid;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+  .infoSection {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
   }
 
-  .col {
-    max-width: 100%;
-    width: 100%;
+  .projectDetail {
+    align-items: center;
   }
 }

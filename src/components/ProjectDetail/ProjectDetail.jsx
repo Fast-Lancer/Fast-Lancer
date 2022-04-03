@@ -18,7 +18,6 @@ export default function ProjectDetail({ project }) {
     hours_quoted,
   } = project
 
-  console.log(project)
   return (
     <main>
       <div className={styles.projectDetail}>

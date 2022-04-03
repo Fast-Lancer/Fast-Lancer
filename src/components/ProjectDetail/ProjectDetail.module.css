@@ -1,4 +1,3 @@
-
 /*  Parent Wrapper  */
 .projectDetail {
   display: flex;
@@ -6,27 +5,27 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #d3d3d3;
-  font-size: .85em;
-  width:90%;
+  font-size: 0.85em;
+  width: 90vw;
 }
 
 .projectDetail a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#595959;
+  color: #595959;
   text-transform: uppercase;
 }
 
-.projectDetail a:hover{
-  color:#fff;
-text-transform: none;
+.projectDetail a:hover {
+  color: #fff;
+  text-transform: none;
 }
 
 .projectTitle {
-  font-family: 'Playfair Display',  serif;
+  font-family: "Playfair Display", serif;
   font-size: 4em;
-  padding-bottom:.25em;
+  padding-bottom: 0.25em;
 }
 
 .clientName {
@@ -36,7 +35,7 @@ text-transform: none;
   flex-direction: column;
   align-content: center;
   align-items: center;
-  font-family:'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-style: italic;
   font-size: 1em;
   padding-bottom: 1em;
@@ -44,67 +43,66 @@ text-transform: none;
 }
 
 .clientName h1 {
-  font-family:'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 2.5em;
   font-style: normal;
   text-underline-offset: 0.5em;
   text-decoration: underline;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .infoWrapper h3 {
-  margin-top:1vw;
-  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 1vw;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1.25em;
 }
 
 .infoSection {
   display: grid;
   grid-template-columns: auto auto;
-  justify-items:start;
+  justify-items: start;
   column-gap: 5vw;
   font-size: 1.25em;
   padding: 1em 0 1.2em 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
-.infoItem{
+.infoItem {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 0 1vw 1vw;
 }
 
-.infoItem img{
+.infoItem img {
   padding: 0 1em 0 0;
   height: 1.2em;
 }
 
 .alignLeft {
   align-self: center;
-  width:100%;
+  width: 100%;
   padding: 10px;
 }
 
 .alignLeft h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3em;
   font-weight: 800;
-
 }
 
-.textBlock { 
+.textBlock {
   display: flex;
   align-items: center;
   padding-bottom: 1.5vw;
   margin: 1vw 0 1vw 1vw;
   border-bottom: 1px black solid;
-  font-family:'IBM Plex Mono', sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
   font-weight: 600;
   font-size: 1.3em;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .infoSection {
     flex-direction: column;
   }
