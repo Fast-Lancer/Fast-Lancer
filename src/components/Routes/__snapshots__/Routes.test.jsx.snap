@@ -11,11 +11,6 @@ exports[`properly renders the Routes component 1`] = `
       <div
         class="titleBody"
       >
-        <section
-          class="title"
-        >
-          Log In
-        </section>
         <ul
           class="tabnav"
         >
@@ -54,6 +49,9 @@ exports[`properly renders the Routes component 1`] = `
           </label>
           <button>
             Log In
+          </button>
+          <button>
+            Log In With Demo Account
           </button>
           <div
             class="linkButton"
