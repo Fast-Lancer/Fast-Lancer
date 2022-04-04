@@ -1,13 +1,13 @@
 .header {
-  margin-top:1em;
+  margin: 3vw;
   display: grid;
   grid-template: 1fr 1fr 1fr / 2fr 8fr 2fr;
   height: 150px;
 }
 
 .header img {
-  height: 80%;
-  width: 80%;
+  height: 120%;
+  width: 120%;
 }
 
 .header > nav {
@@ -28,8 +28,11 @@
   padding: 10px;
 }
 
+.newNav {
+  visibility: hidden;
+}
+
 .logoDiv {
-  margin-top:3.2em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,9 +70,8 @@
   border-radius: 3px;
   z-index: 10;
   transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 .hamburger .bar:first-child {
@@ -95,7 +97,7 @@
   transform: translate(4px, 4px) scale(1.15, 1.15) rotate(-45deg);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .header {
     height: 50px;
     display: flex;
@@ -111,7 +113,7 @@
     flex-direction: column;
     border-radius: 0px;
     text-align: center;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     background-color: grey;
     margin: 0px;
@@ -126,7 +128,7 @@
     width: 50px;
     height: 50px;
   }
-  
+
   .hamburger {
     display: block;
     z-index: 20;

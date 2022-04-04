@@ -1,24 +1,23 @@
-import {  useState } from 'react'
+import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { useUser } from '../../context/UserContext.jsx'
-
+import styles from './ProjectForm.module.css'
 import changeValue from '../../utils/changeValue.js'
 
-export default function ProjectForm({ handleProject, clientsAvailable, initialValues }) {
+export default function ProjectForm({ handleProject, clientsAvailable, initialValues, isCreate, handleDelete }) {
   const [form, setForm] = useState(initialValues)
   const { user } = useUser()
+  const { id } = useParams()
   
   const handleSubmit = (e) => {
     e.preventDefault()
-
     // replace empty strings with null in form object without mutation by creating a two dimensional array to iterate through, then make it back into object
     const nullifiedForm = changeValue(form, null)
-
     handleProject({ ...nullifiedForm, user_id: user.id })
   }
 
   const handleChange = (e) => {
     const { name, value } = e.target
-
     setForm(prev => ({ ...prev, [name]: value }))
   }
 
@@ -64,9 +63,11 @@ export default function ProjectForm({ handleProject, clientsAvailable, initialVa
 
         <label htmlFor='notes'>Notes:</label>
         <textarea id='notes' name='notes' value={form.notes} onChange={handleChange}/>
-
-        <button type="submit">Submit</button>
       </form>
+      <div className={styles.buttonWrapper}>
+        <button onClick={handleSubmit}>Save</button>
+        {!isCreate && <button onClick={handleDelete}>Delete</button>}
+      </div>
     </main>
   )
 }

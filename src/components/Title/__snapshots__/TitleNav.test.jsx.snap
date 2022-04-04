@@ -28,6 +28,13 @@ exports[`renders the TitleNav component accurately 1`] = `
         New Project
       </a>
     </li>
+    <li>
+      <a
+        href="/login"
+      >
+        Log Out
+      </a>
+    </li>
   </ul>
 </div>
 `;

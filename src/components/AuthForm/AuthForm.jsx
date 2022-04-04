@@ -30,7 +30,7 @@ export default function AuthForm({
             <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} />
           </label>
           <Button handleClick={() => handleSubmit(email, password)} buttonText={authText} />
-          <Button handleClick={() => handleSubmit(demoEmail, demoPassword)} buttonText='Log In With Demo Account' />
+          { !isSigningUp && <Button handleClick={() => handleSubmit(demoEmail, demoPassword)} buttonText='Log In With Demo Account' />} 
           <div className={styles.linkButton} onClick={toggleIsSigningUp}>
             {isSigningUp ? 'Log In Instead' : 'Sign Up Instead'}
           </div>

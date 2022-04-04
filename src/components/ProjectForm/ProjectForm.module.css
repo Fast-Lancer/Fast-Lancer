@@ -1,0 +1,8 @@
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.buttonWrapper button {
+  margin: 1vw;
+}
