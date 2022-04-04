@@ -12,7 +12,7 @@ afterAll(() => {
   server.close()
 })
 
-it.skip('should render the fetched data', async () => {
+it('should render the fetched data', async () => {
   const { container } = render(
     <MemoryRouter initialEntries={['/']}>
       <Switch>

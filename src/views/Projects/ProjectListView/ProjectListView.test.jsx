@@ -12,7 +12,7 @@ afterAll(() => {
 })
 
 
-it.skip('should display a loading screen, then a project list view', async () => {
+it('should display a loading screen, then a project list view', async () => {
 
   const { container } = render(
     <MemoryRouter>

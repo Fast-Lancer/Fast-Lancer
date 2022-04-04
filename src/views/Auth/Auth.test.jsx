@@ -19,7 +19,7 @@ function HistoryGrabber() {
   return null
 }
 
-it.skip('should render the sign up page and sign up a user', async () => {
+it('should render the sign up page and sign up a user', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
       <Routes/>
@@ -27,7 +27,7 @@ it.skip('should render the sign up page and sign up a user', async () => {
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Sign Up' && element.tagName.toLowerCase() === 'section'
+    return content === 'Sign Up' && element.tagName.toLowerCase() === 'a'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -43,7 +43,7 @@ it.skip('should render the sign up page and sign up a user', async () => {
   await waitFor(() => location.pathname === '/projects')
 })
 
-it.skip('should render the log in page and log in a user', async () => {
+it('should render the log in page and log in a user', async () => {
   render(
     <MemoryRouter initialEntries={['/login']}>
       <Routes/>
@@ -51,7 +51,7 @@ it.skip('should render the log in page and log in a user', async () => {
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Log In' && element.tagName.toLowerCase() === 'section'
+    return content === 'Log In' && element.tagName.toLowerCase() === 'a'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -68,7 +68,7 @@ it.skip('should render the log in page and log in a user', async () => {
 })
 
 // This is for a specific bug that came up
-it.skip('should change log in text to sign up when navigating to /login from /signup', async () => {
+it('should change log in text to sign up when navigating to /login from /signup', async () => {
   render(
     <MemoryRouter initialEntries={['/signup']}>
       <Routes/>
@@ -76,7 +76,7 @@ it.skip('should change log in text to sign up when navigating to /login from /si
     </MemoryRouter>
   )
   const signUpText = await screen.findByText((content, element) => {
-    return content === 'Sign Up' && element.tagName.toLowerCase() === 'section'
+    return content === 'Sign Up' && element.tagName.toLowerCase() === 'a'
   })
 
   expect(signUpText).toBeInTheDocument()
@@ -84,7 +84,7 @@ it.skip('should change log in text to sign up when navigating to /login from /si
   history.push('/login')
 
   const logInText = await screen.findByText((content, element) => {
-    return content === 'Log In' && element.tagName.toLowerCase() === 'section'
+    return content === 'Log In' && element.tagName.toLowerCase() === 'a'
   })
 
   expect(logInText).toBeInTheDocument()

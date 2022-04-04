@@ -7,11 +7,6 @@ exports[`should render the fetched data 1`] = `
       <div
         class="titleBody"
       >
-        <section
-          class="title"
-        >
-          bob1
-        </section>
         <ul
           class="tabnav"
         >
@@ -38,95 +33,140 @@ exports[`should render the fetched data 1`] = `
               Edit Client
             </a>
           </li>
+          <li>
+            <a
+              href="/login"
+            >
+              Log Out
+            </a>
+          </li>
         </ul>
       </div>
       <main>
         <div
           class="clientDetail"
         >
-          <h3
-            class="h3"
-          >
-            business1
-          </h3>
           <div
-            class="twoColRow"
+            class="clientName"
           >
-            <div
-              class="col"
-            >
-              <div
-                class="row"
-              >
-                <img
-                  alt="a phone icon"
-                  src="phoneSmall.png"
-                />
-              </div>
-              <div
-                class="row"
-              >
-                <img
-                  alt="an email icon"
-                  src="emailSmall.png"
-                />
-              </div>
-            </div>
-            <div
-              class="col"
-            >
-              <div
-                class="row"
-              >
-                <img
-                  alt="a palette icon"
-                  src="paletteSmall.png"
-                />
-                Client Projects
-              </div>
-              <ul
-                class="linkList"
-              >
-                <li>
-                  <a
-                    href="/projects/1"
-                  >
-                    project1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/projects/2"
-                  >
-                    project2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/projects/3"
-                  >
-                    project3
-                  </a>
-                </li>
-              </ul>
-            </div>
+            bob1
           </div>
-          <div>
-            <div
-              class="row"
+          <div
+            class="businessName"
+          >
+            <h1
+              aria-label="business-name"
             >
-              <img
-                alt="a notes icon"
-                src="emailSmall.png"
-              />
+              business1
+            </h1>
+            <h3>
+              Business Name
+            </h3>
+          </div>
+          <div
+            class="infoWrapper"
+          >
+            <h3>
+              <div
+                aria-label="phone"
+                class="contactDetails"
+              >
+                <section
+                  class="contactItem"
+                >
+                  <img
+                    alt="phone icon"
+                    src="phoneSmall.png"
+                  />
+                </section>
+                <section
+                  class="contactItem"
+                >
+                  <img
+                    alt="email"
+                    src="emailSmall.png"
+                  />
+                </section>
+              </div>
+            </h3>
+            <section
+              class="projectSection"
+            >
+              <h2>
+                Open Projects
+              </h2>
+              <section
+                class="projectList"
+              >
+                <ul>
+                  <li>
+                    <a
+                      href="/projects/1"
+                    >
+                      <img
+                        alt="palette"
+                        src="paletteSmall.png"
+                      />
+                       
+                      project1
+                    </a>
+                    <section
+                      class="projectDescription"
+                    >
+                      ok
+                    </section>
+                  </li>
+                  <li>
+                    <a
+                      href="/projects/2"
+                    >
+                      <img
+                        alt="palette"
+                        src="paletteSmall.png"
+                      />
+                       
+                      project2
+                    </a>
+                    <section
+                      class="projectDescription"
+                    >
+                      ok
+                    </section>
+                  </li>
+                  <li>
+                    <a
+                      href="/projects/3"
+                    >
+                      <img
+                        alt="palette"
+                        src="paletteSmall.png"
+                      />
+                       
+                      project3
+                    </a>
+                    <section
+                      class="projectDescription"
+                    >
+                      ok
+                    </section>
+                  </li>
+                </ul>
+              </section>
+            </section>
+          </div>
+          <section
+            class="notesSection"
+          >
+            <h2>
               Notes
-            </div>
-            <div
-              class="notesDiv"
+            </h2>
+            <p
+              aria-label="notes"
+              class="notes"
             >
               No notes entered.
-            </div>
-          </div>
+            </p>
+          </section>
         </div>
       </main>
     </div>
